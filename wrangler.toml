@@ -1,0 +1,6 @@
+name = "jsud"
+compatibility_date = "2026-04-08"
+main = "index.html"
+
+[assets]
+directory = "."
