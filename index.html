@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=5.0"/>
+<title>Just Show Up &amp; Drive | Premium Car Rental Worldwide</title>
+<meta name="description" content="Premium worldwide car rental. 26 vehicle categories. 105+ countries, 4,500+ locations. $0 deductible, GPS included. Book via WhatsApp."/>
+<meta name="keywords" content="car rental worldwide, renta de autos, premium car rental, SUV rental, BMW rental, luxury rental, 105 countries"/>
+<meta name="robots" content="index,follow"/>
+<link rel="canonical" href="https://www.justshowupdrive.com/"/>
+<link rel="alternate" hreflang="en" href="https://www.justshowupdrive.com/"/>
+<link rel="alternate" hreflang="es" href="https://www.justshowupdrive.com/"/>
+<link rel="alternate" hreflang="x-default" href="https://www.justshowupdrive.com/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://www.justshowupdrive.com/"/>
+<meta property="og:title" content="Just Show Up &amp; Drive — Premium Car Rental Worldwide"/>
+<meta property="og:description" content="Premium worldwide car rental. 26 categories. 105+ countries. $0 deductible. GPS included."/>
+<meta property="og:image" content="https://img.sixt.com/1600/a1d32aef-c392-481a-b9f4-90ec46d8cee3.jpg"/>
+<meta property="og:image:width" content="1600"/>
+<meta property="og:image:height" content="900"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:site_name" content="Just Show Up &amp; Drive"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Just Show Up &amp; Drive | Premium Car Rental Worldwide"/>
+<meta name="twitter:description" content="26 vehicle categories. 105+ countries. $0 deductible, GPS, unlimited miles. Get your quote on WhatsApp in minutes."/>
+<meta name="twitter:image" content="https://img.sixt.com/1600/a1d32aef-c392-481a-b9f4-90ec46d8cee3.jpg"/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%23FF5F00'/%3E%3Ctext x='4' y='24' font-family='Arial' font-size='18' font-weight='900' fill='white'%3EJ%3C/text%3E%3C/svg%3E"/>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;700;900&display=swap" as="style" onload="this.rel='stylesheet'"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700;900&display=swap" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js" defer></script>
+<style>
+:root{--orange:#FF5F00;--orange-dk:#E05400;--orange-light:rgba(255,95,0,.12);--black:#1A1A1A;--dark:#333;--mid:#666;--gray:#999;--light:#F5F5F5;--border:#E0E0E0;--white:#FFF;--green:#00853D;--gold:#C9A010;--shadow-sm:0 2px 8px rgba(0,0,0,.06);--shadow-md:0 6px 24px rgba(0,0,0,.12);--shadow-lg:0 12px 40px rgba(0,0,0,.18);--nav-h:56px;--tab-h:48px;--radius:3px;--transition:.15s;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;overflow-x:hidden;}
+body{font-family:'Source Sans 3',Arial,sans-serif;background:var(--light);color:var(--dark);overflow-x:hidden;-webkit-font-smoothing:antialiased;font-size:15px;line-height:1.4;}
+a{text-decoration:none;color:inherit;}
+button{font-family:inherit;cursor:pointer;border:none;background:none;}
+img{display:block;max-width:100%;}
+:focus-visible{outline:3px solid var(--orange);outline-offset:2px;}
+/* NAV */
+.nav{background:var(--black);height:var(--nav-h);display:flex;align-items:center;justify-content:space-between;padding:0 clamp(14px,3vw,32px);position:sticky;top:0;z-index:300;box-shadow:0 2px 16px rgba(0,0,0,.5);}
+.brand-box{background:var(--orange);color:#fff;font-size:20px;font-weight:900;letter-spacing:-.5px;padding:5px 13px;border-radius:3px;line-height:1;}
+.brand-sub{color:rgba(255,255,255,.35);font-size:10px;letter-spacing:2px;text-transform:uppercase;margin-left:12px;display:none;}
+@media(min-width:480px){.brand-sub{display:block;}}
+.nav-brand{display:flex;align-items:center;}
+.nav-right{display:flex;align-items:center;gap:8px;}
+.lang-box{display:flex;border:1px solid rgba(255,255,255,.15);border-radius:3px;overflow:hidden;}
+.lang-btn{color:rgba(255,255,255,.45);padding:5px 11px;font-size:11px;font-weight:700;transition:.15s;}
+.lang-btn.on{background:var(--orange);color:#fff;}
+.nav-wa{display:none;align-items:center;gap:6px;background:var(--orange);color:#fff;font-size:12px;font-weight:700;padding:8px 16px;border-radius:3px;}
+@media(min-width:560px){.nav-wa{display:flex;}}
+/* HERO */
+.hero{position:relative;min-height:clamp(300px,52vw,480px);display:flex;align-items:flex-end;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;background:url('https://img.sixt.com/1600/a1d32aef-c392-481a-b9f4-90ec46d8cee3.jpg') center/cover no-repeat,linear-gradient(135deg,#1a0800,#330d00);}
+.hero-grad{position:absolute;inset:0;background:linear-gradient(to right,rgba(0,0,0,.82) 0%,rgba(0,0,0,.45) 60%,transparent 100%);}
+.hero-body{position:relative;z-index:2;padding:clamp(22px,4vw,48px) clamp(16px,5vw,56px) clamp(26px,4vw,44px);max-width:680px;}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(255,95,0,.18);border:1px solid rgba(255,95,0,.35);border-radius:3px;padding:5px 12px;margin-bottom:14px;}
+.eyebrow-dot{width:6px;height:6px;border-radius:50%;background:var(--orange);animation:pulse 2s infinite;}
+.eyebrow-txt{font-size:10px;font-weight:700;color:var(--orange);letter-spacing:2px;text-transform:uppercase;}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.hero-h1{font-size:clamp(26px,5.5vw,56px);font-weight:300;color:#fff;line-height:1.0;letter-spacing:-.5px;margin-bottom:10px;}
+.hero-h1 strong{font-weight:900;}
+.hero-p{font-size:clamp(12px,1.7vw,14px);color:rgba(255,255,255,.5);margin-bottom:20px;line-height:1.6;max-width:480px;}
+.hero-btns{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px;}
+.cta-primary{display:flex;align-items:center;gap:8px;background:var(--orange);color:#fff;font-size:14px;font-weight:700;padding:13px 22px;border-radius:3px;box-shadow:0 4px 20px rgba(255,95,0,.4);transition:.2s;white-space:nowrap;}
+.cta-primary:hover{background:var(--orange-dk);transform:translateY(-1px);}
+.cta-ghost{display:flex;align-items:center;gap:7px;border:1.5px solid rgba(255,255,255,.35);color:rgba(255,255,255,.8);font-size:13px;font-weight:600;padding:11px 20px;border-radius:3px;transition:.2s;white-space:nowrap;}
+.cta-ghost:hover{border-color:rgba(255,255,255,.7);color:#fff;}
+.hero-stats{display:flex;gap:clamp(14px,3vw,32px);flex-wrap:wrap;}
+.hstat{border-left:2.5px solid var(--orange);padding-left:10px;}
+.hstat-n{font-size:clamp(18px,3vw,30px);font-weight:300;color:#fff;line-height:1;}
+.hstat-l{font-size:9px;color:rgba(255,255,255,.35);text-transform:uppercase;letter-spacing:2px;margin-top:2px;}
+/* HOW IT WORKS */
+.how{background:var(--black);padding:clamp(24px,4vw,44px) clamp(16px,4vw,40px);}
+.how-inner{max-width:840px;margin:0 auto;}
+.how-hdr{text-align:center;margin-bottom:28px;}
+.how-title{font-size:clamp(20px,3vw,28px);font-weight:300;color:#fff;margin-bottom:5px;}
+.how-sub{font-size:13px;color:rgba(255,255,255,.35);}
+.how-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.07);border-radius:4px;overflow:hidden;margin-bottom:16px;}
+.how-step{background:#111;padding:22px 20px;display:flex;gap:14px;}
+.how-num{width:34px;height:34px;border-radius:50%;background:var(--orange);color:#fff;font-size:15px;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.how-step-title{font-size:14px;font-weight:700;color:#fff;margin-bottom:5px;}
+.how-step-desc{font-size:11.5px;color:rgba(255,255,255,.38);line-height:1.6;}
+.how-note{font-size:11px;color:rgba(255,255,255,.22);text-align:center;font-style:italic;}
+/* TRUST BAR */
+.trust-bar{background:var(--orange);overflow-x:auto;scrollbar-width:none;display:flex;}
+.trust-bar::-webkit-scrollbar{display:none;}
+.trust-item{display:flex;align-items:center;gap:7px;padding:10px 16px;border-right:1px solid rgba(255,255,255,.18);white-space:nowrap;flex-shrink:0;}
+.trust-i{font-size:13px;}
+.trust-t{font-size:11px;font-weight:700;color:#fff;}
+/* TABS */
+.tabs{background:var(--white);border-bottom:1px solid var(--border);display:flex;position:sticky;top:var(--nav-h);z-index:200;height:var(--tab-h);box-shadow:0 1px 8px rgba(0,0,0,.07);}
+.tab-btn{flex:1;height:100%;font-size:clamp(11px,1.8vw,13px);font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--gray);border-bottom:3px solid transparent;margin-bottom:-1px;transition:.15s;}
+.tab-btn.on{border-bottom-color:var(--orange);color:var(--black);}
+/* DESTINATION SELECTOR */
+.dest-bar{background:var(--white);border-bottom:1px solid var(--border);padding:12px clamp(14px,3vw,32px);}
+.dest-label{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--mid);margin-bottom:9px;display:flex;align-items:center;gap:8px;}
+.dest-label-line{flex:1;height:1px;background:var(--border);}
+.dest-search{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.dest-input-wrap{position:relative;flex:1;min-width:200px;max-width:320px;}
+.dest-input{width:100%;border:1.5px solid var(--border);border-radius:3px;padding:9px 12px 9px 34px;font-size:13px;font-family:inherit;outline:none;transition:.15s;}
+.dest-input:focus{border-color:var(--orange);}
+.dest-input-icon{position:absolute;left:10px;top:50%;transform:translateY(-50%);font-size:14px;pointer-events:none;}
+.dest-clear{position:absolute;right:8px;top:50%;transform:translateY(-50%);background:var(--mid);color:#fff;border:none;border-radius:50%;width:18px;height:18px;font-size:11px;cursor:pointer;display:none;align-items:center;justify-content:center;}
+.dest-clear.show{display:flex;}
+.region-pills{display:flex;gap:5px;flex-wrap:wrap;}
+.rpill{background:var(--white);border:1.5px solid var(--border);color:var(--mid);padding:5px 12px;border-radius:24px;font-size:11px;font-weight:700;transition:.15s;white-space:nowrap;}
+.rpill:hover{border-color:var(--orange);color:var(--orange);}
+.rpill.on{background:var(--orange);border-color:var(--orange);color:#fff;}
+/* COUNTRY GRID */
+.country-picker{background:var(--white);border-bottom:1px solid var(--border);padding:10px clamp(14px,3vw,32px);display:none;}
+.country-picker.open{display:block;}
+.cpicker-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:4px;max-height:200px;overflow-y:auto;}
+.cpicker-cell{display:flex;align-items:center;gap:6px;padding:6px 10px;border-radius:3px;font-size:12px;cursor:pointer;transition:.12s;}
+.cpicker-cell:hover{background:var(--light);}
+.cpicker-cell.on{background:#fff3eb;color:var(--orange);font-weight:700;}
+.cpicker-flag{font-size:15px;}
+/* DEST SELECTED BANNER */
+.dest-banner{background:#fff3eb;border-bottom:2px solid var(--orange);padding:8px clamp(14px,3vw,32px);display:none;align-items:center;justify-content:space-between;gap:10px;}
+.dest-banner.show{display:flex;}
+.dest-banner-txt{font-size:12px;font-weight:700;color:var(--orange);}
+.dest-banner-clear{font-size:11px;color:var(--mid);cursor:pointer;white-space:nowrap;}
+/* INCLUDED STRIP */
+.inc-strip{background:var(--white);border-bottom:1px solid var(--border);padding:12px clamp(14px,3vw,32px);}
+.inc-strip-lbl{font-size:9px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--mid);margin-bottom:9px;display:flex;align-items:center;gap:10px;}
+.inc-lbl-line{flex:1;height:1px;background:var(--border);}
+.inc-chips{display:flex;flex-wrap:wrap;gap:5px;}
+.inc-chip{display:flex;align-items:center;gap:5px;background:var(--light);border:1px solid var(--border);border-radius:24px;padding:4px 11px;font-size:11px;font-weight:600;}
+/* FILTER BAR */
+.filter-bar{position:sticky;top:var(--nav-h);z-index:90;background:#fff;border-bottom:1px solid var(--border);padding:12px 14px;}
+.filter-lbl{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gray);flex-shrink:0;margin-right:2px;}
+.fbtn{background:var(--white);border:1.5px solid var(--border);color:var(--mid);padding:5px 12px;border-radius:24px;font-size:11px;font-weight:700;transition:.15s;flex-shrink:0;}
+.fbtn:hover{border-color:var(--orange);color:var(--orange);}
+.fbtn.on{background:var(--orange);border-color:var(--orange);color:#fff;}
+/* FLEET GRID */
+.fleet-body{padding:clamp(8px,2vw,16px) clamp(10px,3vw,28px) 100px;}
+.sec-hdr{display:flex;align-items:center;gap:10px;padding:clamp(14px,2vw,20px) 2px 9px;}
+.sec-hdr-name{font-size:clamp(15px,2.5vw,19px);font-weight:300;color:var(--black);white-space:nowrap;}
+.sec-hdr-count{font-size:12px;color:var(--orange);font-weight:700;}
+.sec-hdr-line{flex:1;height:1px;background:var(--border);}
+.cars-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-radius:3px;overflow:hidden;}
+/* CAR CARD */
+.car-card{background:var(--white);display:flex;flex-direction:column;transition:box-shadow .2s;cursor:pointer;}
+.car-card:hover{box-shadow:0 6px 28px rgba(0,0,0,.13);z-index:2;position:relative;}
+.car-photo{background:var(--white);position:relative;display:flex;align-items:center;justify-content:center;min-height:175px;padding:18px 12px 8px;overflow:hidden;}
+.car-photo img{width:100%;max-height:148px;object-fit:contain;transition:transform .35s;}
+.car-card:hover .car-photo img{transform:scale(1.04);}
+.no-img{display:none;flex-direction:column;align-items:center;justify-content:center;width:100%;min-height:130px;gap:7px;}
+.no-img-icon{font-size:48px;opacity:.18;}
+.no-img-txt{font-size:10px;color:var(--gray);letter-spacing:1px;text-transform:uppercase;}
+.badge-pop{position:absolute;top:9px;left:9px;background:var(--orange);color:#fff;font-size:9px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;padding:3px 8px;border-radius:2px;z-index:1;}
+.badge-prem{position:absolute;top:9px;right:9px;background:var(--black);color:rgba(255,255,255,.85);font-size:9px;font-weight:700;padding:3px 8px;border-radius:2px;z-index:1;}
+.car-info{padding:2px 13px 10px;flex:1;display:flex;flex-direction:column;gap:6px;border-top:1px solid #f2f2f2;}
+.car-code-cat{display:inline-flex;align-items:center;margin-top:9px;align-self:flex-start;border-radius:2px;overflow:hidden;}
+.car-code{font-size:9px;font-weight:900;letter-spacing:.5px;padding:3px 7px;color:#fff;}
+.car-cat-name{font-size:9px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:3px 8px;color:#fff;opacity:.85;}
+.car-name{font-size:clamp(14px,2vw,16px);font-weight:700;color:var(--black);line-height:1.15;}
+.car-vary{font-size:10.5px;color:var(--gray);font-style:italic;line-height:1.4;}
+.car-region-examples{font-size:10px;color:var(--orange);font-weight:600;line-height:1.4;display:none;}
+.car-region-examples.show{display:block;}
+.car-specs{display:flex;flex-wrap:wrap;gap:7px 13px;padding-top:5px;border-top:1px solid #f5f5f5;}
+.spec-i{font-size:11px;color:var(--mid);display:flex;align-items:center;gap:3px;}
+.car-footer{padding:7px 13px 13px;border-top:1px solid #f2f2f2;}
+.inc-tags{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:8px;}
+.inc-tag{font-size:9px;font-weight:700;color:var(--green);background:#eaf7f0;padding:3px 7px;border-radius:2px;}
+.wa-book{display:flex;align-items:center;justify-content:center;gap:7px;background:#25D366;border-radius:3px;padding:11px;width:100%;transition:.15s;}
+.wa-book:hover{background:#1eba59;}
+.wa-book span{font-size:12px;font-weight:700;color:#fff;}
+/* MAP */
+.map-body{padding:clamp(14px,3vw,28px) clamp(14px,4vw,40px) 100px;}
+.map-title{font-size:clamp(18px,3vw,26px);font-weight:300;color:var(--black);margin-bottom:3px;}
+.map-sub{font-size:12px;color:var(--mid);margin-bottom:14px;}
+.map-leg{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:12px;}
+.leg-i{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--mid);}
+.leg-dot{width:12px;height:12px;border-radius:2px;flex-shrink:0;}
+#world-svg{width:100%;height:auto;display:block;border-radius:4px;border:1px solid var(--border);}
+.map-tip{position:fixed;background:var(--black);color:#fff;padding:9px 13px;border-radius:3px;font-size:12px;pointer-events:none;z-index:999;box-shadow:0 6px 24px rgba(0,0,0,.4);display:none;white-space:nowrap;line-height:1.5;}
+.cty-hdr{font-size:9px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--mid);margin:20px 0 10px;display:flex;align-items:center;gap:10px;}
+.cty-hdr-line{flex:1;height:1px;background:var(--border);}
+.cty-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-radius:3px;overflow:hidden;}
+.cty-cell{background:var(--white);padding:8px 11px;font-size:11px;color:var(--dark);display:flex;align-items:center;gap:7px;}
+.cty-dot{width:5px;height:5px;border-radius:50%;background:var(--orange);flex-shrink:0;}
+/* WA FLOAT */
+.wa-float{position:fixed;bottom:16px;right:15px;z-index:400;display:flex;align-items:center;gap:8px;background:#25D366;border-radius:100px;padding:12px 18px;box-shadow:0 4px 24px rgba(37,211,102,.5);animation:wa-glow 2.5s infinite;white-space:nowrap;}
+.wa-float span{font-size:13px;font-weight:800;color:#fff;}
+@keyframes wa-glow{0%,100%{box-shadow:0 4px 24px rgba(37,211,102,.5)}50%{box-shadow:0 4px 36px rgba(37,211,102,.75)}}
+/* FOOTER */
+.footer{background:var(--black);padding:clamp(22px,4vw,40px) clamp(16px,4vw,40px);}
+.footer-inc{display:flex;flex-wrap:wrap;gap:7px;padding-bottom:20px;border-bottom:1px solid rgba(255,255,255,.07);margin-bottom:20px;}
+.f-inc-i{display:flex;align-items:center;gap:6px;font-size:11px;color:rgba(255,255,255,.28);}
+.footer-main{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:18px;padding-bottom:18px;border-bottom:1px solid rgba(255,255,255,.07);margin-bottom:14px;}
+.footer-brand{background:var(--orange);color:#fff;font-size:19px;font-weight:900;padding:5px 13px;border-radius:3px;display:inline-block;margin-bottom:9px;}
+.footer-desc{font-size:11px;color:rgba(255,255,255,.26);line-height:1.65;max-width:300px;}
+.footer-wa{display:flex;align-items:center;gap:8px;background:var(--orange);padding:10px 16px;border-radius:3px;}
+.footer-wa:hover{background:var(--orange-dk);}
+.footer-wa span{font-size:12px;font-weight:700;color:#fff;}
+.footer-copy{font-size:10px;color:rgba(255,255,255,.16);}
+.hidden{display:none!important;}
+/* RESPONSIVE */
+@media(max-width:400px){.wa-float span{display:none;}.wa-float{padding:13px;}.hero-btns{gap:8px;}}
+@media(max-width:600px){.hero-stats{gap:14px;}.trust-item{padding:9px 13px;}.filter-bar{padding:7px 10px;}.fleet-body{padding:6px 6px 100px;}.how-steps{grid-template-columns:1fr;}.footer-main{flex-direction:column;}}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important;}}
+@media print{.nav-wa,.wa-float,.trust-bar,.filter-bar{display:none!important;}.car-card{break-inside:avoid;}.cars-grid{grid-template-columns:repeat(3,1fr)!important;}}
+
+/* ─── FEATURED CITIES ─── */
+.cities-section{background:var(--white);border-top:1px solid var(--border);padding:clamp(24px,4vw,44px) clamp(16px,4vw,40px);}
+.section-header{text-align:center;margin-bottom:clamp(20px,3vw,32px);}
+.section-title{font-size:clamp(20px,3vw,28px);font-weight:300;color:var(--black);margin-bottom:5px;}
+.section-sub{font-size:13px;color:var(--mid);}
+.cities-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px;}
+.city-card{background:var(--light);border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px;cursor:pointer;transition:all .18s;text-decoration:none;display:block;}
+.city-card:hover{border-color:var(--orange);background:#fff3eb;transform:translateY(-1px);box-shadow:var(--shadow-sm);}
+.city-flag{font-size:22px;margin-bottom:6px;}
+.city-name{font-size:13px;font-weight:700;color:var(--black);}
+.city-country{font-size:10px;color:var(--gray);letter-spacing:.5px;text-transform:uppercase;margin-top:2px;}
+.city-note{font-size:10px;color:var(--orange);font-weight:600;margin-top:4px;}
+@media(max-width:600px){.cities-grid{grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:7px;}}
+/* ─── TESTIMONIALS ─── */
+.testi-section{background:var(--light);border-top:1px solid var(--border);padding:clamp(24px,4vw,44px) clamp(16px,4vw,40px);}
+.testi-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,280px),1fr));gap:14px;margin-top:24px;}
+.testi-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:20px;position:relative;}
+.testi-card::before{content:'"';font-size:48px;color:var(--orange);opacity:.15;position:absolute;top:8px;left:14px;font-family:Georgia,serif;line-height:1;}
+.testi-stars{color:#F59E0B;font-size:13px;margin-bottom:10px;letter-spacing:1px;}
+.testi-text{font-size:13px;color:var(--dark);line-height:1.6;margin-bottom:14px;font-style:italic;}
+.testi-author{display:flex;align-items:center;gap:10px;}
+.testi-avatar{width:36px;height:36px;border-radius:50%;background:var(--orange);color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;flex-shrink:0;}
+.testi-name{font-size:12px;font-weight:700;color:var(--black);}
+.testi-location{font-size:10px;color:var(--gray);margin-top:1px;}
+.testi-vehicle{display:inline-flex;align-items:center;gap:5px;background:var(--light);border:1px solid var(--border);padding:3px 9px;border-radius:24px;font-size:10px;color:var(--mid);font-weight:600;margin-top:10px;}
+@media(max-width:600px){.testi-grid{grid-template-columns:1fr;}}
+/* ─── FAQ ─── */
+.faq-section{background:var(--white);border-top:1px solid var(--border);padding:clamp(24px,4vw,44px) clamp(16px,4vw,40px);}
+.faq-list{max-width:720px;margin:24px auto 0;}
+.faq-item{border:1px solid var(--border);border-radius:var(--radius);margin-bottom:8px;overflow:hidden;}
+.faq-q{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;cursor:pointer;font-size:13.5px;font-weight:700;color:var(--black);background:var(--white);transition:background .15s;gap:12px;border:none;width:100%;text-align:left;}
+.faq-q:hover{background:#fff8f3;}
+.faq-q.open{background:#fff3eb;color:var(--orange);}
+.faq-arrow{font-size:11px;flex-shrink:0;transition:transform .2s;}
+.faq-q.open .faq-arrow{transform:rotate(180deg);}
+.faq-a{display:none;padding:0 18px 16px;font-size:13px;color:var(--mid);line-height:1.65;}
+.faq-a.show{display:block;}
+.faq-a strong{color:var(--black);}
+/* ─── COOKIE NOTICE ─── */
+.cookie-bar{position:fixed;bottom:0;left:0;right:0;z-index:500;background:rgba(26,26,26,.96);backdrop-filter:blur(8px);padding:12px clamp(14px,3vw,32px);display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.07);transform:translateY(100%);transition:transform .4s ease;}
+.cookie-bar.show{transform:translateY(0);}
+.cookie-txt{font-size:11.5px;color:rgba(255,255,255,.55);line-height:1.5;flex:1;min-width:200px;}
+.cookie-txt a{color:var(--orange);text-decoration:underline;cursor:pointer;}
+.cookie-btns{display:flex;gap:8px;flex-shrink:0;}
+.cookie-accept{background:var(--orange);color:#fff;border:none;padding:8px 18px;border-radius:var(--radius);font-size:12px;font-weight:700;cursor:pointer;font-family:inherit;}
+.cookie-accept:hover{background:var(--orange-dk);}
+.cookie-decline{background:transparent;color:rgba(255,255,255,.4);border:1px solid rgba(255,255,255,.15);padding:8px 14px;border-radius:var(--radius);font-size:12px;cursor:pointer;font-family:inherit;}
+/* ─── PRIVACY MODAL ─── */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:600;display:none;align-items:center;justify-content:center;padding:20px;}
+.modal-overlay.show{display:flex;}
+.modal-box{background:var(--white);border-radius:4px;max-width:600px;width:100%;max-height:82vh;overflow-y:auto;padding:28px;position:relative;}
+.modal-title{font-size:18px;font-weight:700;margin-bottom:14px;padding-right:36px;}
+.modal-body{font-size:12.5px;color:var(--mid);line-height:1.75;}
+.modal-body h3{font-size:13px;font-weight:700;color:var(--black);margin:14px 0 5px;}
+.modal-close{position:absolute;top:16px;right:16px;background:var(--light);border:none;border-radius:50%;width:30px;height:30px;font-size:18px;cursor:pointer;line-height:30px;text-align:center;color:var(--mid);}
+.modal-close:hover{background:var(--border);}
+.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}.skip-link:focus{position:fixed;top:8px;left:8px;z-index:9999;background:var(--orange);color:#fff;padding:8px 16px;border-radius:3px;font-size:13px;font-weight:700;width:auto;height:auto;}
+
+/* ─── VEHICLE FILTERS ─── */
+.fgrp{margin-bottom:12px;}
+.fgrp-lbl{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--mid);margin-bottom:7px;padding-left:2px;}
+.fgrp-chips{display:flex;flex-wrap:wrap;gap:6px;}
+.fbtn{background:var(--light);border:1.5px solid var(--border);border-radius:20px;padding:6px 14px;font-size:12px;cursor:pointer;transition:all .15s;font-family:inherit;color:var(--dark);white-space:nowrap;}
+.fbtn:hover{border-color:var(--orange);color:var(--orange);}
+.fbtn.on{background:var(--black);border-color:var(--black);color:#fff;font-weight:700;}
+.fbtn.age-btn{border-radius:6px;font-size:11px;}
+/* Fleet summary bar */
+.fleet-summary{background:var(--light);border:1px solid var(--border);border-radius:var(--radius);padding:8px 14px;font-size:12px;color:var(--mid);margin-bottom:12px;display:flex;align-items:center;gap:6px;}
+.fleet-count{font-size:16px;font-weight:700;color:var(--black);}
+/* Empty state */
+.fleet-empty{text-align:center;padding:48px 24px;color:var(--mid);}
+.fleet-empty-icon{font-size:36px;margin-bottom:12px;}
+.fleet-empty p{font-size:13px;line-height:1.6;margin-bottom:16px;}
+.fleet-empty-btn{background:var(--orange);color:#fff;border:none;padding:10px 24px;border-radius:var(--radius);font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;}
+/* Age badge on cards */
+.badge-age{position:absolute;top:8px;left:8px;background:rgba(0,0,0,.7);color:#fff;font-size:10px;font-weight:700;padding:3px 7px;border-radius:3px;letter-spacing:.5px;}
+/* Age spec color */
+.age-spec{color:var(--mid);}
+.age-25{color:var(--orange)!important;font-weight:700;}
+@media(max-width:600px){.fgrp-chips{gap:5px;}.fbtn{padding:5px 11px;font-size:11px;}}
+
+/* ─── AIRPORT CODE BADGE ─── */
+.city-code{display:inline-block;background:var(--orange);color:#fff;font-size:9px;font-weight:700;padding:1px 5px;border-radius:3px;margin-left:5px;letter-spacing:.5px;vertical-align:middle;}
+.cities-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px;}
+@media(max-width:600px){.cities-grid{grid-template-columns:repeat(2,1fr);gap:8px;}}
+@media(max-width:380px){.cities-grid{grid-template-columns:1fr 1fr;gap:6px;}}
+
+/* ─── IMPROVED DEST SEARCH — Sixt-style suggestions ─── */
+.dest-suggestions{position:absolute;top:100%;left:0;right:0;background:#fff;border:1px solid var(--border);border-radius:0 0 var(--radius) var(--radius);box-shadow:var(--shadow-md);z-index:200;max-height:240px;overflow-y:auto;}
+.dest-suggestion{padding:9px 14px;cursor:pointer;font-size:13px;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--border);}
+.dest-suggestion:last-child{border-bottom:none;}
+.dest-suggestion:hover,.dest-suggestion.active{background:var(--light);}
+.dest-sugg-flag{font-size:16px;min-width:20px;}
+.dest-sugg-name{font-weight:600;color:var(--black);}
+.dest-sugg-code{font-size:10px;background:var(--orange);color:#fff;padding:1px 5px;border-radius:3px;margin-left:4px;font-weight:700;}
+.dest-sugg-country{font-size:11px;color:var(--mid);margin-left:auto;}
+
+/* ─── SHOW X OFFERS COUNTER ─── */
+.offers-counter{display:inline-flex;align-items:center;gap:6px;background:var(--orange);color:#fff;padding:6px 14px;border-radius:20px;font-size:12px;font-weight:700;margin:0 0 12px 0;}
+.offers-counter-num{font-size:16px;font-weight:900;}
+
+/* ─── SORT BAR ─── */
+.sort-bar{display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap;}
+.sort-lbl{font-size:11px;color:var(--mid);font-weight:600;text-transform:uppercase;letter-spacing:.5px;}
+.sort-btn{background:var(--light);border:1px solid var(--border);border-radius:14px;padding:4px 12px;font-size:11px;cursor:pointer;font-family:inherit;color:var(--dark);transition:all .15s;}
+.sort-btn.on,.sort-btn:hover{background:var(--black);border-color:var(--black);color:#fff;}
+
+/* ─── TRANSMISSION FILTER ─── */
+.trans-badge{font-size:9px;background:rgba(255,255,255,.15);color:rgba(255,255,255,.9);padding:1px 5px;border-radius:3px;margin-left:4px;letter-spacing:.3px;}
+
+/* ─── BETTER SEARCH INPUT ─── */
+.dest-wrap{position:relative;}
+.dest-input-inner{position:relative;display:flex;align-items:center;}
+
+</style>
+
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to content</a>
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-brand">
+    <div class="brand-box">JSUD</div>
+    <span class="brand-sub t" data-en="Just Show Up &amp; Drive" data-es="Solo Llega y Maneja">Just Show Up &amp; Drive</span>
+  </div>
+  <div class="nav-right">
+    <div class="lang-box" role="group" aria-label="Language selector">
+      <button class="lang-btn on" onclick="setLang('en')" aria-pressed="true">EN</button>
+      <button class="lang-btn" onclick="setLang('es')" aria-pressed="false">ES</button>
+    </div>
+    <a href="https://wa.me/14073739085" target="_blank" rel="noopener" class="nav-wa">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.12.553 4.109 1.522 5.838L.044 23.956l6.284-1.649C8.01 23.39 9.97 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.652-.51-5.17-1.397l-.371-.22-3.851 1.01 1.028-3.752-.242-.386C2.497 15.77 2 13.947 2 12 2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+      <span class="t" data-en="Book on WhatsApp" data-es="Reservar">Book on WhatsApp</span>
+    </a>
+  </div>
+</nav>
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grad"></div>
+  <div class="hero-body">
+    <div class="hero-eyebrow">
+      <span class="eyebrow-dot"></span>
+      <span class="eyebrow-txt t" data-en="Worldwide · 105+ Countries · 4,500+ Locations" data-es="Mundial · 105+ Países · 4,500+ Ubicaciones">Worldwide · 105+ Countries · 4,500+ Locations</span>
+    </div>
+    <h1 class="hero-h1 t" data-en="<strong>Premium car rental</strong><br>worldwide."><strong>Premium car rental</strong><br>worldwide.</h1>
+    <p class="hero-p t" data-en="Tell us your destination &amp; dates — we quote you in minutes. $0 deductible, GPS, unlimited miles — all included." data-es="Dinos tu destino y fechas — te cotizamos en minutos. $0 deducible, GPS, millaje ilimitado — todo incluido.">Tell us your destination &amp; dates — we quote you in minutes. $0 deductible, GPS, unlimited miles — all included.</p>
+    <div class="hero-btns">
+      <a href="https://wa.me/14073739085?text=Hi!%20I%20want%20a%20quote.%0ADestination%3A%20%0ADates%3A%20%0ACategory%3A%20" target="_blank" rel="noopener" class="cta-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.12.553 4.109 1.522 5.838L.044 23.956l6.284-1.649C8.01 23.39 9.97 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.652-.51-5.17-1.397l-.371-.22-3.851 1.01 1.028-3.752-.242-.386C2.497 15.77 2 13.947 2 12 2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+        <span class="t" data-en="💬 Get a Quote" data-es="💬 Obtener Cotización">💬 Get a Quote</span>
+      </a>
+      <button class="cta-ghost" onclick="setTab('fleet')">
+        <span class="t" data-en="Browse Fleet ↓" data-es="Ver Catálogo ↓">Browse Fleet ↓</span>
+      </button>
+    </div>
+    <div class="hero-stats" role="list" aria-label="Key statistics">
+      <div class="hstat"><div class="hstat-n">26</div><div class="hstat-l t" data-en="categories" data-es="categorías">categories</div></div>
+      <div class="hstat"><div class="hstat-n">105+</div><div class="hstat-l t" data-en="countries" data-es="países">countries</div></div>
+      <div class="hstat"><div class="hstat-n">4,500+</div><div class="hstat-l t" data-en="locations" data-es="ubicaciones">locations</div></div>
+    </div>
+  </div>
+</section>
+<!-- HOW IT WORKS -->
+<div class="how">
+  <div class="how-inner">
+    <div class="how-hdr">
+      <h2 class="how-title t" data-en="How it works" data-es="Cómo funciona">How it works</h2>
+      <div class="how-sub t" data-en="Simple, transparent — 3 steps" data-es="Simple y transparente — 3 pasos">Simple, transparent — 3 steps</div>
+    </div>
+    <div class="how-steps">
+      <div class="how-step">
+        <div class="how-num">1</div>
+        <div>
+          <div class="how-step-title t" data-en="Choose &amp; contact us" data-es="Elige y contáctanos">Choose &amp; contact us</div>
+          <div class="how-step-desc t" data-en="Select your vehicle category, destination &amp; dates. Send us a WhatsApp — we reply with an exact quote in minutes." data-es="Selecciona categoría, destino y fechas. Escríbenos por WhatsApp — te respondemos con cotización exacta en minutos.">Select your vehicle category, destination &amp; dates. Send us a WhatsApp — we reply with an exact quote in minutes.</div>
+        </div>
+      </div>
+      <div class="how-step">
+        <div class="how-num">2</div>
+        <div>
+          <div class="how-step-title t" data-en="Pay reservation fee" data-es="Paga el fee de reserva">Pay reservation fee</div>
+          <div class="how-step-desc t" data-en="Pay a small reservation fee via Zelle, Wise, or Stripe. We handle the entire booking process for you." data-es="Paga un pequeño fee de reserva vía Zelle, Wise o Stripe. Nosotros gestionamos todo el proceso de reserva.">Pay a small reservation fee via Zelle, Wise, or Stripe. We handle the entire booking process for you.</div>
+        </div>
+      </div>
+      <div class="how-step">
+        <div class="how-num">3</div>
+        <div>
+          <div class="how-step-title t" data-en="Just show up &amp; drive" data-es="Solo llega y maneja">Just show up &amp; drive</div>
+          <div class="how-step-desc t" data-en="Pick up your vehicle at any of 4,500+ locations worldwide. Pay the remaining balance directly at the counter." data-es="Recoge tu vehículo en cualquiera de las 4,500+ ubicaciones. Paga el balance restante directamente en el mostrador.">Pick up your vehicle at any of 4,500+ locations worldwide. Pay the remaining balance directly at the counter.</div>
+        </div>
+      </div>
+    </div>
+    <p class="how-note t" data-en="💬 Prices vary by destination, dates &amp; availability. Contact us on WhatsApp for an exact quote." data-es="💬 Los precios varían por destino, fechas y disponibilidad. Contáctanos por WhatsApp para tu cotización exacta.">💬 Prices vary by destination, dates &amp; availability. Contact us on WhatsApp for an exact quote.</p>
+  </div>
+</div>
+<div id="trust-bar" class="trust-bar" role="list" aria-label="Included benefits"></div>
+<main id="main-content">
+<div class="tabs" role="tablist">
+  <button class="tab-btn on" onclick="setTab('fleet')" id="tbf" role="tab" aria-selected="true">
+    <span class="t" data-en="🚗 World Fleet" data-es="🚗 Flota Mundial">🚗 World Fleet</span>
+  </button>
+  <button class="tab-btn" onclick="setTab('map')" id="tbm" role="tab" aria-selected="false">
+    <span class="t" data-en="🌍 Coverage Map" data-es="🌍 Mapa de Cobertura">🌍 Coverage Map</span>
+  </button>
+</div>
+<!-- FLEET PANEL -->
+<div id="sf">
+  <!-- DESTINATION SELECTOR -->
+  <div class="dest-bar">
+    <div class="dest-label">
+      <span class="t" data-en="🌍 Select your destination (optional — shows typical vehicles for that region)" data-es="🌍 Selecciona tu destino (opcional — muestra vehículos típicos de esa región)">🌍 Select your destination</span>
+      <div class="dest-label-line"></div>
+    </div>
+    <div class="dest-search" role="search" aria-label="Search by destination">
+      <div class="dest-input-wrap">
+        <span class="dest-input-icon">🔍</span>
+        <input type="text" id="dest-input" class="dest-input t" placeholder="Search country or city..." data-en-placeholder="Search country or city..." data-es-placeholder="Buscar país o ciudad..." oninput="onDestSearch(this.value)" autocomplete="off" aria-label="Search destination"/>
+        <button class="dest-clear" id="dest-clear-btn" onclick="clearDest()" aria-label="Clear destination">×</button>
+      </div>
+      <div class="region-pills" id="region-pills" role="group" aria-label="Filter by world region" aria-label="Filter by region"></div>
+    </div>
+  </div>
+  <div class="country-picker" id="country-picker">
+    <div class="cpicker-grid" id="cpicker-grid"></div>
+  </div>
+  <div class="dest-banner" id="dest-banner">
+    <span class="dest-banner-txt" id="dest-banner-txt"></span>
+    <span class="dest-banner-clear t" data-en="Show all countries ×" data-es="Ver todos los países ×" onclick="clearDest()">Show all countries ×</span>
+  </div>
+  <!-- INCLUDED STRIP -->
+  <div class="inc-strip">
+    <div class="inc-strip-lbl">
+      <span class="t" data-en="Included in every reservation — worldwide" data-es="Incluido en cada reserva — a nivel mundial">Included in every reservation</span>
+      <div class="inc-lbl-line"></div>
+    </div>
+    <div class="inc-chips" id="inc-chips"></div>
+  </div>
+  <!-- FILTER -->
+  <div class="filter-bar" role="search" aria-label="Filter vehicles" style="display:block;padding:12px 14px;">
+    <div class="sort-bar" id="sort-bar"><span class="sort-lbl t" data-en="Sort:" data-es="Orden:">Sort:</span><button class="sort-btn on" onclick="setSort('default')" id="sort-default" type="button">Default</button><button class="sort-btn" onclick="setSort('seats')" id="sort-seats" type="button">Seats ↑</button><button class="sort-btn" onclick="setSort('age')" id="sort-age" type="button">Age req.</button></div>
+    <div id="fbtns" role="group" aria-label="Vehicle filters — type, seats, driver age"></div>
+  </div>
+  <div class="fleet-body" id="fw" aria-live="polite" role="list"></div>
+</div>
+<!-- MAP PANEL -->
+<div id="sm" class="hidden">
+  <div class="map-body">
+    <h2 class="map-title t" data-en="Worldwide Coverage" data-es="Cobertura Mundial">Worldwide Coverage</h2>
+    <p class="map-sub t" data-en="105+ countries · 4,500+ pickup locations" data-es="105+ países · 4,500+ ubicaciones">105+ countries · 4,500+ locations</p>
+    <div class="map-leg">
+      <div class="leg-i"><span class="leg-dot" style="background:var(--black)"></span><span class="t" data-en="Available" data-es="Disponible">Available</span></div>
+      <div class="leg-i"><span class="leg-dot" style="background:#C8CDD8;border:1px solid #B5BAC4"></span><span class="t" data-en="Not available" data-es="No disponible">Not available</span></div>
+    </div>
+    <svg id="world-svg" role="img" aria-label="World coverage map"></svg>
+    <div id="maptip" class="map-tip" role="tooltip"></div>
+    <div class="cty-hdr"><span class="t" data-en="Covered Countries" data-es="Países con Cobertura">Covered Countries</span><div class="cty-hdr-line"></div><span id="ccnt" style="font-size:16px;font-weight:300;color:rgba(0,0,0,.1);"></span></div>
+    <div class="cty-grid" id="cg"></div>
+  </div>
+</div>
+</main>
+<button class="back-top" id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top"><span class="back-top-arrow">↑</span></button>
+<a href="https://wa.me/14073739085" target="_blank" rel="noopener" class="wa-float" aria-label="Book on WhatsApp">
+  <svg width="19" height="19" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.12.553 4.109 1.522 5.838L.044 23.956l6.284-1.649C8.01 23.39 9.97 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.652-.51-5.17-1.397l-.371-.22-3.851 1.01 1.028-3.752-.242-.386C2.497 15.77 2 13.947 2 12 2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+  <span class="t" data-en="Get a Quote" data-es="Cotizar">Get a Quote</span>
+</a>
+
+<!-- ██ POPULAR DESTINATIONS ██ -->
+<!-- POPULAR DESTINATIONS -->
+<section class="section" id="destinations">
+  <div class="section-inner">
+    <h2 class="section-title t" data-en="Popular Destinations" data-es="Destinos Populares">Popular Destinations</h2>
+    <p class="section-sub t" data-en="Available at 4,500+ locations worldwide — airports, cities, downtown" data-es="Disponible en 4,500+ ubicaciones — aeropuertos, ciudades, centros">Available at 4,500+ locations worldwide — airports, cities, downtown</p>
+    <div class="cities-grid">
+      <a href="https://wa.me/14073739085?text=Hi!%20I%20want%20a%20quote%20for%20Miami%2C%20FL%20(MIA).%0ADestination%3A%20Miami%20Airport%20(MIA)%0ADates%3A%20%0ACategory%3A%20" target="_blank" rel="noopener" class="city-card">
+        <div class="city-flag">🇺🇸</div>
+        <div class="city-info">
+          <div class="city-name">Miami, FL<span class="city-code">MIA</span></div>
+          <div class="city-country">United States</div>
+        </div>
+        <span class="city-cta t" data-en="Get quote →" data-es="Cotizar →">Get quote →</span>
+      </a>
+      <a href="https://wa.me/14073739085?text=Hi!%20I%20want%20a%20quote%20for%20Orlando%2C%20FL%20(MCO).%0ADestination%3A%20Orlando%20Airport%20(MCO)%0ADates%3A%20%0ACategory%3A%20" target="_blank" rel="noopener" class="city-card">
+        <div class="city-flag">🇺🇸</div>
+        <div class="city-info">
+          <div class="city-name">Orlando, FL<span class="city-code">MCO</span></div>
+          <div class="city-country">United States</div>
+        </div>
+        <span class="city-cta t" data-en="Get quote →" data-es="Cotizar →">Get quote →</span>
+      </a>
+      <a href="https://wa.me/14073739085?text=Hi!%20I%20want%20a%20quote%20for%20New%20York%20(JFK).%0ADestination%3A%20JFK%20Airport%20-%20New%20York%0ADates%3A%20%0ACategory%3A%20" target="_blank" rel="noopener" class="city-card">
+        <div class="city-flag">🇺🇸</div>
+        <div class="city-info">
+          <div class="city-name">New York, NY<span class="city-code">JFK</span></div>
+          <div class="city-country">United States</div>
+        </div>
+        <span class="city-cta t" data-en="Get quote →" data-es="Cotizar →">Get quote →</span>
+      </a>
+      <a href="https://wa.me/14073739085?text=Hi!%20I%20want%20a%20quote%20for%20Los%20Angeles%20(LAX).%0ADestination%3A%20LAX%20Airport%20-%20Los%20Angeles%0ADates%3A%20%0ACategory%3A%20" target="_blank" rel="noopener" class="city-card">
+        <div class="city-flag">🇺🇸</div>
+        <div class="city-info">
+          <div class="city-name">Los Angeles<span class="city-code">LAX</span></div>
+          <div class="city-country">United States</div>
+        </div>
+        <span class="city-cta t" data-en="Get quote →" data-es="Cotizar →">Get quote →</span>
+      </a>
+      <a href="https://wa.me/14073739085?text=Hi!%20I%20want%20a%20quote%20for%20Las%20Vegas%20(LAS).%0ADestination%3A%20Las%20Vegas%20Airport%20(LAS)%0ADates%3A%20%0ACategory%3A%20" target="_blank" rel="noopener" class="city-card">
+        <div class="city-flag">🇺🇸</div>
+        <div class="city-info">
+          <div class="city-name">Las Vegas<span class="city-code">LAS</span></div>
+          <div class="city-country">United States</div>
+        </div>
+        <span class="city-cta t" data-en="Get quote →" data-es="Cotizar →">Get quote →</span>
+      </a>
+      <a href="https://wa.me/14073739085?text=Hi!%20I%20want%20a%20quote%20for%20Cancun%20(CUN).%0ADestination%3A%20Cancun%20Airport%20(CUN)%0ADates%3A%20%0ACategory%3A%20" target="_blank" rel="noopener" class="city-card">
+        <div class="city-flag">🇲🇽</div>
+        <div class="city-info">
+          <div class="city-name">Cancún<span class="city-code">CUN</span></div>
+          <div class="city-country">México</div>
+        </div>
+        <span class="city-cta t" data-en="Get quote →" data-es="Cotizar →">Get quote →</span>
+      </a>
+      <a href="https://wa.me/14073739085?text=Hi!%20I%20want%20a%20quote%20for%20Mexico%20City%20(MEX).%0ADestination%3A%20CDMX%20Airport%20(MEX)%0ADates%3A%20%0ACategory%3A%20" target="_blank" rel="noopener" class="city-card">
+        <div class="city-flag">🇲🇽</div>
+        <div class="city-info">
+          <div class="city-name">Ciudad de México<span class="city-code">MEX</span></div>
+          <div class="city-country">México</div>
+        </div>
+        <span class="city-cta t" data-en="Get quote →" data-es="Cotizar →">Get quote →</span>
+      </a>
+      <a href="https://wa.me/14073739085?text=Hi!%20I%20want%20a%20quote%20for%20Bogota%20(BOG).%0ADestination%3A%20Bogotá%2C%20Colombia%0ADates%3A%20%0ACategory%3A%20" target="_blank" rel="noopener" class="city-card">
+        <div class="city-flag">🇨🇴</div>
+        <div class="city-info">
+          <div class="city-name">Bogotá<span class="city-code">BOG</span></div>
+          <div class="city-country">Colombia</div>
+        </div>
+        <span class="city-cta t" data-en="Get quote →" data-es="Cotizar →">Get quote →</span>
+      </a>
+      <a href="https://wa.me/14073739085?text=Hi!%20I%20want%20a%20quote%20for%20Madrid%20(MAD).%0ADestination%3A%20Madrid%20Airport%20(MAD)%0ADates%3A%20%0ACategory%3A%20" target="_blank" rel="noopener" class="city-card">
+        <div class="city-flag">🇪🇸</div>
+        <div class="city-info">
+          <div class="city-name">Madrid<span class="city-code">MAD</span></div>
+          <div class="city-country">España</div>
+        </div>
+        <span class="city-cta t" data-en="Get quote →" data-es="Cotizar →">Get quote →</span>
+      </a>
+      <a href="https://wa.me/14073739085?text=Hi!%20I%20want%20a%20quote%20for%20Frankfurt%20(FRA).%0ADestination%3A%20Frankfurt%20Airport%20(FRA)%0ADates%3A%20%0ACategory%3A%20" target="_blank" rel="noopener" class="city-card">
+        <div class="city-flag">🇩🇪</div>
+        <div class="city-info">
+          <div class="city-name">Frankfurt<span class="city-code">FRA</span></div>
+          <div class="city-country">Germany</div>
+        </div>
+        <span class="city-cta t" data-en="Get quote →" data-es="Cotizar →">Get quote →</span>
+      </a>
+      <a href="https://wa.me/14073739085?text=Hi!%20I%20want%20a%20quote%20for%20London%20(LHR).%0ADestination%3A%20Heathrow%20Airport%20(LHR)%0ADates%3A%20%0ACategory%3A%20" target="_blank" rel="noopener" class="city-card">
+        <div class="city-flag">🇬🇧</div>
+        <div class="city-info">
+          <div class="city-name">London<span class="city-code">LHR</span></div>
+          <div class="city-country">United Kingdom</div>
+        </div>
+        <span class="city-cta t" data-en="Get quote →" data-es="Cotizar →">Get quote →</span>
+      </a>
+      <a href="https://wa.me/14073739085?text=Hi!%20I%20want%20a%20quote%20for%20Paris%20(CDG).%0ADestination%3A%20Paris%20CDG%20Airport%0ADates%3A%20%0ACategory%3A%20" target="_blank" rel="noopener" class="city-card">
+        <div class="city-flag">🇫🇷</div>
+        <div class="city-info">
+          <div class="city-name">Paris<span class="city-code">CDG</span></div>
+          <div class="city-country">France</div>
+        </div>
+        <span class="city-cta t" data-en="Get quote →" data-es="Cotizar →">Get quote →</span>
+      </a>
+      <a href="https://wa.me/14073739085?text=Hi!%20I%20want%20a%20quote%20for%20Rome%20(FCO).%0ADestination%3A%20Rome%20Fiumicino%20(FCO)%0ADates%3A%20%0ACategory%3A%20" target="_blank" rel="noopener" class="city-card">
+        <div class="city-flag">🇮🇹</div>
+        <div class="city-info">
+          <div class="city-name">Rome<span class="city-code">FCO</span></div>
+          <div class="city-country">Italy</div>
+        </div>
+        <span class="city-cta t" data-en="Get quote →" data-es="Cotizar →">Get quote →</span>
+      </a>
+      <a href="https://wa.me/14073739085?text=Hi!%20I%20want%20a%20quote%20for%20Dubai%20(DXB).%0ADestination%3A%20Dubai%20Airport%20(DXB)%0ADates%3A%20%0ACategory%3A%20" target="_blank" rel="noopener" class="city-card">
+        <div class="city-flag">🇦🇪</div>
+        <div class="city-info">
+          <div class="city-name">Dubai<span class="city-code">DXB</span></div>
+          <div class="city-country">UAE</div>
+        </div>
+        <span class="city-cta t" data-en="Get quote →" data-es="Cotizar →">Get quote →</span>
+      </a>
+      <a href="https://wa.me/14073739085?text=Hi!%20I%20want%20a%20quote%20for%20Riyadh%20(RUH).%0ADestination%3A%20Riyadh%20Airport%20(RUH)%0ADates%3A%20%0ACategory%3A%20" target="_blank" rel="noopener" class="city-card">
+        <div class="city-flag">🇸🇦</div>
+        <div class="city-info">
+          <div class="city-name">Riyadh<span class="city-code">RUH</span></div>
+          <div class="city-country">Saudi Arabia</div>
+        </div>
+        <span class="city-cta t" data-en="Get quote →" data-es="Cotizar →">Get quote →</span>
+      </a>
+      <a href="https://wa.me/14073739085?text=Hi!%20I%20want%20a%20quote%20for%20Tokyo%20(NRT).%0ADestination%3A%20Tokyo%20Narita%20(NRT)%0ADates%3A%20%0ACategory%3A%20" target="_blank" rel="noopener" class="city-card">
+        <div class="city-flag">🇯🇵</div>
+        <div class="city-info">
+          <div class="city-name">Tokyo<span class="city-code">NRT</span></div>
+          <div class="city-country">Japan</div>
+        </div>
+        <span class="city-cta t" data-en="Get quote →" data-es="Cotizar →">Get quote →</span>
+      </a>
+      <a href="https://wa.me/14073739085?text=Hi!%20I%20want%20a%20quote%20for%20Sydney%20(SYD).%0ADestination%3A%20Sydney%20Airport%20(SYD)%0ADates%3A%20%0ACategory%3A%20" target="_blank" rel="noopener" class="city-card">
+        <div class="city-flag">🇦🇺</div>
+        <div class="city-info">
+          <div class="city-name">Sydney<span class="city-code">SYD</span></div>
+          <div class="city-country">Australia</div>
+        </div>
+        <span class="city-cta t" data-en="Get quote →" data-es="Cotizar →">Get quote →</span>
+      </a>
+      <a href="https://wa.me/14073739085?text=Hi!%20I%20want%20a%20quote%20for%20Cape%20Town%20(CPT).%0ADestination%3A%20Cape%20Town%2C%20South%20Africa%0ADates%3A%20%0ACategory%3A%20" target="_blank" rel="noopener" class="city-card">
+        <div class="city-flag">🇿🇦</div>
+        <div class="city-info">
+          <div class="city-name">Cape Town<span class="city-code">CPT</span></div>
+          <div class="city-country">South Africa</div>
+        </div>
+        <span class="city-cta t" data-en="Get quote →" data-es="Cotizar →">Get quote →</span>
+      </a>
+      <a href="https://wa.me/14073739085?text=Hi!%20I%20want%20a%20quote%20for%20Sao%20Paulo%20(GRU).%0ADestination%3A%20São%20Paulo%20GRU%20Airport%0ADates%3A%20%0ACategory%3A%20" target="_blank" rel="noopener" class="city-card">
+        <div class="city-flag">🇧🇷</div>
+        <div class="city-info">
+          <div class="city-name">São Paulo<span class="city-code">GRU</span></div>
+          <div class="city-country">Brazil</div>
+        </div>
+        <span class="city-cta t" data-en="Get quote →" data-es="Cotizar →">Get quote →</span>
+      </a>
+      <a href="https://wa.me/14073739085?text=Hi!%20I%20want%20a%20quote%20for%20Santiago%20(SCL).%0ADestination%3A%20Santiago%20Airport%20(SCL)%0ADates%3A%20%0ACategory%3A%20" target="_blank" rel="noopener" class="city-card">
+        <div class="city-flag">🇨🇱</div>
+        <div class="city-info">
+          <div class="city-name">Santiago<span class="city-code">SCL</span></div>
+          <div class="city-country">Chile</div>
+        </div>
+        <span class="city-cta t" data-en="Get quote →" data-es="Cotizar →">Get quote →</span>
+      </a>
+      <a href="https://wa.me/14073739085?text=Hi!%20I%20want%20a%20quote%20for%20Bangkok%20(BKK).%0ADestination%3A%20Bangkok%20Suvarnabhumi%20(BKK)%0ADates%3A%20%0ACategory%3A%20" target="_blank" rel="noopener" class="city-card">
+        <div class="city-flag">🇹🇭</div>
+        <div class="city-info">
+          <div class="city-name">Bangkok<span class="city-code">BKK</span></div>
+          <div class="city-country">Thailand</div>
+        </div>
+        <span class="city-cta t" data-en="Get quote →" data-es="Cotizar →">Get quote →</span>
+      </a>
+      <a href="https://wa.me/14073739085?text=Hi!%20I%20want%20a%20quote%20for%20Singapore%20(SIN).%0ADestination%3A%20Singapore%20Changi%20(SIN)%0ADates%3A%20%0ACategory%3A%20" target="_blank" rel="noopener" class="city-card">
+        <div class="city-flag">🇸🇬</div>
+        <div class="city-info">
+          <div class="city-name">Singapore<span class="city-code">SIN</span></div>
+          <div class="city-country">Singapore</div>
+        </div>
+        <span class="city-cta t" data-en="Get quote →" data-es="Cotizar →">Get quote →</span>
+      </a>
+      <a href="https://wa.me/14073739085?text=Hi!%20I%20want%20a%20quote%20for%20Marrakech%20(RAK).%0ADestination%3A%20Marrakech%20Airport%20(RAK)%0ADates%3A%20%0ACategory%3A%20" target="_blank" rel="noopener" class="city-card">
+        <div class="city-flag">🇲🇦</div>
+        <div class="city-info">
+          <div class="city-name">Marrakech<span class="city-code">RAK</span></div>
+          <div class="city-country">Morocco</div>
+        </div>
+        <span class="city-cta t" data-en="Get quote →" data-es="Cotizar →">Get quote →</span>
+      </a>
+      <a href="https://wa.me/14073739085?text=Hi!%20I%20want%20a%20quote.%0ADestination%3A%20%0ADates%3A%20%0ACategory%3A%20" target="_blank" rel="noopener" class="city-card">
+        <div class="city-flag">🌍</div>
+        <div class="city-info">
+          <div class="city-name">Your City</div>
+          <div class="city-country">105+ countries</div>
+        </div>
+        <span class="city-cta t" data-en="Get quote →" data-es="Cotizar →">Get quote →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ██ TESTIMONIALS ██ -->
+<section class="testi-section" id="reviews" aria-labelledby="testi-title">
+  <div class="section-header">
+    <h2 class="section-title t" id="testi-title" data-en="What Our Customers Say" data-es="Lo Que Dicen Nuestros Clientes">What Our Customers Say</h2>
+    <p class="section-sub t" data-en="Real experiences · 5 ★ average" data-es="Experiencias reales · Promedio 5 ★">Real experiences · 5 ★ average</p>
+  </div>
+  <div class="testi-grid" role="list">
+    <article class="testi-card" role="listitem">
+      <div class="testi-stars" aria-label="5 out of 5 stars">★★★★★</div>
+      <p class="testi-text t" data-en="Super easy. WhatsApp → quote in 10 min → paid fee → just showed up at Miami airport. BMW X3 was waiting. Exactly as described. No surprises." data-es="Súper fácil. WhatsApp → cotización en 10 min → pagué el fee → llegué al aeropuerto de Miami. El BMW X3 me esperaba. Exactamente como lo describieron.">"Super easy. WhatsApp → quote in 10 min → paid fee → just showed up at Miami airport. BMW X3 was waiting. Exactly as described. No surprises."</p>
+      <div class="testi-vehicle" aria-label="BMW X3, Miami">🚗 BMW X3 · Miami, FL</div>
+      <div class="testi-author">
+        <div class="testi-avatar" aria-hidden="true">A</div>
+        <div><div class="testi-name">Alejandro R.</div><div class="testi-location">🇻🇪 Venezuela</div></div>
+      </div>
+    </article>
+    <article class="testi-card" role="listitem">
+      <div class="testi-stars" aria-label="5 out of 5 stars">★★★★★</div>
+      <p class="testi-text t" data-en="Rented a RAV4 for 2 weeks in Spain. $0 deductible, GPS included, unlimited miles — all true. No surprises at the counter. Will definitely use again for Europe." data-es="Renté un RAV4 por 2 semanas en España. $0 deducible, GPS incluido, millaje ilimitado — todo verdad. Sin sorpresas en el mostrador. Definitivamente lo uso de nuevo.">"Rented a RAV4 for 2 weeks in Spain. $0 deductible, GPS included, unlimited miles — all true. No surprises at the counter. Will use again."</p>
+      <div class="testi-vehicle" aria-label="Toyota RAV4, Madrid">🚙 Toyota RAV4 · Madrid, Spain</div>
+      <div class="testi-author">
+        <div class="testi-avatar" aria-hidden="true">M</div>
+        <div><div class="testi-name">María C.</div><div class="testi-location">🇨🇴 Colombia</div></div>
+      </div>
+    </article>
+    <article class="testi-card" role="listitem">
+      <div class="testi-stars" aria-label="5 out of 5 stars">★★★★★</div>
+      <p class="testi-text t" data-en="Got a Suburban for our family of 7 in Orlando. All luggage fit, kids had space. Response on WhatsApp was immediate. Easiest car rental I have ever done." data-es="Conseguí un Suburban para nuestra familia de 7 en Orlando. Toda la maleta cupo, los niños tenían espacio. La respuesta en WhatsApp fue inmediata. La reserva más fácil que he hecho.">"Got a Suburban for our family of 7 in Orlando. All luggage fit. Response on WhatsApp was immediate. Easiest car rental I have ever done."</p>
+      <div class="testi-vehicle" aria-label="Chevrolet Suburban, Orlando">🚗 Chevrolet Suburban · Orlando, FL</div>
+      <div class="testi-author">
+        <div class="testi-avatar" aria-hidden="true">C</div>
+        <div><div class="testi-name">Carlos M.</div><div class="testi-location">🇲🇽 México</div></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+
+<!-- ██ FAQ ██ -->
+<section class="faq-section" id="faq" aria-labelledby="faq-title">
+  <div class="section-header">
+    <h2 class="section-title t" id="faq-title" data-en="Frequently Asked Questions" data-es="Preguntas Frecuentes">Frequently Asked Questions</h2>
+    <p class="section-sub t" data-en="Everything you need to know before booking" data-es="Todo lo que necesitas saber antes de reservar">Everything you need to know before booking</p>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-q t" aria-expanded="false" data-en="How does the reservation process work?" data-es="¿Cómo funciona el proceso de reserva?" onclick="toggleFaq(this)">How does the reservation process work? <span class="faq-arrow" aria-hidden="true">▼</span></button>
+      <div class="faq-a t" data-en="Simple 3 steps: (1) Contact us on WhatsApp with destination, dates &amp; vehicle category. (2) We send an exact quote — pay a small <strong>reservation fee</strong> via Zelle, Wise, or Stripe to confirm. (3) On your pickup date, just show up at the counter and pay the <strong>remaining balance</strong> directly. We handle everything in between." data-es="3 pasos simples: (1) Contáctanos por WhatsApp con destino, fechas y categoría. (2) Te enviamos cotización exacta — paga el <strong>fee de reserva</strong> vía Zelle, Wise o Stripe para confirmar. (3) En la fecha de recogida, solo llega al mostrador y paga el <strong>balance restante</strong>. Nosotros manejamos todo.">Simple 3 steps: Contact us on WhatsApp with destination, dates &amp; category. Pay a small reservation fee to confirm. Show up at the counter and pay the remaining balance.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q t" aria-expanded="false" data-en="What payment methods do you accept?" data-es="¿Qué métodos de pago aceptan?" onclick="toggleFaq(this)">What payment methods do you accept? <span class="faq-arrow" aria-hidden="true">▼</span></button>
+      <div class="faq-a t" data-en="For the reservation fee: <strong>Zelle</strong> (US), <strong>Wise</strong> (international), <strong>Stripe</strong> (all major credit/debit cards). The remaining balance is paid directly at the rental counter in local currency or USD depending on the location." data-es="Para el fee de reserva: <strong>Zelle</strong> (EE.UU.), <strong>Wise</strong> (internacional), <strong>Stripe</strong> (tarjetas). El balance restante se paga en el mostrador en moneda local o USD.">Reservation fee: Zelle (US), Wise (international), Stripe (cards). Balance at counter in local currency.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q t" aria-expanded="false" data-en="What is included? What about insurance?" data-es="¿Qué está incluido? ¿Y el seguro?" onclick="toggleFaq(this)">What is included? What about insurance? <span class="faq-arrow" aria-hidden="true">▼</span></button>
+      <div class="faq-a t" data-en="Every reservation includes: <strong>Full insurance</strong> · <strong>$0 deductible</strong> · <strong>GPS navigation</strong> · <strong>1 additional driver free</strong> · <strong>24/7 roadside assistance</strong> · <strong>Unlimited miles</strong> · <strong>Free cancellation</strong>. No hidden fees — what you quote is what you pay." data-es="Cada reserva incluye: <strong>Seguro completo</strong> · <strong>$0 deducible</strong> · <strong>GPS</strong> · <strong>+1 conductor gratis</strong> · <strong>Asistencia 24/7</strong> · <strong>Millaje ilimitado</strong> · <strong>Cancelación gratis</strong>. Sin cargos ocultos.">Every reservation includes: Full insurance · $0 deductible · GPS · +1 driver free · 24/7 roadside · Unlimited miles · Free cancellation.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q t" aria-expanded="false" data-en="How much is the security deposit at pickup?" data-es="¿Cuánto es el depósito de seguridad al recoger?" onclick="toggleFaq(this)">How much is the security deposit at pickup? <span class="faq-arrow" aria-hidden="true">▼</span></button>
+      <div class="faq-a t" data-en="A temporary <strong>credit card hold of $200–$500 USD</strong> is placed at pickup (varies by vehicle category and location). This is fully released when you return the vehicle without damage. A <strong>credit card in the driver's name</strong> is required (debit accepted at some locations)." data-es="Se retiene temporalmente en tu tarjeta de crédito entre <strong>$200–$500 USD</strong> al recoger el vehículo (varía según categoría y ubicación). Se libera completamente al devolver el auto sin daños. Se requiere <strong>tarjeta de crédito a nombre del conductor</strong>.">Security hold: $200–$500 USD on your credit card at pickup — fully released on return. Credit card in driver's name required.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q t" aria-expanded="false" data-en="What is the minimum age? What documents do I need?" data-es="¿Cuál es la edad mínima? ¿Qué documentos necesito?" onclick="toggleFaq(this)">What is the minimum age? What documents? <span class="faq-arrow" aria-hidden="true">▼</span></button>
+      <div class="faq-a t" data-en="Minimum age: <strong>21 years</strong> (25 for some premium categories). Required: <strong>valid driver's license</strong>, <strong>passport</strong>, and a <strong>credit card in the driver's name</strong>. An international driving permit is recommended for non-US destinations. Some locations accept drivers 18–20 with a young driver surcharge." data-es="Edad mínima: <strong>21 años</strong> (25 para algunas categorías premium). Necesitas: <strong>licencia de conducir válida</strong>, <strong>pasaporte</strong> y <strong>tarjeta de crédito a nombre del conductor</strong>. Se recomienda licencia internacional fuera de EE.UU.">Minimum age: 21 (25 for premium). Required: driver's license, passport, credit card in driver's name.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q t" aria-expanded="false" data-en="Can I pick up at the airport? One-way rentals?" data-es="¿Puedo recoger en el aeropuerto? ¿Rentas de ida?" onclick="toggleFaq(this)">Can I pick up at the airport? One-way rentals? <span class="faq-arrow" aria-hidden="true">▼</span></button>
+      <div class="faq-a t" data-en="<strong>Yes — airport pickup</strong> available at 2,000+ airports worldwide. Just tell us your airport code (MIA, LHR, CDG, DXB, etc.). <strong>One-way rentals</strong> (pick up in one city, return in another) are available at most locations — ask us about availability and any drop-off fee." data-es="<strong>Sí — recojo en aeropuerto</strong> disponible en 2,000+ aeropuertos. Solo indícanos el código (MIA, MAD, CDG, DXB, etc.). Las <strong>rentas de solo ida</strong> también están disponibles en la mayoría de ubicaciones.">Airport pickup at 2,000+ airports worldwide. One-way rentals available. Just tell us your airport code.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q t" aria-expanded="false" data-en="What currency do I pay in?" data-es="¿En qué moneda pago?" onclick="toggleFaq(this)">What currency do I pay in? <span class="faq-arrow" aria-hidden="true">▼</span></button>
+      <div class="faq-a t" data-en="The <strong>reservation fee</strong> we charge is in <strong>USD</strong>. The <strong>remaining balance</strong> at the rental counter is charged in the <strong>local currency</strong> of the country (EUR in Europe, MXN in Mexico, AED in Dubai, etc.) — your bank's exchange rate applies." data-es="El <strong>fee de reserva</strong> que cobramos es en <strong>USD</strong>. El <strong>balance restante</strong> en el mostrador se cobra en <strong>moneda local</strong> (EUR en Europa, MXN en México, AED en Dubai, etc.) — aplica la tasa de tu banco.">Reservation fee in USD. Balance at counter in local currency (EUR, MXN, AED, etc.) at your bank's rate.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q t" aria-expanded="false" data-en="Are child seats and extras available?" data-es="¿Disponibles sillas infantiles y extras?" onclick="toggleFaq(this)">Are child seats and extras available? <span class="faq-arrow" aria-hidden="true">▼</span></button>
+      <div class="faq-a t" data-en="Yes — <strong>child seats</strong> (infant, toddler, booster), ski racks, snow tires, and other extras available at most locations. Just mention them in your WhatsApp message and we'll include them in your quote. Additional fees may apply for some extras." data-es="Sí — <strong>sillas infantiles</strong> (bebé, niño pequeño, booster), portaesquís, llantas de nieve y otros extras disponibles. Mencionalos en tu mensaje de WhatsApp y los incluimos en tu cotización.">Yes — child seats, ski racks, snow tires available. Mention them in your WhatsApp and we'll include them.</div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inc" id="footer-inc"></div>
+  <div class="footer-main">
+    <div>
+      <div class="footer-brand">JSUD</div>
+      <p class="footer-desc t" data-en="Premium worldwide vehicle rental. 26 categories across 105+ countries. $0 deductible, GPS, unlimited miles — no hidden fees." data-es="Renta de vehículos premium en todo el mundo. 26 categorías en 105+ países. $0 deducible, GPS, millaje ilimitado — sin cargos ocultos.">Premium worldwide vehicle rental. 26 categories across 105+ countries.</p>
+    </div>
+    <a href="https://wa.me/14073739085" target="_blank" rel="noopener" class="footer-wa">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.12.553 4.109 1.522 5.838L.044 23.956l6.284-1.649C8.01 23.39 9.97 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.652-.51-5.17-1.397l-.371-.22-3.851 1.01 1.028-3.752-.242-.386C2.497 15.77 2 13.947 2 12 2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+      <span class="t" data-en="💬 Get a Quote" data-es="💬 Obtener Cotización">💬 Get a Quote</span>
+    </a>
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:16px;align-items:center;margin-bottom:12px;">
+    <a href="https://wa.me/14073739085" target="_blank" rel="noopener" style="font-size:11px;color:rgba(255,255,255,.35);" class="t" data-en="💬 WhatsApp" data-es="💬 WhatsApp" aria-label="Contact on WhatsApp">💬 WhatsApp</a>
+    <a href="mailto:reservations@justshowupdrive.com" style="font-size:11px;color:rgba(255,255,255,.45);" aria-label="Email reservations">✉️ reservations@justshowupdrive.com</a>
+    <button onclick="openPrivacy()" style="background:none;border:none;font-size:11px;color:rgba(255,255,255,.35);cursor:pointer;font-family:inherit;padding:0;" class="t" data-en="🔒 Privacy Policy" data-es="🔒 Política de Privacidad" aria-label="View privacy policy">🔒 Privacy Policy</button>
+    <span style="font-size:11px;color:rgba(255,255,255,.35);">|</span>
+    <span style="font-size:11px;color:rgba(255,255,255,.25);" class="t" data-en="Available 24/7 · 105+ countries · 4,500+ locations" data-es="Disponible 24/7 · 105+ países · 4,500+ ubicaciones">Available 24/7 · 105+ countries · 4,500+ locations</span>
+  </div>
+  <p class="footer-copy t" data-en="© 2026 Just Show Up &amp; Drive · Premium car rental worldwide · Model varies by location" data-es="© 2026 Just Show Up &amp; Drive · Renta de autos premium · Modelo varía por ubicación">© 2026 Just Show Up &amp; Drive · Premium car rental worldwide</p>
+</footer>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+
+
+
+
+
+
+
+
+
+'use strict';
+var lang='en',activeFilter='all',activeSeatFilter=0,activeAgeFilter=0,activeRegion='',selectedCountry='',mapDone=false,activeSort='default';
+
+'use strict';
+var lang='en',activeFilter='all',activeRegion='',selectedCountry='',mapDone=false;
+var COVERED={
+  ALB:"Albania",AGO:"Angola",ARG:"Argentina",ARM:"Armenia",ABW:"Aruba",
+  AUS:"Australia",AUT:"Austria",AZE:"Azerbaijan",BHR:"Bahrain",BRB:"Barbados",
+  BLR:"Belarus",BEL:"Belgium",BIH:"Bosnia & Herzegovina",BGR:"Bulgaria",
+  CAN:"Canada",CYM:"Cayman Islands",CHL:"Chile",COL:"Colombia",CRI:"Costa Rica",
+  HRV:"Croatia",CUW:"Curaçao",CYP:"Cyprus",CZE:"Czech Republic",DNK:"Denmark",
+  DOM:"Dominican Republic",ECU:"Ecuador",EGY:"Egypt",SLV:"El Salvador",
+  EST:"Estonia",ETH:"Ethiopia",FRO:"Faroe Islands",FIN:"Finland",FRA:"France",
+  GUF:"French Guiana",GEO:"Georgia",DEU:"Germany",GIB:"Gibraltar",GRC:"Greece",
+  GRL:"Greenland",GLP:"Guadeloupe",GUM:"Guam",GTM:"Guatemala",GGY:"Guernsey",
+  HND:"Honduras",HUN:"Hungary",ISL:"Iceland",IRQ:"Iraq",IRL:"Ireland",
+  ISR:"Israel",ITA:"Italy",JAM:"Jamaica",JPN:"Japan",JEY:"Jersey",
+  JOR:"Jordan",KAZ:"Kazakhstan",XKX:"Kosovo",KWT:"Kuwait",LAO:"Laos",
+  LVA:"Latvia",LBN:"Lebanon",LBY:"Libya",LTU:"Lithuania",LUX:"Luxembourg",
+  MYS:"Malaysia",MLT:"Malta",MTQ:"Martinique",MUS:"Mauritius",MEX:"Mexico",
+  MDA:"Moldova",MCO:"Monaco",MNG:"Mongolia",MNE:"Montenegro",MAR:"Morocco",
+  MOZ:"Mozambique",MKD:"North Macedonia",NAM:"Namibia",NLD:"Netherlands",
+  NCL:"New Caledonia",NZL:"New Zealand",NIC:"Nicaragua",NGA:"Nigeria",
+  NOR:"Norway",OMN:"Oman",PAN:"Panama",PRY:"Paraguay",PER:"Peru",
+  POL:"Poland",PRT:"Portugal",PRI:"Puerto Rico",QAT:"Qatar",
+  REU:"Réunion",ROU:"Romania",BLM:"Saint Barthélemy",MAF:"Saint Martin",
+  SAU:"Saudi Arabia",SEN:"Senegal",SRB:"Serbia",SYC:"Seychelles",
+  SGP:"Singapore",SXM:"Sint Maarten",SVK:"Slovakia",SVN:"Slovenia",
+  ZAF:"South Africa",ESP:"Spain",LCA:"St. Lucia",SWE:"Sweden",CHE:"Switzerland",
+  THA:"Thailand",TTO:"Trinidad & Tobago",TUR:"Turkey",TCA:"Turks & Caicos",
+  ARE:"UAE",UKR:"Ukraine",GBR:"United Kingdom",URY:"Uruguay",
+  USA:"United States",UZB:"Uzbekistan",VEN:"Venezuela",ZWE:"Zimbabwe"
+};
+var COUNTRY_FLAGS={USA:"🇺🇸",CAN:"🇨🇦",MEX:"🇲🇽",BRA:"🇧🇷",COL:"🇨🇴",ARG:"🇦🇷",CHL:"🇨🇱",PER:"🇵🇪",VEN:"🇻🇪",ECU:"🇪🇨",PAN:"🇵🇦",CRI:"🇨🇷",GTM:"🇬🇹",HND:"🇭🇳",SLV:"🇸🇻",NIC:"🇳🇮",DOM:"🇩🇴",JAM:"🇯🇲",ABW:"🇦🇼",CUW:"🇨🇼",BRB:"🇧🇧",TTO:"🇹🇹",GUY:"🇬🇾",PRY:"🇵🇾",URY:"🇺🇾",DEU:"🇩🇪",FRA:"🇫🇷",ESP:"🇪🇸",ITA:"🇮🇹",GBR:"🇬🇧",NLD:"🇳🇱",BEL:"🇧🇪",CHE:"🇨🇭",AUT:"🇦🇹",POL:"🇵🇱",CZE:"🇨🇿",HUN:"🇭🇺",ROU:"🇷🇴",BGR:"🇧🇬",GRC:"🇬🇷",PRT:"🇵🇹",SWE:"🇸🇪",NOR:"🇳🇴",DNK:"🇩🇰",FIN:"🇫🇮",IRL:"🇮🇪",HRV:"🇭🇷",SVN:"🇸🇮",SVK:"🇸🇰",LTU:"🇱🇹",LVA:"🇱🇻",EST:"🇪🇪",LUX:"🇱🇺",MLT:"🇲🇹",ISL:"🇮🇸",ALB:"🇦🇱",BIH:"🇧🇦",MKD:"🇲🇰",MNE:"🇲🇪",SRB:"🇷🇸",UKR:"🇺🇦",BLR:"🇧🇾",MDA:"🇲🇩",RUS:"🇷🇺",TUR:"🇹🇷",CYP:"🇨🇾",GIB:"🇬🇮",FRO:"🇫🇴",ARE:"🇦🇪",SAU:"🇸🇦",QAT:"🇶🇦",KWT:"🇰🇼",BHR:"🇧🇭",OMN:"🇴🇲",JOR:"🇯🇴",LBN:"🇱🇧",ISR:"🇮🇱",EGY:"🇪🇬",MAR:"🇲🇦",TUN:"🇹🇳",ZAF:"🇿🇦",KEN:"🇰🇪",NGA:"🇳🇬",GHA:"🇬🇭",SEN:"🇸🇳",RWA:"🇷🇼",TZA:"🇹🇿",UGA:"🇺🇬",ZMB:"🇿🇲",ZWE:"🇿🇼",MOZ:"🇲🇿",NAM:"🇳🇦",LSO:"🇱🇸",AGO:"🇦🇴",JPN:"🇯🇵",AUS:"🇦🇺",NZL:"🇳🇿",SGP:"🇸🇬",IND:"🇮🇳",KOR:"🇰🇷",THA:"🇹🇭",PHL:"🇵🇭",VNM:"🇻🇳",LKA:"🇱🇰",PAK:"🇵🇰",AZE:"🇦🇿",ARM:"🇦🇲",GEO:"🇬🇪",KAZ:"🇰🇿",MUS:"🇲🇺",GLP:"🇬🇵","ETH":"🇪🇹","GUF":"🇬🇫","GRL":"🇬🇱","GUM":"🇬🇺","GGY":"🇬🇬","IRQ":"🇮🇶","JEY":"🇯🇪","XKX":"🇽🇰","LAO":"🇱🇦","LBY":"🇱🇾","MYS":"🇲🇾","MDV":"🇲🇻","MTQ":"🇲🇶","MCO":"🇲🇨","MNG":"🇲🇳","NCL":"🇳🇨","PRI":"🇵🇷","REU":"🇷🇪","BLM":"🇧🇱","MAF":"🇲🇫","SYC":"🇸🇨","SXM":"🇸🇽","LCA":"🇱🇨","TCA":"🇹🇨","UZB":"🇺🇿"};
+var REGIONS=[
+  {id:'americas',en:'🌎 Americas',es:'🌎 Américas',countries:['USA','CAN','MEX','COL','VEN','ARG','CHL','PER','URY','ECU','PRY','PAN','CRI','GTM','HND','NIC','SLV','PRI','JAM','DOM','TTO','ABW','CUW','CYM','BRB','LCA','TCA','BLM','MAF','SXM','GUF','GLP','MTQ']},
+  {id:'europe',en:'🌍 Europe',es:'🌍 Europa',countries:['GBR','DEU','FRA','ESP','ITA','PRT','NLD','BEL','CHE','AUT','SWE','NOR','DNK','FIN','IRL','GRC','POL','CZE','HUN','ROU','HRV','SVK','SVN','BGR','SRB','MNE','BIH','ALB','MKD','XKX','EST','LVA','LTU','LUX','MLT','CYP','ISL','UKR','BLR','MDA','MCO','GIB','GGY','JEY','FRO','GRL']},
+  {id:'mideast',en:'🌍 Middle East',es:'🌍 Medio Oriente',countries:['ARE','SAU','QAT','KWT','BHR','OMN','JOR','ISR','LBN','IRQ','TUR']},
+  {id:'africa',en:'🌍 Africa',es:'🌍 África',countries:['ZAF','EGY','MAR','NGA','ETH','ZWE','MOZ','NAM','SEN','AGO','LBY','MUS','SYC','REU']},
+  {id:'asia',en:'🌏 Asia-Pacific',es:'🌏 Asia-Pacífico',countries:['JPN','AUS','NZL','SGP','THA','MYS','LAO','MNG','GUM','GEO','ARM','AZE','KAZ','UZB','NCL']}
+]
+var N2A={"4":"AFG","8":"ALB","12":"DZA","24":"AGO","32":"ARG","51":"ARM","533":"ABW","36":"AUS","40":"AUT","31":"AZE","52":"BRB","112":"BLR","56":"BEL","68":"BOL","70":"BIH","76":"BRA","100":"BGR","124":"CAN","152":"CHL","156":"CHN","170":"COL","188":"CRI","196":"CYP","203":"CZE","208":"DNK","214":"DOM","218":"ECU","818":"EGY","222":"SLV","233":"EST","246":"FIN","250":"FRA","276":"DEU","288":"GHA","300":"GRC","320":"GTM","340":"HND","348":"HUN","356":"IND","372":"IRL","376":"ISR","380":"ITA","388":"JAM","392":"JPN","400":"JOR","398":"KAZ","404":"KEN","410":"KOR","414":"KWT","428":"LVA","422":"LBN","426":"LSO","440":"LTU","442":"LUX","484":"MEX","498":"MDA","504":"MAR","508":"MOZ","516":"NAM","528":"NLD","554":"NZL","558":"NIC","566":"NGA","578":"NOR","512":"OMN","586":"PAK","591":"PAN","600":"PRY","604":"PER","608":"PHL","616":"POL","620":"PRT","634":"QAT","642":"ROU","643":"RUS","646":"RWA","682":"SAU","686":"SEN","703":"SVK","705":"SVN","710":"ZAF","724":"ESP","144":"LKA","752":"SWE","756":"CHE","834":"TZA","764":"THA","780":"TTO","788":"TUN","792":"TUR","800":"UGA","804":"UKR","784":"ARE","826":"GBR","840":"USA","858":"URY","862":"VEN","704":"VNM","894":"ZMB","716":"ZWE","191":"HRV","268":"GEO","352":"ISL","807":"MKD","499":"MNE","688":"SRB"};
+var C2R={};REGIONS.forEach(function(r){r.countries.forEach(function(c){C2R[c]=r.id;});});
+var RF={
+  americas:{
+    ECAR:'Nissan Versa / Hyundai Venue / Kia Rio / Chevrolet Spark',CCAR:'VW Jetta / Toyota Corolla / Hyundai Venue / Kia Soul / Nissan Versa Plus',ICAR:'Nissan Sentra / Hyundai Elantra',FCAR:'Toyota Camry / Nissan Altima',
+    CSUV:'VW Taos / Nissan Kicks / Chevrolet Trax',IFAR:'Toyota RAV4 / Hyundai Tucson / Jeep Compass',SFAR:'Chevrolet Blazer / Ford Explorer',
+    JCAR:'Jeep Wrangler / Toyota 4Runner',PPAR:'Toyota Tacoma / Ram 1500 Classic / Ford F-150 / Chevrolet Colorado / GMC Canyon',
+    LCAR:'BMW 2 Series / Mercedes CLA',PCAR:'BMW 3 Series / Mercedes C-Class',FCAR_E:'BMW 5 Series / Mercedes E-Class',XDAR:'BMW 7 Series',
+    XCAR:'MINI Countryman / Audi Q3',AXAR:'BMW X1 / Audi Q3',BXAR:'BMW X3 / Audi Q5',XFAR:'BMW X5 / Audi Q7 / Mercedes GLE',GCAR:'Mercedes G-Class',
+    MVAR:'GMC Acadia / Chevrolet Traverse / Toyota Highlander / Kia Telluride / Hyundai Palisade',FVAN:'Chrysler Pacifica / Dodge Grand Caravan',FSAR:'Chevrolet Tahoe / GMC Yukon / Ford Expedition / Toyota Sequoia',
+    FXAR:'BMW X7 / Mercedes GLS',GSAR:'Chevrolet Suburban / GMC Yukon XL / Ford Expedition Max',XFAZ:'Cadillac Escalade',COAR:'Ford Mustang GT Convertible / Chevrolet Camaro Convertible / Dodge Charger',STAR:'Chevrolet Corvette / BMW Z4 / Porsche 718 Boxster'
+  },
+  europe:{
+    ECAR:'VW Polo / Opel Corsa / Peugeot 208 / Citroen C3 / Renault Clio / Fiat 500 / Toyota Yaris',CCAR:'VW Golf / Opel Astra / Peugeot 308 / Toyota Corolla / Ford Focus / Alfa Romeo Giulietta',ICAR:'Skoda Octavia / Hyundai i30 / Mazda3',FCAR:'VW Passat / Skoda Superb / Ford Mondeo / Peugeot 508',
+    CSUV:'VW T-Roc / Peugeot 2008 / Opel Mokka / Citroen C3 Aircross / Nissan Qashqai / Ford Puma',IFAR:'VW Tiguan / Peugeot 3008 / Opel Grandland / Jeep Compass / Toyota RAV4 / Hyundai Tucson',SFAR:'VW Touareg / Jeep Grand Cherokee / Peugeot 5008 / Skoda Kodiaq / Ford Explorer',
+    JCAR:'Jeep Wrangler / Land Rover Defender / Jeep Compass 4xe / Dacia Duster 4x4',PPAR:'VW Amarok / Ford Ranger / Mitsubishi L200 / Fiat Fullback',
+    LCAR:'BMW 2 Series / Mercedes CLA / Audi A3',PCAR:'BMW 3 Series / Mercedes C-Class / Audi A4 / Volvo S60',FCAR_E:'BMW 5 Series / Mercedes E-Class / Audi A6 / Volvo S90',XDAR:'BMW 7 Series / Mercedes S-Class / Audi A8',
+    XCAR:'MINI Countryman / Audi Q3 / Mercedes GLA',AXAR:'BMW X1 / Audi Q3 / Mercedes GLA',BXAR:'BMW X3 / Audi Q5 / Mercedes GLC / Volvo XC60',XFAR:'BMW X5 / Audi Q7 / Mercedes GLE / Volvo XC90 / Range Rover Velar',GCAR:'Mercedes G-Class',
+    MVAR:'Citroen SpaceTourer / Peugeot Traveller / VW Sharan / Ford Galaxy / SEAT Alhambra',FVAN:'VW Multivan / Mercedes V-Class / Peugeot Traveller / Citroen SpaceTourer / Ford Custom',FSAR:'Ford Expedition / Chevrolet Tahoe',
+    FXAR:'BMW X7 / Mercedes GLS',GSAR:'Chevrolet Suburban',XFAZ:'Cadillac Escalade',COAR:'BMW 4 Series Conv. / Ford Mustang Conv. / Audi A5 Conv.',STAR:'BMW Z4 / Audi TT / Porsche 718 / Mazda MX-5'
+  },
+  mideast:{
+    ECAR:'Toyota Yaris / Nissan Sunny / Hyundai Accent',CCAR:'Toyota Corolla / Honda Civic / Nissan Sentra',ICAR:'Hyundai Elantra / Nissan Altima / Kia Cerato',FCAR:'Toyota Camry / Nissan Maxima / Honda Accord',
+    CSUV:'Hyundai Creta / Nissan Kicks / Toyota Yaris Cross',IFAR:'Toyota RAV4 / Hyundai Tucson / Nissan X-Trail',SFAR:'Nissan Patrol / Toyota Fortuner / Mitsubishi Pajero / Jeep Grand Cherokee',
+    JCAR:'Toyota Land Cruiser Prado 4WD / Jeep Wrangler / Nissan Patrol 4WD',PPAR:'Toyota Hilux / Nissan Navara / Ford Ranger',
+    LCAR:'BMW 3 Series / Mercedes C-Class',PCAR:'BMW 5 Series / Mercedes E-Class / Audi A6',FCAR_E:'BMW 7 Series / Mercedes S-Class',XDAR:'BMW 7 Series / Mercedes S-Class',
+    XCAR:'BMW X1 / Audi Q3 / Mercedes GLA',AXAR:'BMW X1 / Audi Q3',BXAR:'BMW X3 / Audi Q5 / Mercedes GLC',XFAR:'BMW X5 / Cadillac XT6 / Mercedes GLE / Audi Q7',GCAR:'Mercedes G-Class (guaranteed)',
+    MVAR:'Toyota Highlander / Chevrolet Traverse / Kia Telluride',FVAN:'Toyota Previa / GMC Savana',FSAR:'Chevrolet Tahoe / GMC Yukon / Toyota Land Cruiser 200 / Nissan Patrol LE',
+    FXAR:'BMW X7 / Mercedes GLS / Lexus LX',GSAR:'Chevrolet Suburban / GMC Yukon XL / Ford Expedition Max',XFAZ:'Cadillac Escalade / Mercedes GLS 600 Maybach',COAR:'Chevrolet Camaro Conv. / Ford Mustang Conv.',STAR:'Porsche Boxster / BMW Z4'
+  },
+  africa:{
+    ECAR:'Toyota Yaris / VW Polo / Hyundai i20',CCAR:'Toyota Corolla / VW Golf / Hyundai Elantra',ICAR:'Toyota Corolla / Ford Fiesta / Kia Cerato',FCAR:'Toyota Camry / VW Passat / Ford Fusion',
+    CSUV:'Toyota Rav4 / Ford EcoSport / Nissan Qashqai',IFAR:'Toyota RAV4 / Hyundai Tucson / Mitsubishi Outlander',SFAR:'Toyota Fortuner / Mitsubishi Pajero Sport',
+    JCAR:'Toyota Land Cruiser Prado / Jeep Wrangler / Ford Ranger 4x4',PPAR:'Toyota Hilux / Ford Ranger / Nissan Navara',
+    LCAR:'BMW 3 Series / Mercedes C-Class',PCAR:'BMW 3 Series / Mercedes C-Class',FCAR_E:'BMW 5 Series / Mercedes E-Class',XDAR:'BMW 7 Series / Mercedes S-Class',
+    XCAR:'BMW X1 / MINI Countryman',AXAR:'BMW X1',BXAR:'BMW X3 / Audi Q5',XFAR:'BMW X5 / Mercedes GLE',GCAR:'Mercedes G-Class',
+    MVAR:'Toyota Prado 7-seat / Chevrolet Traverse',FVAN:'Toyota Hi-Ace / VW Caravelle',FSAR:'Toyota Land Cruiser V8 / Chevrolet Tahoe',
+    FXAR:'BMW X7 / Mercedes GLS',GSAR:'Chevrolet Suburban / Toyota Land Cruiser',XFAZ:'Cadillac Escalade',COAR:'Ford Mustang Conv.',STAR:'BMW Z4'
+  },
+  asia:{
+    ECAR:'Toyota Yaris / Honda Jazz / Daihatsu Mira',CCAR:'Toyota Corolla / Honda Civic / Hyundai Elantra / Mazda3',ICAR:'Mitsubishi Lancer / Kia Cerato / Nissan Sylphy',FCAR:'Toyota Camry / Honda Accord / Mazda6',
+    CSUV:'Toyota C-HR / Nissan Qashqai / Hyundai Kona / Honda Vezel',IFAR:'Toyota RAV4 / Honda CR-V / Mitsubishi Outlander / Nissan X-Trail',SFAR:'Toyota Kluger / Hyundai Santa Fe / Kia Sorento',
+    JCAR:'Toyota Land Cruiser / Suzuki Jimny / Mitsubishi Pajero',PPAR:'Toyota Hilux / Mitsubishi Triton / Isuzu D-Max',
+    LCAR:'BMW 3 Series / Mercedes C-Class',PCAR:'BMW 3 Series / Mercedes C-Class / Lexus IS',FCAR_E:'BMW 5 Series / Mercedes E-Class / Lexus ES',XDAR:'BMW 7 Series / Mercedes S-Class / Lexus LS',
+    XCAR:'MINI Countryman / BMW X1 / Audi Q3',AXAR:'BMW X1 / Audi Q3',BXAR:'BMW X3 / Audi Q5 / Lexus NX',XFAR:'BMW X5 / Audi Q7 / Lexus RX',GCAR:'Mercedes G-Class',
+    MVAR:'Toyota Alphard / Kia Carnival / Honda Odyssey',FVAN:'Toyota Previa / Honda Elysion / VW Multivan',FSAR:'Toyota Land Cruiser 200 / Nissan Patrol',
+    FXAR:'BMW X7 / Lexus LX / Mercedes GLS',GSAR:'Toyota Land Cruiser / Chevrolet Suburban',XFAZ:'Lexus LX / Cadillac Escalade',COAR:'BMW 4 Series Conv. / Mazda MX-5 RF',STAR:'BMW Z4 / Mazda MX-5 / Porsche 718'
+  }
+};
+var CATS=[
+  // SEDANS
+  {id:1,sec:"Sedans",tags:["sedan"],hot:false,minAge:21,sixtType:"sedan",pax:5,doors:4,bags:"1 suitcase + 2 bags",code:"ECAR",bg:"#555",
+   en:{name:"Economy Sedan",cat:"Compact · Economy",vary:"Nissan Versa, VW Polo, Peugeot 208, Toyota Yaris, Hyundai Venue — varies by country"},
+   es:{name:"Sedán Económico",cat:"Compacto · Económico",vary:"Nissan Versa, VW Polo, Toyota Yaris, Kia Rio — varía por país"},
+   img1:"https://img.sixt.com/1200/3e476e7f-3fc1-491e-883c-33fd1e2ce324.png",
+   img2:"https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/2025_Nissan_Versa_au_SIAM_2025.jpg/600px-2025_Nissan_Versa_au_SIAM_2025.jpg",sipp:"ECAR"},
+  {id:2,sec:"Sedans",tags:["sedan"],hot:false,minAge:21,sixtType:"sedan",pax:5,doors:4,bags:"2 bags",code:"CCAR",bg:"#555",
+   en:{name:"Compact Sedan",cat:"Compact · Standard",vary:"VW Golf, Toyota Corolla, Opel Astra, Peugeot 308, Hyundai Elantra — varies by country"},
+   es:{name:"Sedán Compacto",cat:"Compacto · Estándar",vary:"VW Jetta, VW Golf, Toyota Corolla, Ford Focus — varía por país"},
+   img1:"https://img.sixt.com/1200/ef36f165-9501-44c1-9291-0eee3ac65167.png",
+   img2:"https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/2025_Volkswagen_Jetta_SEL,_front_3.28.25.jpg/600px-2025_Volkswagen_Jetta_SEL,_front_3.28.25.jpg",sipp:"CCAR"},
+  {id:3,sec:"Sedans",tags:["sedan"],hot:false,minAge:21,sixtType:"sedan",pax:5,doors:4,bags:"2 bags",code:"ICAR",bg:"#555",
+   en:{name:"Intermediate Sedan",cat:"Midsize Sedan",vary:"Nissan Sentra, Hyundai Elantra, Skoda Octavia — varies by country"},
+   es:{name:"Sedán Intermedio",cat:"Sedán Mediano",vary:"Nissan Sentra, Hyundai Elantra, Skoda Octavia — varía por país"},
+   img1:"https://img.sixt.com/1200/a1ba17f0-d7a6-4c72-b368-efd563950d0b.png",
+   img2:"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Nissan_Sentra_B18_01.jpg/600px-Nissan_Sentra_B18_01.jpg",sipp:"ICAR"},
+  {id:4,sec:"Sedans",tags:["sedan"],hot:false,minAge:21,sixtType:"sedan",pax:5,doors:4,bags:"2 suitcases + 2 bags",code:"FCAR",bg:"#555",
+   en:{name:"Fullsize Sedan",cat:"Full-Size Sedan",vary:"Toyota Camry, VW Passat, Skoda Superb, Nissan Altima — varies by country"},
+   es:{name:"Sedán Grande",cat:"Sedán Tamaño Completo",vary:"Toyota Camry, VW Passat, Skoda Superb, Nissan Altima — varía por país"},
+   img1:"https://img.sixt.com/1200/dbfc3ee4-49f3-43fe-9412-136faab039fb.png",
+   img2:"https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/2025_Toyota_Camry_LE,_front_left.jpg/600px-2025_Toyota_Camry_LE,_front_left.jpg",sipp:"FCAR"},
+  // SUVs
+  {id:5,sec:"SUVs & Crossovers",tags:["suv"],hot:false,minAge:21,sixtType:"suv",pax:5,doors:4,bags:"2 bags",code:"CSUV",bg:"#1E6E2E",
+   en:{name:"Compact SUV",cat:"Compact Crossover",vary:"VW Taos, Nissan Kicks, Toyota C-HR, Ford Puma — varies by country"},
+   es:{name:"SUV Compacto",cat:"Crossover Compacto",vary:"VW Taos, Nissan Kicks, Toyota C-HR, Ford Puma — varía por país"},
+   img1:"https://img.sixt.com/1200/57ef4edf-50cf-42ab-895b-ebae6c318755.png",
+   img2:"https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/2025_Volkswagen_Taos_DSC_2865.jpg/600px-2025_Volkswagen_Taos_DSC_2865.jpg",sipp:"CSUV"},
+  {id:6,sec:"SUVs & Crossovers",tags:["suv"],hot:true,minAge:21,sixtType:"suv",pax:5,doors:4,bags:"2 suitcases + 2 bags",code:"IFAR",bg:"#1E6E2E",
+   en:{name:"Midsize SUV",cat:"Intermediate SUV",vary:"Toyota RAV4, VW Tiguan, Hyundai Tucson, Honda CR-V — varies by country"},
+   es:{name:"SUV Mediano",cat:"SUV Intermedio",vary:"Toyota RAV4, VW Tiguan, Hyundai Tucson, Honda CR-V — varía por país"},
+   img1:"https://img.sixt.com/1200/cd27782a-3794-4798-a2e2-48c1796a48a8.png",
+   img2:"https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/2025_Toyota_RAV4_au_SIAM_2025.jpg/600px-2025_Toyota_RAV4_au_SIAM_2025.jpg",sipp:"IFAR"},
+  {id:7,sec:"SUVs & Crossovers",tags:["suv"],hot:false,minAge:21,sixtType:"suv",pax:5,doors:4,bags:"2 suitcases + 3 bags",code:"SFAR",bg:"#1E6E2E",
+   en:{name:"Standard SUV",cat:"Full-Size Crossover",vary:"Chevrolet Blazer, Skoda Kodiaq, Ford Explorer — varies by country"},
+   es:{name:"SUV Estándar",cat:"Crossover Grande",vary:"Chevrolet Blazer, Skoda Kodiaq, Ford Explorer — varía por país"},
+   img1:"https://img.sixt.com/1200/1ff70b1a-124e-48b9-bf8f-e1f721d58ea7.png",
+   img2:"https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/2024_Chevrolet_Blazer_EV_LT,_front_right.jpg/600px-2024_Chevrolet_Blazer_EV_LT,_front_right.jpg",sipp:"SFAR"},
+  {id:8,sec:"SUVs & Crossovers",tags:["suv","adventure"],hot:false,minAge:21,sixtType:"suv",pax:5,doors:4,bags:"2 suitcases + 2 bags",code:"JCAR",bg:"#7A3B10",
+   en:{name:"Adventure SUV",cat:"Off-Road 4x4",vary:"Jeep Wrangler, Land Rover Defender, Toyota Land Cruiser Prado — varies by country"},
+   es:{name:"SUV Aventura",cat:"Todo Terreno 4x4",vary:"Jeep Wrangler, Land Rover Defender, Toyota Land Cruiser Prado — varía por país"},
+   img1:"https://img.sixt.com/1200/52acc047-e3f6-4106-8a3f-87b79f6e516b.png",
+   img2:"https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/2024_Jeep_Wrangler_4xe_in_Hydro_Blue_Pearl,_front_8.11.23.jpg/600px-2024_Jeep_Wrangler_4xe_in_Hydro_Blue_Pearl,_front_8.11.23.jpg",sipp:"JCAR"},
+  {id:9,sec:"SUVs & Crossovers",tags:["pickup"],hot:false,minAge:21,sixtType:"pickup",pax:5,doors:4,bags:"2 suitcases + 2 bags",code:"PPAR",bg:"#7A3B10",
+   en:{name:"Pickup Truck",cat:"Standard Pickup",vary:"Toyota Tacoma, Ford Ranger, VW Amarok, Ram 1500, Toyota Hilux — varies by country"},
+   es:{name:"Camioneta Pick-up",cat:"Pickup Estándar",vary:"Toyota Tacoma, Ford Ranger, VW Amarok, Ram 1500, Toyota Hilux — varía por país"},
+   img1:"https://img.sixt.com/1200/3e1675a7-cd1b-4d63-bcc9-b8b5a956fff7.png",
+   img2:"https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Toyota_Tacoma_Las_Vegas_2025.jpg/600px-Toyota_Tacoma_Las_Vegas_2025.jpg",sipp:"PPAR"},
+  // ELITE & PREMIUM
+  {id:10,sec:"Elite & Premium",tags:["elite"],hot:false,minAge:25,sixtType:"elite",pax:5,doors:4,bags:"2 bags",code:"XCAR",bg:"#8B6914",
+   en:{name:"Elite Compact",cat:"Premium Compact",vary:"MINI Countryman, Audi Q3, Mercedes GLA, BMW X1 — varies by country"},
+   es:{name:"Compacto Elite",cat:"Compacto Premium",vary:"MINI Countryman, Audi Q3, Mercedes GLA, BMW X1 — varía por país"},
+   img1:"https://img.sixt.com/1200/7fb6c46e-0e9c-45c7-895a-296f629e931c.png",
+   img2:"https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/2024_MINI_Countryman_S_in_Island_Blue_Metallic,_front_3.5.24.jpg/600px-2024_MINI_Countryman_S_in_Island_Blue_Metallic,_front_3.5.24.jpg",sipp:"XCAR"},
+  {id:11,sec:"Elite & Premium",tags:["elite"],hot:false,minAge:25,sixtType:"elite",pax:5,doors:4,bags:"2 suitcases + 2 bags",code:"LCAR",bg:"#8B6914",
+   en:{name:"Elite Compact Sedan",cat:"Luxury Compact",vary:"BMW 2 Series, Mercedes CLA, Audi A3 — varies by country"},
+   es:{name:"Sedán Elite Compacto",cat:"Compacto de Lujo",vary:"BMW Serie 2, Mercedes CLA, Audi A3 — varía por país"},
+   img1:"https://img.sixt.com/1200/a44922bb-e455-4efa-b0ce-47a168af59ba.png",
+   img2:"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/2022_BMW_228i_Gran_Coupe_in_Alpine_White,_front_8.16.22.jpg/600px-2022_BMW_228i_Gran_Coupe_in_Alpine_White,_front_8.16.22.jpg",sipp:"LCAR"},
+  {id:12,sec:"Elite & Premium",tags:["elite"],hot:true,minAge:25,sixtType:"elite",pax:5,doors:4,bags:"2 suitcases + 2 bags",code:"PCAR",bg:"#8B6914",
+   en:{name:"BMW 3 / Mercedes C",cat:"Elite Standard Sedan",vary:"BMW 3 Series, Mercedes C-Class, Audi A4, Volvo S60 — varies by country"},
+   es:{name:"BMW 3 / Mercedes C",cat:"Sedán Elite Estándar",vary:"BMW Serie 3, Mercedes Clase C, Audi A4, Volvo S60 — varía por país"},
+   img1:"https://img.sixt.com/1200/483d7c40-c5d4-444d-844b-d237b6dad368.png",
+   img2:"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/BMW_3-Series_(G20,_front).jpg/600px-BMW_3-Series_(G20,_front).jpg",sipp:"PCAR"},
+  {id:13,sec:"Elite & Premium",tags:["elite"],hot:false,minAge:25,sixtType:"elite",pax:5,doors:4,bags:"2 suitcases + 2 bags",code:"FCAR",bg:"#8B6914",
+   en:{name:"BMW 5 / Mercedes E",cat:"Elite Fullsize Sedan",vary:"BMW 5 Series, Mercedes E-Class, Audi A6, Volvo S90 — varies by country"},
+   es:{name:"BMW 5 / Mercedes E",cat:"Sedán Elite Grande",vary:"BMW Serie 5, Mercedes Clase E, Audi A6, Volvo S90 — varía por país"},
+   img1:"https://img.sixt.com/1200/aa88b668-edf1-4c6b-a945-9ea17a41b1bd.png",
+   img2:"https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/2024_BMW_530i_in_Mineral_White,_front_4.29.24.jpg/600px-2024_BMW_530i_in_Mineral_White,_front_4.29.24.jpg",sipp:"FCAR_E"},
+  {id:14,sec:"Elite & Premium",tags:["elite"],hot:false,minAge:25,sixtType:"elite",pax:5,doors:4,bags:"2 suitcases + 2 bags",code:"XDAR",bg:"#8B6914",
+   en:{name:"BMW 7 / Mercedes S",cat:"Luxury Elite Sedan",vary:"BMW 7 Series, Mercedes S-Class, Audi A8, Lexus LS — varies by country"},
+   es:{name:"BMW 7 / Mercedes S",cat:"Sedán de Lujo Elite",vary:"BMW Serie 7, Mercedes Clase S, Audi A8, Lexus LS — varía por país"},
+   img1:"https://img.sixt.com/1200/929fc552-2ca4-436f-98b8-979105f87555.png",
+   img2:"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/2021_BMW_750i_xDrive_in_Carbon_Black_Metallic,_front_8.15.21.jpg/600px-2021_BMW_750i_xDrive_in_Carbon_Black_Metallic,_front_8.15.21.jpg",sipp:"XDAR"},
+  {id:15,sec:"Elite & Premium",tags:["elite"],hot:false,minAge:25,sixtType:"elite",pax:5,doors:4,bags:"2 bags",code:"AXAR",bg:"#8B6914",
+   en:{name:"BMW X1 / Audi Q3",cat:"Compact Elite SUV",vary:"BMW X1, Audi Q3, Mercedes GLA, Lexus NX — varies by country"},
+   es:{name:"BMW X1 / Audi Q3",cat:"SUV Elite Compacto",vary:"BMW X1, Audi Q3, Mercedes GLA, Lexus NX — varía por país"},
+   img1:"https://img.sixt.com/1200/51f908cc-81ff-4df4-ae29-938c10921342.png",
+   img2:"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/BMW_X1_U11_sDrive18d_2022.jpg/600px-BMW_X1_U11_sDrive18d_2022.jpg",sipp:"AXAR"},
+  {id:16,sec:"Elite & Premium",tags:["elite"],hot:false,minAge:25,sixtType:"elite",pax:5,doors:4,bags:"2 suitcases + 2 bags",code:"BXAR",bg:"#8B6914",
+   en:{name:"BMW X3 / Audi Q5",cat:"Midsize Elite SUV",vary:"BMW X3, Audi Q5, Mercedes GLC, Volvo XC60 — varies by country"},
+   es:{name:"BMW X3 / Audi Q5",cat:"SUV Elite Mediano",vary:"BMW X3, Audi Q5, Mercedes GLC, Volvo XC60 — varía por país"},
+   img1:"https://img.sixt.com/1200/829bae36-a1db-4155-9ae2-e63ade9f4c9e.png",
+   img2:"https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/2022_BMW_X3_xDrive30i_(facelift),_front_6.18.22.jpg/600px-2022_BMW_X3_xDrive30i_(facelift),_front_6.18.22.jpg",sipp:"BXAR"},
+  {id:17,sec:"Elite & Premium",tags:["elite"],hot:false,minAge:25,sixtType:"elite",pax:5,doors:4,bags:"2 suitcases + 3 bags",code:"XFAR",bg:"#8B6914",
+   en:{name:"BMW X5 / Audi Q7",cat:"Premium Elite SUV",vary:"BMW X5, Audi Q7, Mercedes GLE, Range Rover Velar, Volvo XC90 — varies by country"},
+   es:{name:"BMW X5 / Audi Q7",cat:"SUV Premium Elite",vary:"BMW X5, Audi Q7, Mercedes GLE, Range Rover Velar, Volvo XC90 — varía por país"},
+   img1:"https://img.sixt.com/1200/cb0f2bfb-041b-44cb-8c8b-98e52031fda3.png",
+   img2:"https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/2024_BMW_X5.jpg/600px-2024_BMW_X5.jpg",sipp:"XFAR"},
+  {id:18,sec:"Elite & Premium",tags:["elite"],hot:false,minAge:25,sixtType:"elite",pax:5,doors:4,bags:"2 suitcases + 2 bags",code:"GCAR",bg:"#1A1A1A",
+   en:{name:"Mercedes G-Class",cat:"Premium Elite SUV (Guaranteed)",vary:"Mercedes G-Class — where available · varies by country"},
+   es:{name:"Mercedes Clase G",cat:"SUV Premium Elite (Garantizado)",vary:"Mercedes Clase G — donde disponible · varía por país"},
+   img1:"https://img.sixt.com/1200/ce433e3d-0195-47f7-8b90-830604c03009.png",
+   img2:"https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/2019_Mercedes-Benz_G_350_d_in_Selenite_Grey%2C_front_8.15.21.jpg/600px-2019_Mercedes-Benz_G_350_d_in_Selenite_Grey%2C_front_8.15.21.jpg",sipp:"GCAR"},
+  // 7-PASSENGER
+  {id:19,sec:"7-Passenger",tags:["7pax"],hot:false,minAge:21,sixtType:"family",pax:7,doors:4,bags:"2 bags",code:"MVAR",bg:"#1E6E2E",
+   en:{name:"7-Seat SUV",cat:"Midsize 7-Seat",vary:"GMC Acadia, Kia Sorento 7, Ford Explorer, VW Sharan — varies by country"},
+   es:{name:"SUV 7 Plazas",cat:"Mediano 7 Plazas",vary:"GMC Acadia, Kia Sorento 7, Ford Explorer, VW Sharan — varía por país"},
+   img1:"https://img.sixt.com/1200/cafa68ca-c96c-48eb-9751-b4618b9cdaaa.png",
+   img2:"https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/2024_GMC_Acadia_AT4_in_Sterling_Metallic,_front_2.1.24.jpg/600px-2024_GMC_Acadia_AT4_in_Sterling_Metallic,_front_2.1.24.jpg",sipp:"MVAR"},
+  {id:20,sec:"7-Passenger",tags:["minivan","7pax"],hot:false,minAge:21,sixtType:"family",pax:7,doors:4,bags:"2 suitcases + 2 bags",code:"FVAN",bg:"#3A3A8C",
+   en:{name:"Minivan",cat:"Passenger Minivan",vary:"Chrysler Pacifica, VW Multivan, Mercedes V-Class, Toyota Previa — varies by country"},
+   es:{name:"Minivan",cat:"Minivan de Pasajeros",vary:"Chrysler Pacifica, VW Multivan, Mercedes V-Class, Toyota Previa — varía por país"},
+   img1:"https://img.sixt.com/1200/1e2ff9a5-e435-4bc0-b55e-560cf7cb80cb.png",
+   img2:"https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/2021_Chrysler_Pacifica_Touring_in_Billet_Silver_Metallic,_front_9.12.20.jpg/600px-2021_Chrysler_Pacifica_Touring_in_Billet_Silver_Metallic,_front_9.12.20.jpg",sipp:"FVAN"},
+  {id:21,sec:"7-Passenger",tags:["7pax"],hot:false,minAge:21,sixtType:"family",pax:7,doors:4,bags:"3 bags",code:"FSAR",bg:"#1E6E2E",
+   en:{name:"Large SUV",cat:"Full-Size 7-Seat SUV",vary:"Chevrolet Tahoe, Ford Expedition, Toyota Land Cruiser, GMC Yukon — varies by country"},
+   es:{name:"SUV Grande",cat:"SUV Grande 7 Plazas",vary:"Chevrolet Tahoe, Ford Expedition, Toyota Land Cruiser, GMC Yukon — varía por país"},
+   img1:"https://img.sixt.com/1200/94b09f30-04f2-4833-b07d-2e0a3ee77b8a.png",
+   img2:"https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/2024_Chevrolet_Tahoe_5.3_Z71_V8,_front_right,_06-16-2024.jpg/600px-2024_Chevrolet_Tahoe_5.3_Z71_V8,_front_right,_06-16-2024.jpg",sipp:"FSAR"},
+  {id:22,sec:"7-Passenger",tags:["elite","7pax"],hot:true,minAge:25,sixtType:"family",pax:7,doors:4,bags:"2 suitcases + 3 bags",code:"FXAR",bg:"#8B6914",
+   en:{name:"BMW X7 / Mercedes GLS",cat:"Elite 7-Seat SUV",vary:"BMW X7, Mercedes GLS, Lexus LX, Cadillac Escalade — varies by country"},
+   es:{name:"BMW X7 / Mercedes GLS",cat:"SUV Elite 7 Plazas",vary:"BMW X7, Mercedes GLS, Lexus LX, Cadillac Escalade — varía por país"},
+   img1:"https://img.sixt.com/1200/d429a5e9-f7a5-45af-9dae-d55d854476ef.png",
+   img2:"https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/BMW_X7_xDrive40i_(G07,_2021)_(52858944085).jpg/600px-BMW_X7_xDrive40i_(G07,_2021)_(52858944085).jpg",sipp:"FXAR"},
+  {id:23,sec:"7-Passenger",tags:["7pax"],hot:false,minAge:25,sixtType:"family",pax:7,doors:4,bags:"4 suitcases",code:"GSAR",bg:"#1E6E2E",
+   en:{name:"Premium Large SUV",cat:"Full-Size Premium 7-Seat",vary:"Chevrolet Suburban, GMC Yukon XL, Toyota Land Cruiser V8 — varies by country"},
+   es:{name:"SUV Premium Grande",cat:"SUV Grande Premium 7 Plazas",vary:"Chevrolet Suburban, GMC Yukon XL, Toyota Land Cruiser V8 — varía por país"},
+   img1:"https://img.sixt.com/1200/d49ba416-0ae6-4a15-85af-fc6e04609c0e.png",
+   img2:"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/2024_Chevrolet_Suburban_5.3_Z71_V8,_front_left,_06-21-2024.jpg/600px-2024_Chevrolet_Suburban_5.3_Z71_V8,_front_left,_06-21-2024.jpg",sipp:"GSAR"},
+  {id:24,sec:"7-Passenger",tags:["elite","7pax"],hot:false,minAge:25,sixtType:"family",pax:7,doors:4,bags:"3 suitcases",code:"XFAZ",bg:"#8B6914",
+   en:{name:"Cadillac Escalade",cat:"Luxury Full-Size SUV",vary:"Cadillac Escalade, Mercedes GLS 600, Lexus LX — where available · varies by country"},
+   es:{name:"Cadillac Escalade",cat:"SUV de Lujo Grande",vary:"Cadillac Escalade, Mercedes GLS 600, Lexus LX — donde disponible · varía por país"},
+   img1:"https://img.sixt.com/1200/af1a39f6-d34b-4066-937c-dcb9dd0c7ea3.png",
+   img2:"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/2021_Cadillac_Escalade_in_Black_Raven,_front_10.19.21.jpg/600px-2021_Cadillac_Escalade_in_Black_Raven,_front_10.19.21.jpg",sipp:"XFAZ"},
+  // CONVERTIBLES & SPORTS
+  {id:25,sec:"Convertibles & Sports",tags:["conv"],hot:false,minAge:25,sixtType:"conv",pax:4,doors:2,bags:"1 suitcase + 2 bags",code:"COAR",bg:"#8C1C2E",
+   en:{name:"Convertible",cat:"Fullsize Convertible",vary:"Ford Mustang Conv., BMW 4 Series Conv., Audi A5 Conv. — varies by country"},
+   es:{name:"Convertible",cat:"Convertible Grande",vary:"Ford Mustang Conv., BMW Serie 4 Conv., Audi A5 Conv. — varía por país"},
+   img1:"https://img.sixt.com/1200/3f25083c-1740-4e1f-a64f-70f65cf2d41c.png",
+   img2:"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/2024_Ford_Mustang_EcoBoost_Convertible_in_Grabber_Blue,_front_10.17.23.jpg/600px-2024_Ford_Mustang_EcoBoost_Convertible_in_Grabber_Blue,_front_10.17.23.jpg",sipp:"COAR"},
+  {id:26,sec:"Convertibles & Sports",tags:["conv","elite"],hot:false,minAge:25,sixtType:"conv",pax:2,doors:2,bags:"1 suitcase",code:"STAR",bg:"#8C1C2E",
+   en:{name:"Sports Roadster",cat:"2-Seat Roadster",vary:"BMW Z4, Audi TT, Porsche 718, Mazda MX-5 — varies by country"},
+   es:{name:"Roadster Deportivo",cat:"Roadster 2 Plazas",vary:"BMW Z4, Audi TT, Porsche 718, Mazda MX-5 — varía por país"},
+   img1:"https://img.sixt.com/1200/b9d85010-f56e-4d3e-a116-1903be1c1f8b.png",
+   img2:"https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/BMW_Z4_G29_M40i_-_Flickr_-_Alexandre_Previ%C3%B4t_%282%29.jpg/600px-BMW_Z4_G29_M40i_-_Flickr_-_Alexandre_Previ%C3%B4t_%282%29.jpg",sipp:"STAR"}
+];
+var SECS_LABEL={en:{"Sedans":"Sedans","SUVs & Crossovers":"SUVs & Crossovers","Elite & Premium":"Elite & Premium","7-Passenger":"7-Passenger Vehicles","Convertibles & Sports":"Convertibles & Sports"},es:{"Sedans":"Sedanes","SUVs & Crossovers":"SUVs & Crossovers","Elite & Premium":"Elite & Premium","7-Passenger":"Vehículos 7 Pasajeros","Convertibles & Sports":"Convertibles & Deportivos"}};
+var FILTERS={
+  types:{
+    en:[["all","All Types"],["sedan","Sedan"],["suv","SUV"],["family","Family Car"],["elite","Elite & Luxury"],["conv","Convertible/Sports"],["pickup","Pickup"]],
+    es:[["all","Todos"],["sedan","Sedán"],["suv","SUV"],["family","Auto Familiar"],["elite","Elite y Lujo"],["conv","Convertible/Deportivo"],["pickup","Pick-up"]]
+  },
+  seats:[2,4,5,7,8],
+  ages:[18,21,25]
+}
+var INC={en:[{i:"🛡️",t:"Full Insurance"},{i:"📋",t:"$0 Deductible"},{i:"📍",t:"GPS Included"},{i:"👤",t:"+1 Driver Free"},{i:"🚨",t:"24/7 Roadside"},{i:"🛣️",t:"Unlimited Miles"},{i:"📅",t:"Free Cancel"},{i:"🌍",t:"105+ Countries"}],es:[{i:"🛡️",t:"Seguro Completo"},{i:"📋",t:"$0 Deducible"},{i:"📍",t:"GPS Incluido"},{i:"👤",t:"+1 Conductor"},{i:"🚨",t:"Asistencia 24/7"},{i:"🛣️",t:"Millaje Ilimitado"},{i:"📅",t:"Cancelación Gratis"},{i:"🌍",t:"105+ Países"}]};
+var CINC={en:["🛡️ Insurance","📍 GPS","👤 +Driver","🚨 24/7","🛣️ Unlimited","🌍 Worldwide"],es:["🛡️ Seguro","📍 GPS","👤 +Conductor","🚨 24/7","🛣️ Ilimitado","🌍 Mundial"]};
+var TRUST={en:["💬 Instant quote on WhatsApp","🛡️ $0 deductible","📍 GPS included","👤 +1 driver free","🚨 24/7 roadside","🛣️ Unlimited miles","📅 Free cancellation","🌍 105+ countries"],es:["💬 Cotización instantánea","🛡️ $0 deducible","📍 GPS incluido","👤 +1 conductor gratis","🚨 Asistencia 24/7","🛣️ Millaje ilimitado","📅 Cancelación gratis","🌍 105+ países"]};
+
+var AIRPORTS={
+  'MIA':'US','MCO':'US','JFK':'US','LAX':'US','LAS':'US','ORD':'US','DFW':'US','SFO':'US','BOS':'US','SEA':'US','ATL':'US','DEN':'US','PHX':'US',
+  'CUN':'MX','MEX':'MX','GDL':'MX','MTY':'MX',
+  'BOG':'CO','MDE':'CO','CLO':'CO',
+  'GRU':'BR','GIG':'BR','BSB':'BR',
+  'SCL':'CL','LIM':'PE','EZE':'AR','UIO':'EC','CCS':'VE',
+  'MAD':'ES','BCN':'ES',
+  'LHR':'GB','LGW':'GB','MAN':'GB',
+  'CDG':'FR','NCE':'FR','LYS':'FR',
+  'FRA':'DE','MUC':'DE','BER':'DE','DUS':'DE','HAM':'DE',
+  'FCO':'IT','MXP':'IT','VCE':'IT','NAP':'IT',
+  'AMS':'NL','BRU':'BE','ZRH':'CH','VIE':'AT',
+  'CPH':'DK','ARN':'SE','OSL':'NO','HEL':'FI',
+  'DXB':'AE','AUH':'AE','SHJ':'AE',
+  'RUH':'SA','JED':'SA','DMM':'SA',
+  'DOH':'QA','BAH':'BH','KWI':'KW','MCT':'OM',
+  'TLV':'IL','AMM':'JO','BEY':'LB',
+  'NBO':'KE','JNB':'ZA','CPT':'ZA','CMN':'MA','CAI':'EG','LOS':'NG','ADD':'ET',
+  'NRT':'JP','HND':'JP','KIX':'JP',
+  'ICN':'KR','GMP':'KR',
+  'PEK':'CN','PVG':'CN','CAN':'CN','SZX':'CN',
+  'HKG':'HK',
+  'SIN':'SG',
+  'BKK':'TH','HKT':'TH','CNX':'TH',
+  'KUL':'MY','SIN':'SG','CGK':'ID','MNL':'PH',
+  'SYD':'AU','MEL':'AU','BNE':'AU','PER':'AU',
+  'AKL':'NZ',
+  'DEL':'IN','BOM':'IN','BLR':'IN','MAA':'IN',
+  'DUB':'IE','LIS':'PT','ATH':'GR','IST':'TR','WAW':'PL','PRG':'CZ',
+
+  'GUM':'GUM','CUW':'CUW','SXM':'SXM','BLM':'BLM',
+  'NCE':'FR','MRS':'FR','TLS':'FR','BOD':'FR',
+  'BIO':'ES','AGP':'ES','SVQ':'ES','PMI':'ES','VLC':'ES',
+  'CIA':'IT','PSA':'IT','BLQ':'IT','TRN':'IT',
+  'STR':'DE','CGN':'DE','NUE':'DE','TXL':'DE',
+  'GVA':'CH','BSL':'CH',
+  'LBA':'GB','EDI':'GB','GLA':'GB','BHX':'GB',
+  'ORY':'FR',
+  'PTY':'PAN','BOG':'COL','MDE':'COL','CLO':'COL',
+  'AMS':'NLD','BRU':'BEL','VIE':'AUT','CPH':'DNK',
+  'OSL':'NOR','ARN':'SWE','HEL':'FIN','DUB':'IRL',
+  'ATH':'GRC','WAW':'POL','PRG':'CZE','BUD':'HUN',
+  'OTP':'ROU','SOF':'BGR','BEG':'SRB','ZAG':'HRV',
+  'LJU':'SVN','BTS':'SVK','TIA':'ALB',
+  'TLL':'EST','RIX':'LVA','VNO':'LTU',
+  'LUX':'LUX','VLL':'MLT',
+  'REK':'ISL','KIV':'MDA','TBS':'GEO',
+  'EVN':'ARM','GYD':'AZE','NQZ':'KAZ','TAS':'UZB',
+  'ASB':'TKM'};
+var WA_SVG='<svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.12.553 4.109 1.522 5.838L.044 23.956l6.284-1.649C8.01 23.39 9.97 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.652-.51-5.17-1.397l-.371-.22-3.851 1.01 1.028-3.752-.242-.386C2.497 15.77 2 13.947 2 12 2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>';
+function setLang(l){
+  lang=l;document.documentElement.lang=l;
+  document.querySelectorAll('.lang-btn').forEach(function(b){b.classList.toggle('on',b.textContent===l.toUpperCase());b.setAttribute('aria-pressed',b.textContent===l.toUpperCase()?'true':'false');});
+  document.querySelectorAll('.t[data-'+l+']').forEach(function(el){var v=el.getAttribute('data-'+l);if(v!==null){if(v.indexOf('<')!==-1)el.innerHTML=v;else el.textContent=v;}});
+  var inp=document.getElementById('dest-input');if(inp){var ph=inp.getAttribute('data-'+l+'-placeholder');if(ph)inp.placeholder=ph;}
+  renderTrust();renderInc();renderFilts();renderRegionPills();renderFleet();renderCountries();
+}
+function setTab(t){
+  document.getElementById('sf').classList.toggle('hidden',t!=='fleet');
+  document.getElementById('sm').classList.toggle('hidden',t==='fleet');
+  document.getElementById('tbf').classList.toggle('on',t==='fleet');
+  document.getElementById('tbm').classList.toggle('on',t!=='fleet');
+  document.getElementById('tbf').setAttribute('aria-selected',t==='fleet'?'true':'false');
+  document.getElementById('tbm').setAttribute('aria-selected',t!=='fleet'?'true':'false');
+  if(t==='map'&&!mapDone){mapDone=true;renderMap();}
+}
+function renderTrust(){var el=document.getElementById('trust-bar');if(!el)return;el.innerHTML=TRUST[lang].map(function(s){var p=s.split(' ');var i=p.shift();return'<div class="trust-item" role="listitem"><span class="trust-i">'+i+'</span><span class="trust-t">'+p.join(' ')+'</span></div>';}).join('');}
+function renderInc(){var d=INC[lang];var e1=document.getElementById('inc-chips');if(e1)e1.innerHTML=d.map(function(x){return'<div class="inc-chip"><span>'+x.i+'</span><span>'+x.t+'</span></div>';}).join('');var e2=document.getElementById('footer-inc');if(e2)e2.innerHTML=d.map(function(x){return'<div class="f-inc-i"><span>'+x.i+'</span><span>'+x.t+'</span></div>';}).join('');}
+
+/* ─── 3-DIMENSIONAL SIXT FILTERS ─── */
+function renderFilts(){
+  var el=document.getElementById('fbtns');if(!el)return;
+  var types=FILTERS.types[lang];
+  var seatOpts=FILTERS.seats;
+  var ageOpts=FILTERS.ages;
+  var ageLabels={18:'18+',21:'21+',25:'25+'};
+  var ageLabelsFull={
+    en:{18:'18+ (Economy)',21:'21+ (Standard)',25:'25+ (Luxury only)'},
+    es:{18:'18+ (Económico)',21:'21+ (Estándar)',25:'25+ (Solo lujo)'}
+  };
+  var h='';
+  /* — Vehicle Type — */
+  h+='<div class="fgrp"><div class="fgrp-lbl t" data-en="Vehicle Type" data-es="Tipo de Vehículo">'+(lang==='en'?'Vehicle Type':'Tipo de Vehículo')+'</div><div class="fgrp-chips" role="group" aria-label="Filter by vehicle type">';
+  types.forEach(function(f){
+    var icons={'all':'🚗','sedan':'🚗','suv':'🚙','family':'👨‍👩‍👧‍👦','elite':'🏆','conv':'🏎️','pickup':'🛻'};
+    var ic=icons[f[0]]||'🚗';
+    h+='<button class="fbtn'+(activeFilter===f[0]?' on':'')+'" onclick="setFilter(\''+f[0]+'\');" aria-pressed="'+(activeFilter===f[0])+'" type="button">'+ic+' '+f[1]+'</button>';
+  });
+  h+='</div></div>';
+  /* — Minimum Seats — */
+  h+='<div class="fgrp"><div class="fgrp-lbl t" data-en="Minimum Seats" data-es="Asientos Mínimos">'+(lang==='en'?'Minimum Seats':'Asientos Mínimos')+'</div><div class="fgrp-chips" role="group" aria-label="Filter by minimum seats">';
+  [0,4,5,7,8].forEach(function(s){
+    var lbl=s===0?(lang==='en'?'Any':'Todos'):s+'+';
+    h+='<button class="fbtn'+(activeSeatFilter===s?' on':'')+'" onclick="setSeatFilter('+s+');" aria-pressed="'+(activeSeatFilter===s)+'" type="button">'+lbl+'</button>';
+  });
+  h+='</div></div>';
+  /* — Driver Age — */
+  h+='<div class="fgrp"><div class="fgrp-lbl t" data-en="Driver\'s Min. Age" data-es="Edad Mínima del Conductor">'+(lang==='en'?'Driver\'s Min. Age':'Edad Mínima del Conductor')+'</div><div class="fgrp-chips" role="group" aria-label="Filter by driver minimum age">';
+  [0,18,21,25].forEach(function(a){
+    var lbl=a===0?(lang==='en'?'Any':'Todos'):ageLabelsFull[lang][a];
+    h+='<button class="fbtn age-btn'+(activeAgeFilter===a?' on':'')+'" onclick="setAgeFilter('+a+');" aria-pressed="'+(activeAgeFilter===a)+'" type="button">'+(a===0?lbl:ageLabels[a]+' '+lbl.split('(')[1].replace(')',''))+'</button>';
+  });
+  h+='</div></div>';
+  el.innerHTML=h;
+}
+function setFilter(f){activeFilter=f;renderFilts();renderFleet();}
+function setSeatFilter(s){activeSeatFilter=s;renderFilts();renderFleet();}
+function setAgeFilter(a){activeAgeFilter=a;renderFilts();renderFleet();}
+
+function renderRegionPills(){var el=document.getElementById('region-pills');if(!el)return;el.innerHTML=REGIONS.map(function(r){var name=lang==='en'?r.en:r.es;return'<button class="rpill'+(activeRegion===r.id?' on':'')+'" onclick="setRegion(\''+r.id+'\');" type="button">'+name+'</button>';}).join('');}
+function setRegion(rid){if(activeRegion===rid){activeRegion='';selectedCountry='';var p=document.getElementById('country-picker');if(p)p.classList.remove('open');}else{activeRegion=rid;selectedCountry='';}renderRegionPills();renderCountryPicker();updateDestBanner();renderFleet();}
+function renderCountryPicker(){var picker=document.getElementById('country-picker');if(!picker)return;if(!activeRegion){picker.classList.remove('open');return;}picker.classList.add('open');var region=REGIONS.find(function(r){return r.id===activeRegion;});if(!region)return;var h='';region.countries.forEach(function(code){if(!COVERED[code])return;var flag=COUNTRY_FLAGS[code]||'🏳️';h+='<div class="cpicker-cell'+(selectedCountry===code?' on':'')+'" onclick="selectCountry(\''+code+'\')" role="option" tabindex="0"><span class="cpicker-flag">'+flag+'</span><span>'+COVERED[code]+'</span></div>';});document.getElementById('cpicker-grid').innerHTML=h;}
+function selectCountry(code){selectedCountry=(selectedCountry===code)?'':code;renderCountryPicker();updateDestBanner();renderFleet();var inp=document.getElementById('dest-input');var btn=document.getElementById('dest-clear-btn');if(inp&&selectedCountry){inp.value=COVERED[selectedCountry]||'';if(btn)btn.classList.add('show');}}
+function onDestSearch(val){
+  var btn=document.getElementById('dest-clear-btn');
+  if(btn)btn.classList.toggle('show',val.length>0);
+  var q=val.toUpperCase().trim();
+  // Airport code direct match
+  if(q.length===3 && AIRPORTS[q]){
+    var cc=AIRPORTS[q];
+    if(COVERED[cc]){
+      selectedCountry=cc;activeRegion=C2R[cc]||'';
+      var inp=document.getElementById('dest-input');
+      if(inp)inp.value=COVERED[cc]+' ('+q+')';
+      renderRegionPills();renderCountryPicker();updateDestBanner();renderFleet();
+      hideSuggestions();return;
+    }
+  }
+  if(val.length<2){if(!val)clearDest();hideSuggestions();return;}
+  var ql=val.toLowerCase();
+  var matches=[];
+  Object.keys(COVERED).forEach(function(code){
+    var name=COVERED[code].toLowerCase();
+    if(name.indexOf(ql)===0||name.indexOf(ql)>0)matches.push(code);
+  });
+  // Sort: starts-with first
+  matches.sort(function(a,b){
+    var an=COVERED[a].toLowerCase(),bn=COVERED[b].toLowerCase();
+    var as=an.indexOf(ql)===0,bs=bn.indexOf(ql)===0;
+    if(as&&!bs)return -1;if(!as&&bs)return 1;
+    return an.localeCompare(bn);
+  });
+  showSuggestions(matches.slice(0,8));
+  if(matches.length===1){
+    selectedCountry=matches[0];activeRegion=C2R[matches[0]]||'';
+    renderRegionPills();renderCountryPicker();updateDestBanner();renderFleet();
+  }
+}
+function showSuggestions(codes){
+  var wrap=document.getElementById('dest-suggestions');
+  if(!wrap){
+    var inp=document.getElementById('dest-input');
+    if(!inp)return;
+    wrap=document.createElement('div');
+    wrap.id='dest-suggestions';
+    wrap.className='dest-suggestions';
+    inp.parentNode.appendChild(wrap);
+  }
+  if(!codes.length){wrap.style.display='none';return;}
+  wrap.style.display='block';
+  wrap.innerHTML=codes.map(function(code){
+    var flag=COUNTRY_FLAGS[code]||'🏳️';
+    return '<div class="dest-suggestion" onclick="selectFromSuggestion(''+code+'')">'
+      +'<span class="dest-sugg-flag">'+flag+'</span>'
+      +'<span class="dest-sugg-name">'+COVERED[code]+'</span>'
+      +'</div>';
+  }).join('');
+}
+function hideSuggestions(){
+  var wrap=document.getElementById('dest-suggestions');
+  if(wrap)wrap.style.display='none';
+}
+function selectFromSuggestion(code){
+  selectedCountry=code;activeRegion=C2R[code]||'';
+  var inp=document.getElementById('dest-input');
+  if(inp)inp.value=COVERED[code];
+  var btn=document.getElementById('dest-clear-btn');
+  if(btn)btn.classList.add('show');
+  renderRegionPills();renderCountryPicker();updateDestBanner();renderFleet();
+  hideSuggestions();
+}
+function clearDest(){selectedCountry='';activeRegion='';hideSuggestions();var inp=document.getElementById('dest-input');if(inp)inp.value='';var btn=document.getElementById('dest-clear-btn');if(btn)btn.classList.remove('show');var picker=document.getElementById('country-picker');if(picker)picker.classList.remove('open');renderRegionPills();updateDestBanner();renderFleet();}
+function updateDestBanner(){var banner=document.getElementById('dest-banner'),txt=document.getElementById('dest-banner-txt');if(!banner||!txt)return;if(selectedCountry){txt.textContent=(lang==='en'?'Showing fleet for: ':'Mostrando flota para: ')+(COUNTRY_FLAGS[selectedCountry]||'')+' '+(COVERED[selectedCountry]||'');banner.classList.add('show');}else if(activeRegion){var reg=REGIONS.find(function(r){return r.id===activeRegion;});if(reg)txt.textContent=(lang==='en'?'Showing fleet for region: ':'Mostrando flota para región: ')+(lang==='en'?reg.en:reg.es);banner.classList.add('show');}else{banner.classList.remove('show');}}
+function getRegionalVary(car){var rkey=selectedCountry?C2R[selectedCountry]:activeRegion;if(!rkey||!RF[rkey])return null;return RF[rkey][car.sipp||car.code]||null;}
+function imgErr(img){var src2=img.getAttribute('data-src2');if(src2&&img.src!==src2&&!img.dataset.tried){img.dataset.tried='1';img.src=src2;}else{img.style.display='none';var fb=img.nextElementSibling;if(fb)fb.style.display='flex';}}
+
+/* ─── RENDER FLEET — with 3-dimensional Sixt filtering ─── */
+function renderFleet(){
+  var el=document.getElementById('fw');if(!el)return;
+  /* Apply all 3 filters */
+  var filtered=CATS.filter(function(c){
+    if(activeFilter!=='all'&&c.sixtType!==activeFilter)return false;
+    if(activeSeatFilter>0&&c.pax<activeSeatFilter)return false;
+    if(activeAgeFilter>0&&c.minAge>activeAgeFilter)return false;
+    return true;
+  });
+  /* Apply sort */
+  if(activeSort==='seats'){filtered.sort(function(a,b){return b.pax-a.pax||(a.minAge-b.minAge);});}
+  else if(activeSort==='age'){filtered.sort(function(a,b){return a.minAge-b.minAge||(a.pax-b.pax);});}
+  /* Default: preserve section order */
+  var secs=[];filtered.forEach(function(c){if(secs.indexOf(c.sec)===-1)secs.push(c.sec);});
+  var ci=CINC[lang];
+  var popLabel=lang==='en'?'Most Popular':'Más Popular';
+  var premLabel='Premium';
+  var quoteLabel=lang==='en'?'Get Quote':'Cotizar';
+  var ageWarn25=lang==='en'?'25+ only':'Solo 25+';
+  var h='';
+  /* Show active filter summary */
+  var activeCount=filtered.length;
+  var summaryParts=[];
+  if(activeFilter!=='all'){var tf=FILTERS.types[lang].find(function(f){return f[0]===activeFilter;});if(tf)summaryParts.push(tf[1]);}
+  if(activeSeatFilter>0)summaryParts.push(activeSeatFilter+'+ seats');
+  if(activeAgeFilter>0)summaryParts.push('Age '+activeAgeFilter+'+');
+  if(summaryParts.length>0){
+    h+='<div class="fleet-summary"><span class="fleet-count">'+activeCount+'</span> '+(lang==='en'?'vehicles':'vehículos')+' — '+summaryParts.join(' · ')+'</div>';
+  }
+  if(!filtered.length){
+    h+='<div class="fleet-empty"><div class="fleet-empty-icon">🔍</div><p>'+(lang==='en'?'No vehicles match your filters. Try adjusting the age or seat requirements.':'No hay vehículos con estos filtros. Ajusta la edad o los asientos requeridos.')+'</p><button onclick="resetFilters()" class="fleet-empty-btn">'+(lang==='en'?'Reset Filters':'Quitar Filtros')+'</button></div>';
+    el.innerHTML=h;return;
+  }
+  secs.forEach(function(sec){
+    var sc=filtered.filter(function(c){return c.sec===sec;});
+    var secName=(SECS_LABEL[lang]||{})[sec]||sec;
+    h+='<div class="sec-hdr"><span class="sec-hdr-name">'+secName+'</span> <span class="sec-hdr-count">('+sc.length+')</span><div class="sec-hdr-line"></div></div><div class="cars-grid">';
+    sc.forEach(function(car){
+      var d=car[lang]||car.en;
+      var isElite=car.sixtType==='elite';
+      var isConv=car.sixtType==='conv';
+      var isPick=car.sixtType==='pickup';
+      var isFamily=car.sixtType==='family';
+      var regVary=getRegionalVary(car);
+      var destTxt='';
+      if(selectedCountry&&COVERED[selectedCountry]){destTxt='%0ADestination: '+(COUNTRY_FLAGS[selectedCountry]||'')+encodeURIComponent(' '+COVERED[selectedCountry]);}
+      else if(activeRegion){var reg=REGIONS.find(function(r){return r.id===activeRegion;});if(reg)destTxt='%0ARegion: '+encodeURIComponent(lang==='en'?reg.en:reg.es);}
+      var msg=encodeURIComponent((lang==='en'?'Hi! Quote for: ':'Hola! Cotizar: ')+d.name+' ('+car.code+')')+destTxt+'%0ADates:%20%0ADays:%20';
+      h+='<article class="car-card">';
+      h+='<div class="car-photo">';
+      h+='<img src="'+car.img1+'" alt="'+d.name+' rental" loading="lazy" referrerpolicy="no-referrer" width="260" height="148" data-src2="'+car.img2+'" onerror="imgErr(this)">';
+      h+='<div class="no-img" style="display:none;"><div class="no-img-icon">&#x1F697;</div><div class="no-img-txt">'+d.name+'</div></div>';
+      if(car.hot)h+='<div class="badge-pop">&#11088; '+popLabel+'</div>';
+      if(isElite||isConv)h+='<div class="badge-prem">&#9733; '+premLabel+'</div>';
+      /* Age badge for 25+ vehicles */
+      if(car.minAge>=25)h+='<div class="badge-age" title="Minimum driver age">25+</div>';
+      h+='</div>';
+      h+='<div class="car-info"><div class="car-code-cat"><span class="car-code" style="background:'+car.bg+'">'+car.code+'</span><span class="car-cat-name" style="background:'+car.bg+'">'+d.cat+'</span></div>';
+      h+='<div class="car-name">'+d.name+'</div>';
+      h+=regVary?'<div class="car-region-examples show">'+regVary+'</div>':'<div class="car-vary">'+d.vary+'</div>';
+      h+='<div class="car-specs">';
+      h+='<span class="spec-i">'+car.pax+' pax</span>';
+      h+='<span class="spec-i">'+car.doors+' doors</span>';
+      h+='<span class="spec-i">'+car.bags+'</span>';
+      h+='<span class="spec-i age-spec'+(car.minAge>=25?' age-25':'')+'">&#x1F477; '+car.minAge+(lang==='en'?'+ yrs':'+ años')+'</span>';
+      h+='</div></div>';
+      h+='<div class="car-footer"><div class="inc-tags">'+ci.map(function(t){return'<span class="inc-tag">'+t+'</span>';}).join('')+'</div>';
+      h+='<a href="https://wa.me/14073739085?text='+msg+'" target="_blank" rel="noopener" class="wa-book">'+WA_SVG+'<span>'+quoteLabel+'</span></a>';
+      h+='</div></article>';
+    });
+    h+='</div>';
+  });
+  el.innerHTML=h;
+}
+
+function setSort(s){
+  activeSort=s;
+  document.querySelectorAll('.sort-btn').forEach(function(b){
+    b.classList.toggle('on',b.id==='sort-'+s);
+  });
+  renderFleet();
+}
+function resetFilters(){activeFilter='all';activeSeatFilter=0;activeAgeFilter=0;renderFilts();renderFleet();}
+
+function renderCountries(){var el=document.getElementById('cg');if(!el)return;var sorted=Object.entries(COVERED).sort(function(a,b){return a[1].localeCompare(b[1]);});el.innerHTML=sorted.map(function(e){return'<div class="cty-cell"><span class="cty-dot"></span>'+(COUNTRY_FLAGS[e[0]]||'')+'&nbsp;'+e[1]+'</div>';}).join('');var cnt=document.getElementById('ccnt');if(cnt)cnt.textContent=sorted.length;}
+function renderMap(){var svgEl=document.getElementById('world-svg');if(!svgEl)return;var w=svgEl.parentElement?svgEl.parentElement.clientWidth:360;if(w<10)w=360;var h=Math.round(w*0.50);svgEl.setAttribute('viewBox','0 0 '+w+' '+h);var sel=d3.select(svgEl);sel.append('rect').attr('width',w).attr('height',h).attr('fill','#EEF0F6').attr('rx',3);var proj=d3.geoNaturalEarth1().scale(w/6.3).translate([w/2,h/2]);var path=d3.geoPath().projection(proj);sel.append('path').datum(d3.geoGraticule()()).attr('fill','none').attr('stroke','rgba(0,0,0,.04)').attr('stroke-width',0.4).attr('d',path);var tip=document.getElementById('maptip');d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json').then(function(world){var features=topojson.feature(world,world.objects.countries).features;sel.selectAll('path.c').data(features).join('path').attr('class','c').attr('d',path).attr('fill',function(d){var a=N2A[String(d.id)];return(a&&COVERED[a])?'#1A1A1A':'#C8CDD8';}).attr('stroke','#fff').attr('stroke-width',0.4).style('cursor','pointer').on('mousemove',function(ev,d){var a=N2A[String(d.id)],ok=!!(a&&COVERED[a]),nm=(a&&COVERED[a])||'—';if(!tip)return;tip.innerHTML='<strong>'+nm+'</strong><br><span style="color:'+(ok?'#4ade80':'#f87171')+'">'+(lang==='en'?(ok?'Available':'Not available'):(ok?'Disponible':'No disponible'))+'</span>';tip.style.cssText='display:block;left:'+(ev.clientX+14)+'px;top:'+(ev.clientY-56)+'px;';}).on('mouseleave',function(){if(tip)tip.style.display='none';}).on('touchend',function(ev,d){var a=N2A[String(d.id)],ok=!!(a&&COVERED[a]),nm=(a&&COVERED[a])||'—';if(!tip)return;tip.innerHTML='<strong>'+nm+'</strong> '+(ok?'OK':'');tip.style.cssText='display:block;position:fixed;bottom:85px;left:50%;transform:translateX(-50%);';setTimeout(function(){tip.style.display='none';},2000);});}).catch(function(){sel.append('text').attr('x',w/2).attr('y',h/2).attr('text-anchor','middle').attr('fill','#999').attr('font-size',14).text('Map loading...');});}
+function toggleFaq(btn){var wasOpen=btn.classList.contains('open');document.querySelectorAll('.faq-q.open').forEach(function(b){b.classList.remove('open');b.setAttribute('aria-expanded','false');var a=b.nextElementSibling;if(a)a.classList.remove('show');});if(!wasOpen){btn.classList.add('open');btn.setAttribute('aria-expanded','true');var ans=btn.nextElementSibling;if(ans)ans.classList.add('show');}}
+function acceptCookies(){try{localStorage.setItem('jsud_ck','1');}catch(e){}var b=document.getElementById('cookie-bar');if(b)b.classList.remove('show');}
+function declineCookies(){try{localStorage.setItem('jsud_ck','0');}catch(e){}var b=document.getElementById('cookie-bar');if(b)b.classList.remove('show');}
+function openPrivacy(){var m=document.getElementById('privacy-modal');if(m)m.classList.add('show');}
+function closePrivacy(){var m=document.getElementById('privacy-modal');if(m)m.classList.remove('show');}
+document.addEventListener('DOMContentLoaded',function(){
+  setLang('en');
+  try{if(!localStorage.getItem('jsud_ck')){setTimeout(function(){var b=document.getElementById('cookie-bar');if(b)b.classList.add('show');},2000);}}catch(e){}
+  window.addEventListener('scroll',function(){var b=document.getElementById('back-top');if(b)b.classList.toggle('show',window.scrollY>400);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closePrivacy();});
+});
+
+
+
+
+
+
+
+
+
+
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js" defer></script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"CarRental","name":"Just Show Up & Drive","description":"Premium worldwide car rental. 26 vehicle categories. 105+ countries, 4,500+ locations. Full insurance, $0 deductible, GPS included.","url":"https://www.justshowupdrive.com/","telephone":"+14073739085","email":"reservations@justshowupdrive.com","contactPoint":{"@type":"ContactPoint","telephone":"+14073739085","email":"reservations@justshowupdrive.com","contactType":"reservations","availableLanguage":["English","Spanish"],"contactOption":"TollFree"},"areaServed":{"@type":"Place","name":"Worldwide — 105+ Countries"},"currenciesAccepted":"USD","paymentAccepted":"Zelle, Wise, Stripe","hasOfferCatalog":{"@type":"OfferCatalog","name":"Vehicle Categories","numberOfItems":26},"sameAs":["https://wa.me/14073739085"]}
+</script>
+</head>
+
+<a href="#main-content" class="skip-link">Skip to content</a>
+
+
+<!-- ██ COOKIE NOTICE ██ -->
+<div class="cookie-bar" id="cookie-bar" role="dialog" aria-label="Cookie consent" aria-live="polite">
+  <p class="cookie-txt t" data-en="We use essential cookies to improve your experience. <button onclick='openPrivacy()' style='background:none;border:none;color:var(--orange);text-decoration:underline;cursor:pointer;font-size:inherit;padding:0;'>Privacy Policy</button>" data-es="Usamos cookies esenciales para mejorar tu experiencia. <button onclick='openPrivacy()' style='background:none;border:none;color:var(--orange);text-decoration:underline;cursor:pointer;font-size:inherit;padding:0;'>Política de Privacidad</button>">We use essential cookies to improve your experience.</p>
+  <div class="cookie-btns">
+    <button class="cookie-accept t" data-en="Accept" data-es="Aceptar" onclick="acceptCookies()" aria-label="Accept cookies">Accept</button>
+    <button class="cookie-decline t" data-en="Decline" data-es="Rechazar" onclick="declineCookies()" aria-label="Decline cookies">Decline</button>
+  </div>
+</div>
+<!-- ██ PRIVACY MODAL ██ -->
+<div class="modal-overlay" id="privacy-modal" role="dialog" aria-modal="true" aria-labelledby="privacy-title" onclick="if(event.target===this)closePrivacy()">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closePrivacy()" aria-label="Close privacy policy">×</button>
+    <h2 class="modal-title t" id
+</body>
+</html>
