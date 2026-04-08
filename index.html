@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Just Show Up & Drive — Better Price Than Booking Direct · 105 Countries</title>
+<meta name="description" content="Same premium cars, same airports — at exclusive rates lower than booking directly. $0 deductible, GPS, unlimited miles included. 2,000+ locations in 105 countries.">
+<meta property="og:title" content="Just Show Up & Drive — Beat Any Direct Booking Price">
+<meta property="og:description" content="Same cars. Same airports. We beat direct booking prices. WhatsApp quote in minutes.">
+<meta property="og:url" content="https://justshowupdrive.com">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,700&family=Cabinet+Grotesk:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#C9A84C;--gold2:#E8C96A;--gold3:rgba(201,168,76,.1);--ink:#08080A;--ink2:#101014;--ink3:#18181E;--ink4:#222228;--text:#EAEAF2;--muted:#68687C;--green:#22C55E;--red:#F43F5E;--ease:cubic-bezier(.4,0,.2,1);}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{background:var(--ink);color:var(--text);font-family:'Cabinet Grotesk',sans-serif;overflow-x:hidden;}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .65s var(--ease),transform .65s var(--ease);}
+.reveal.visible{opacity:1;transform:none;}
+.d1{transition-delay:.1s;}.d2{transition-delay:.2s;}.d3{transition-delay:.3s;}.d4{transition-delay:.4s;}
+/* NAV */
+nav{position:fixed;top:0;inset-inline:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:15px 36px;background:rgba(8,8,10,.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(201,168,76,.07);}
+.logo{font-family:'Fraunces',serif;font-size:20px;font-weight:900;color:#fff;text-decoration:none;}
+.logo em{font-style:normal;color:var(--gold);}
+.nav-r{display:flex;align-items:center;gap:8px;}
+.lang{background:transparent;border:1px solid rgba(201,168,76,.2);color:var(--muted);font-family:inherit;font-size:11px;font-weight:700;letter-spacing:.8px;padding:5px 10px;border-radius:6px;cursor:pointer;transition:all .2s;}
+.lang.active,.lang:hover{border-color:var(--gold);color:var(--gold);}
+.nav-cta{background:var(--gold);color:#000;font-family:inherit;font-size:13px;font-weight:800;padding:9px 20px;border-radius:8px;text-decoration:none;transition:all .2s;}
+.nav-cta:hover{background:var(--gold2);}
+/* HERO */
+.hero{position:relative;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:110px 24px 80px;overflow:hidden;}
+.h-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 55% at 50% 45%,rgba(201,168,76,.06) 0%,transparent 65%);}
+.h-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(201,168,76,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.03) 1px,transparent 1px);background-size:52px 52px;mask-image:radial-gradient(ellipse at center,black 30%,transparent 72%);}
+.h-ring{position:absolute;width:640px;height:640px;border:1px solid rgba(201,168,76,.05);border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%);animation:rp 7s ease-in-out infinite;}
+@keyframes rp{0%,100%{transform:translate(-50%,-50%) scale(1);opacity:.5;}50%{transform:translate(-50%,-50%) scale(1.05);opacity:1;}}
+.live-pill{position:relative;display:inline-flex;align-items:center;gap:8px;background:rgba(34,197,94,.07);border:1px solid rgba(34,197,94,.2);border-radius:100px;padding:6px 16px;font-size:12px;font-weight:700;color:var(--green);margin-bottom:28px;letter-spacing:.4px;}
+.dot{width:6px;height:6px;background:var(--green);border-radius:50%;animation:bl 1.6s infinite;}
+@keyframes bl{0%,100%{opacity:1;}50%{opacity:.2;}}
+h1{position:relative;font-family:'Fraunces',serif;font-size:clamp(50px,9.5vw,116px);font-weight:900;line-height:.88;letter-spacing:-2.5px;color:#fff;text-transform:uppercase;margin-bottom:22px;}
+h1 .it{display:block;font-style:italic;font-weight:300;color:var(--gold);letter-spacing:-1px;}
+h1 .sm{font-size:.68em;}
+.hero-p{position:relative;font-size:clamp(15px,1.8vw,18px);font-weight:400;color:rgba(234,234,242,.6);max-width:540px;line-height:1.7;margin-bottom:36px;}
+.hero-p strong{color:var(--text);font-weight:700;}
+.btns{position:relative;display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:56px;}
+.btn-g{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:#000;font-family:inherit;font-size:15px;font-weight:800;padding:15px 30px;border-radius:10px;text-decoration:none;box-shadow:0 0 44px rgba(201,168,76,.18);transition:all .25s;}
+.btn-g:hover{background:var(--gold2);transform:translateY(-2px);}
+.btn-o{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--text);font-family:inherit;font-size:15px;font-weight:600;padding:15px 26px;border-radius:10px;text-decoration:none;border:1px solid rgba(234,234,242,.1);transition:all .2s;}
+.btn-o:hover{border-color:rgba(201,168,76,.4);color:var(--gold);}
+.stats-row{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(201,168,76,.1);border-radius:14px;overflow:hidden;max-width:580px;width:100%;}
+.stat{background:var(--ink2);padding:18px 12px;text-align:center;}
+.sn{font-family:'Fraunces',serif;font-size:28px;font-weight:900;color:var(--gold);display:block;line-height:1;}
+.sl{font-size:9px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-top:3px;display:block;}
+/* TICKER */
+.ticker{background:var(--ink2);border-top:1px solid rgba(201,168,76,.07);border-bottom:1px solid rgba(201,168,76,.07);padding:13px 0;overflow:hidden;}
+.ticker-in{display:flex;gap:40px;white-space:nowrap;animation:tk 30s linear infinite;}
+@keyframes tk{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+.ti{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;color:var(--muted);}
+.ti .g{color:var(--green);}
+.ti .sep{color:rgba(201,168,76,.25);}
+/* SECTIONS */
+section{padding:96px 24px;}
+.wrap{max-width:1120px;margin:0 auto;}
+.eye{font-size:10px;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:12px;}
+.sh2{font-family:'Fraunces',serif;font-size:clamp(36px,5vw,62px);font-weight:900;color:#fff;line-height:.96;letter-spacing:-1.5px;margin-bottom:14px;}
+.sh2 em{font-style:italic;color:var(--gold);font-weight:300;}
+.sp{font-size:16px;font-weight:400;color:var(--muted);line-height:1.65;max-width:480px;}
+/* WHY */
+.why-s{background:var(--ink2);border-top:1px solid rgba(201,168,76,.06);}
+.why-g{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
+.advs{display:flex;flex-direction:column;gap:2px;margin-top:28px;}
+.adv{display:flex;gap:14px;padding:18px;background:var(--ink3);border-radius:11px;transition:background .2s;}
+.adv:hover{background:var(--ink4);}
+.adv-ic{font-size:22px;flex-shrink:0;width:42px;height:42px;background:var(--gold3);border-radius:9px;display:flex;align-items:center;justify-content:center;}
+.adv strong{display:block;font-size:14px;font-weight:700;color:#fff;margin-bottom:3px;}
+.adv span{font-size:12px;color:var(--muted);line-height:1.5;}
+/* VS TABLE */
+.vs{background:var(--ink3);border-radius:14px;overflow:hidden;border:1px solid rgba(201,168,76,.1);}
+.vs-lbl{font-size:10px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:10px;}
+.vs-head{display:grid;grid-template-columns:1fr 1fr 1fr;background:var(--ink4);}
+.vh{padding:13px 14px;font-size:10px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);text-align:center;}
+.vh.jsud{color:var(--gold);}
+.vr{display:grid;grid-template-columns:1fr 1fr 1fr;border-top:1px solid rgba(255,255,255,.04);}
+.vc{padding:12px 14px;font-size:13px;font-weight:500;text-align:center;display:flex;align-items:center;justify-content:center;}
+.vc.lbl{justify-content:flex-start;color:var(--muted);font-weight:600;font-size:12px;}
+.vr.alt{background:rgba(255,255,255,.012);}
+.yn{color:var(--green);}.nr{color:var(--red);}
+.vs-bot{display:grid;grid-template-columns:1fr 1fr 1fr;background:var(--ink4);padding:16px 14px;}
+.vp{text-align:center;}
+.vp .n{font-family:'Fraunces',serif;font-size:26px;font-weight:900;display:block;}
+.vp small{font-size:11px;color:var(--muted);}
+/* SPEED */
+.spd-g{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:860px;margin:44px auto 0;}
+.spd-c{background:var(--ink2);border:1px solid rgba(255,255,255,.05);border-radius:14px;padding:26px;position:relative;}
+.spd-c.w{border-color:rgba(201,168,76,.28);background:linear-gradient(140deg,rgba(201,168,76,.05),var(--ink2));}
+.spd-badge{position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--gold);color:#000;font-size:10px;font-weight:800;letter-spacing:.8px;padding:4px 12px;border-radius:100px;white-space:nowrap;}
+.spd-title{font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:18px;}
+.spd-c.w .spd-title{color:var(--gold);}
+.si{display:flex;gap:9px;margin-bottom:10px;align-items:flex-start;}
+.si:last-of-type{margin-bottom:0;}
+.sn2{width:20px;height:20px;background:rgba(255,255,255,.05);border-radius:5px;font-size:10px;font-weight:700;color:var(--muted);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
+.spd-c.w .sn2{background:rgba(201,168,76,.1);color:var(--gold);}
+.st{font-size:12px;color:var(--muted);line-height:1.4;}
+.spd-t{margin-top:18px;padding-top:14px;border-top:1px solid rgba(255,255,255,.05);font-family:'Fraunces',serif;font-size:18px;font-weight:700;color:var(--muted);}
+.spd-c.w .spd-t{color:var(--gold);}
+/* FLEET */
+.fleet-s{background:var(--ink2);}
+.ffs{display:flex;flex-wrap:wrap;gap:7px;justify-content:center;margin:28px 0 0;}
+.filt{background:transparent;border:1px solid rgba(234,234,242,.1);color:var(--muted);font-family:inherit;font-size:11px;font-weight:700;letter-spacing:.3px;padding:7px 16px;border-radius:100px;cursor:pointer;transition:all .2s;}
+.filt.active,.filt:hover{background:var(--gold);border-color:var(--gold);color:#000;}
+.fleet-g{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:1px;background:rgba(201,168,76,.06);border-radius:14px;overflow:hidden;max-width:1100px;margin:20px auto 0;}
+.cc{background:var(--ink2);display:flex;flex-direction:column;transition:background .2s;}
+.cc:hover{background:var(--ink3);}
+.cw{height:148px;background:linear-gradient(155deg,#0C1520,#060D18);position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.cw img{width:100%;height:100%;object-fit:contain;padding:9px 6px 3px;filter:drop-shadow(0 7px 22px rgba(0,0,0,.8));transition:transform .3s var(--ease);}
+.cc:hover .cw img{transform:scale(1.07);}
+.cp{position:absolute;top:9px;left:9px;font-size:9px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;background:rgba(201,168,76,.1);color:var(--gold);border:1px solid rgba(201,168,76,.22);padding:3px 7px;border-radius:4px;}
+.cb{padding:13px 13px 0;}
+.cn{font-size:14px;font-weight:800;color:#fff;}
+.csim{font-size:11px;color:var(--muted);margin-bottom:7px;}
+.csp{display:flex;gap:7px;}
+.csp span{font-size:11px;color:var(--muted);}
+.cf{margin:10px 13px 13px;display:flex;align-items:center;justify-content:space-between;padding:8px 11px;background:var(--gold3);border:1px solid rgba(201,168,76,.11);border-radius:7px;text-decoration:none;transition:all .2s;}
+.cf:hover{background:var(--gold);}
+.cf:hover .cfl,.cf:hover .cfa{color:#000;}
+.cfl{font-size:12px;font-weight:700;color:var(--gold);}
+.cfa{font-size:11px;color:var(--gold);}
+/* BENTO */
+.bento-g{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:1060px;margin:44px auto 0;}
+.bc{background:var(--ink2);border:1px solid rgba(255,255,255,.04);border-radius:13px;padding:26px;transition:border-color .2s;}
+.bc:hover{border-color:rgba(201,168,76,.18);}
+.bc.s2{grid-column:span 2;}
+.bc.s3{grid-column:span 3;}
+.bc.ac{background:linear-gradient(140deg,rgba(201,168,76,.07),rgba(201,168,76,.02));border-color:rgba(201,168,76,.18);}
+.bc.ac h3{color:var(--gold);}
+.bc .bi{font-size:28px;margin-bottom:12px;display:block;}
+.bn{font-family:'Fraunces',serif;font-size:52px;font-weight:900;color:var(--gold);line-height:1;margin-bottom:6px;}
+.bc h3{font-family:'Fraunces',serif;font-size:18px;font-weight:700;color:#fff;margin-bottom:5px;letter-spacing:-.2px;}
+.bc p{font-size:12px;color:var(--muted);line-height:1.6;}
+/* DESTS */
+.dest-s{background:var(--ink2);}
+.dest-g{display:grid;grid-template-columns:repeat(auto-fill,minmax(135px,1fr));gap:9px;max-width:1060px;margin:36px auto 0;}
+.dc{display:flex;flex-direction:column;align-items:center;gap:6px;padding:20px 10px;background:var(--ink3);border:1px solid rgba(255,255,255,.04);border-radius:11px;text-decoration:none;transition:all .2s;text-align:center;}
+.dc:hover{border-color:rgba(201,168,76,.25);transform:translateY(-3px);background:var(--ink4);}
+.df{font-size:24px;}
+.dci{font-size:12px;font-weight:700;color:#fff;}
+.dco{font-size:10px;color:var(--muted);}
+.dca{font-size:10px;color:var(--gold);margin-top:1px;}
+/* TESTIS */
+.tg{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:12px;max-width:1020px;margin:36px auto 0;}
+.tc{background:var(--ink2);border:1px solid rgba(255,255,255,.04);border-radius:13px;padding:22px;display:flex;flex-direction:column;gap:14px;}
+.ts{color:var(--gold);font-size:12px;letter-spacing:3px;}
+.tq{font-size:13px;font-weight:400;color:rgba(234,234,242,.72);line-height:1.72;flex:1;font-style:italic;}
+.tf{display:flex;align-items:center;gap:9px;padding-top:12px;border-top:1px solid rgba(255,255,255,.04);}
+.ta{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--gold),#7A5210);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:#000;flex-shrink:0;}
+.tn{font-size:12px;font-weight:700;color:#fff;}
+.td{font-size:10px;color:var(--muted);}
+/* FAQ */
+.faq-s{background:var(--ink2);}
+.fq-w{max-width:700px;margin:36px auto 0;}
+.fi{border-radius:9px;overflow:hidden;margin-bottom:2px;}
+.fb{width:100%;background:var(--ink3);border:none;color:var(--text);font-family:inherit;font-size:14px;font-weight:600;padding:17px 18px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;text-align:left;gap:10px;transition:background .2s;}
+.fb:hover{background:var(--ink4);}
+.fc{color:var(--gold);font-size:11px;transition:transform .22s;flex-shrink:0;}
+.fi.open .fc{transform:rotate(180deg);}
+.fa{display:none;padding:0 18px 16px;background:var(--ink3);font-size:13px;color:var(--muted);line-height:1.72;}
+.fi.open .fa{display:block;}
+/* CTA */
+.cta-s{text-align:center;padding:100px 24px;background:radial-gradient(ellipse 65% 50% at 50% 50%,rgba(201,168,76,.065) 0%,transparent 70%);}
+.cta-s h2{font-family:'Fraunces',serif;font-size:clamp(44px,7vw,90px);font-weight:900;color:#fff;letter-spacing:-2px;line-height:.9;margin-bottom:14px;}
+.cta-s h2 em{font-style:italic;color:var(--gold);}
+.cta-s p{font-size:17px;color:var(--muted);margin-bottom:32px;}
+/* FOOTER */
+footer{background:var(--ink2);border-top:1px solid rgba(255,255,255,.04);padding:52px 36px 28px;}
+.fg{max-width:1060px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:36px;margin-bottom:44px;}
+.flogo{font-family:'Fraunces',serif;font-size:22px;font-weight:900;color:#fff;margin-bottom:8px;}
+.flogo em{font-style:normal;color:var(--gold);}
+.fd{font-size:13px;color:var(--muted);line-height:1.6;max-width:260px;}
+.fcol h4{font-size:10px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+.fcol a{display:block;font-size:13px;color:var(--muted);text-decoration:none;margin-bottom:9px;transition:color .2s;}
+.fcol a:hover{color:var(--text);}
+.fb2{max-width:1060px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;border-top:1px solid rgba(255,255,255,.04);padding-top:22px;}
+.fb2 p{font-size:12px;color:var(--muted);}
+/* STICKY WA */
+.wa-sticky{position:fixed;bottom:22px;right:22px;z-index:150;display:flex;align-items:center;gap:9px;background:var(--gold);color:#000;font-family:inherit;font-size:13px;font-weight:800;padding:12px 20px;border-radius:100px;text-decoration:none;box-shadow:0 4px 28px rgba(201,168,76,.3);transition:all .2s;animation:waf 3.5s ease-in-out infinite;}
+@keyframes waf{0%,100%{transform:translateY(0);}50%{transform:translateY(-5px);}}
+.wa-sticky:hover{background:var(--gold2);}
+/* COOKIE */
+.ck{position:fixed;bottom:0;inset-inline:0;z-index:180;background:var(--ink3);border-top:1px solid rgba(201,168,76,.1);padding:13px 22px;display:flex;align-items:center;justify-content:space-between;gap:10px;transition:transform .3s;}
+.ck.h{transform:translateY(100%);}
+.ck p{font-size:13px;color:var(--muted);}
+.ck-b{display:flex;gap:7px;}
+.ca{background:var(--gold);color:#000;border:none;font-family:inherit;font-size:12px;font-weight:800;padding:7px 16px;border-radius:6px;cursor:pointer;}
+.cd{background:transparent;color:var(--muted);border:1px solid rgba(255,255,255,.07);font-family:inherit;font-size:12px;padding:7px 14px;border-radius:6px;cursor:pointer;}
+/* MODAL */
+.mo{display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:300;align-items:center;justify-content:center;padding:20px;}
+.mo.open{display:flex;}
+.mb{background:var(--ink3);border:1px solid rgba(201,168,76,.14);border-radius:14px;max-width:560px;width:100%;max-height:80vh;overflow-y:auto;padding:32px;}
+.mb h2{font-family:'Fraunces',serif;font-size:34px;font-weight:900;color:#fff;margin-bottom:16px;}
+.mb p{font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:11px;}
+.mc{background:var(--gold);color:#000;border:none;font-family:inherit;font-size:13px;font-weight:800;padding:10px 20px;border-radius:7px;cursor:pointer;margin-top:16px;}
+/* RESPONSIVE */
+@media(max-width:860px){nav{padding:13px 18px;}.why-g,.spd-g,.fg{grid-template-columns:1fr;}.bento-g{grid-template-columns:1fr 1fr;}.bc.s2,.bc.s3{grid-column:span 2;}}
+@media(max-width:560px){.stats-row{grid-template-columns:repeat(2,1fr);}.bento-g{grid-template-columns:1fr;}.bc.s2,.bc.s3{grid-column:span 1;}.btns{flex-direction:column;align-items:center;}.btn-g,.btn-o{width:100%;justify-content:center;}.wa-sticky span{display:none;}.wa-sticky{padding:13px 17px;}.fg{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="#" class="logo">JSUD <em>·</em></a>
+  <div class="nav-r">
+    <button class="lang active" onclick="setLang('en')" id="l-en">EN</button>
+    <button class="lang" onclick="setLang('es')" id="l-es">ES</button>
+    <a href="https://wa.me/14073739085" class="nav-cta" target="_blank" rel="noopener" data-t="nav-cta">Get a Quote</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="h-bg"></div><div class="h-grid"></div><div class="h-ring"></div>
+  <div class="live-pill reveal"><span class="dot"></span><span data-t="live">Available now · 105 countries</span></div>
+  <h1 class="reveal d1"><span data-t="h1a">Same Cars.</span><span class="it" data-t="h1b">Better Price.</span><span class="sm" data-t="h1c">Worldwide.</span></h1>
+  <p class="hero-p reveal d2" data-t="hero-p">We hold <strong>exclusive membership rates</strong> at one of the world's largest rental networks — same vehicles, same airports, <strong>lower than booking directly.</strong></p>
+  <div class="btns reveal d3">
+    <a href="https://wa.me/14073739085?text=Hi!%20I%20want%20a%20quote.%0ADestination%3A%20%0ADates%3A%20%0ACategory%3A%20" class="btn-g" target="_blank" rel="noopener">💬 <span data-t="cta1">Get a Free Quote Now</span></a>
+    <a href="#fleet" class="btn-o"><span data-t="cta2">Explore Fleet</span> ↓</a>
+  </div>
+  <div class="stats-row reveal d4">
+    <div class="stat"><span class="sn" data-counter="2000">2000+</span><span class="sl" data-t="st1">Locations</span></div>
+    <div class="stat"><span class="sn" data-counter="105">105+</span><span class="sl" data-t="st2">Countries</span></div>
+    <div class="stat"><span class="sn" data-counter="26">26</span><span class="sl" data-t="st3">Categories</span></div>
+    <div class="stat"><span class="sn">$0</span><span class="sl" data-t="st4">Deductible</span></div>
+  </div>
+</section>
+
+<div class="ticker"><div class="ticker-in" id="ticker"></div></div>
+
+<section class="why-s">
+  <div class="wrap why-g">
+    <div>
+      <span class="eye reveal" data-t="w-eye">Why cheaper?</span>
+      <h2 class="sh2 reveal d1" data-t="w-h2">We beat direct<br><em>booking prices.</em></h2>
+      <p class="sp reveal d2" data-t="w-p">Our membership unlocks wholesale rates across the entire global network — rates the public simply can't access online.</p>
+      <div class="advs">
+        <div class="adv reveal d1"><div class="adv-ic">🔑</div><div><strong data-t="a1t">Exclusive member access</strong><span data-t="a1b">Private wholesale rates across the full global fleet — not available at any public booking site.</span></div></div>
+        <div class="adv reveal d2"><div class="adv-ic">🌍</div><div><strong data-t="a2t">Full global platform</strong><span data-t="a2b">Every location, every category, every country — all bookable at member pricing.</span></div></div>
+        <div class="adv reveal d3"><div class="adv-ic">💸</div><div><strong data-t="a3t">Savings passed directly to you</strong><span data-t="a3b">No markups. What we quote is what you pay. Verifiable on your rental invoice.</span></div></div>
+        <div class="adv reveal d4"><div class="adv-ic">📋</div><div><strong data-t="a4t">Everything included</strong><span data-t="a4b">Insurance · $0 deductible · GPS · extra driver · roadside · unlimited miles — all in every quote.</span></div></div>
+      </div>
+    </div>
+    <div class="reveal d2">
+      <p class="vs-lbl" data-t="vs-lbl">Example · Toyota RAV4 · 7 days · Orlando, FL</p>
+      <div class="vs">
+        <div class="vs-head"><div class="vh" data-t="vh1">Feature</div><div class="vh" data-t="vh2">Direct booking</div><div class="vh jsud">✦ JSUD</div></div>
+        <div class="vr alt"><div class="vc lbl" data-t="vr1">Daily rate</div><div class="vc" data-t="vr1b">~$86/day</div><div class="vc yn" data-t="vr1c">Member rate ✓</div></div>
+        <div class="vr"><div class="vc lbl" data-t="vr2">Insurance/LDW</div><div class="vc nr" data-t="vr2b">+$28/day ✗</div><div class="vc yn">Included ✓</div></div>
+        <div class="vr alt"><div class="vc lbl">GPS</div><div class="vc nr" data-t="vr3b">+$12/day ✗</div><div class="vc yn">Included ✓</div></div>
+        <div class="vr"><div class="vc lbl" data-t="vr4">+1 Driver</div><div class="vc nr" data-t="vr4b">+$13/day ✗</div><div class="vc yn">Included ✓</div></div>
+        <div class="vr alt"><div class="vc lbl" data-t="vr5">Unlimited miles</div><div class="vc nr" data-t="vr5b">Extra ✗</div><div class="vc yn">Included ✓</div></div>
+        <div class="vs-bot">
+          <div class="vp"><span class="n" style="font-size:14px;color:var(--muted);" data-t="vf">Feature</span></div>
+          <div class="vp"><span class="n" style="color:var(--red);">~$979</span><small data-t="ve">total est.</small></div>
+          <div class="vp"><span class="n" style="color:var(--gold);" data-t="vj">Contact us</span><small data-t="vs2">You save more</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap" style="text-align:center;">
+    <span class="eye reveal" data-t="sp-eye">Speed</span>
+    <h2 class="sh2 reveal d1" data-t="sp-h2">Quote in <em>minutes,</em><br>not steps.</h2>
+    <p class="sp reveal d2" style="margin:0 auto;" data-t="sp-p">Booking direct means forms, accounts, upsells. With JSUD it's one WhatsApp message.</p>
+    <div class="spd-g">
+      <div class="spd-c reveal">
+        <div class="spd-title" data-t="sc1">Booking directly online</div>
+        <div class="si"><div class="sn2">1</div><div class="st" data-t="ss1a">Search dates & pick-up location</div></div>
+        <div class="si"><div class="sn2">2</div><div class="st" data-t="ss1b">Compare cars across multiple pages</div></div>
+        <div class="si"><div class="sn2">3</div><div class="st" data-t="ss1c">Add insurance, GPS, extras manually</div></div>
+        <div class="si"><div class="sn2">4</div><div class="st" data-t="ss1d">Create account & fill personal info</div></div>
+        <div class="si"><div class="sn2">5</div><div class="st" data-t="ss1e">Checkout — discover hidden fees</div></div>
+        <div class="spd-t" data-t="st1t">~25–40 minutes · Higher price</div>
+      </div>
+      <div class="spd-c w reveal d2">
+        <div class="spd-badge" data-t="wb">⚡ Faster & Cheaper</div>
+        <div class="spd-title" data-t="sc2">✦ With JSUD</div>
+        <div class="si"><div class="sn2">1</div><div class="st" data-t="ss2a">Send one WhatsApp: destination + dates</div></div>
+        <div class="si"><div class="sn2">2</div><div class="st" data-t="ss2b">Get exact quote in minutes</div></div>
+        <div class="si"><div class="sn2">3</div><div class="st" data-t="ss2c">Pay small reservation fee</div></div>
+        <div class="si"><div class="sn2">4</div><div class="st" data-t="ss2d">Just show up & drive. Done.</div></div>
+        <div class="spd-t" data-t="st2t">Under 10 minutes · Lower price</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="fleet" class="fleet-s">
+  <div class="wrap" style="text-align:center;">
+    <span class="eye reveal" data-t="fl-eye">Fleet</span>
+    <h2 class="sh2 reveal d1" data-t="fl-h2">26 Vehicle <em>Categories</em></h2>
+    <p class="sp reveal d2" style="margin:0 auto;" data-t="fl-p">Late-model vehicles from top brands — economy to luxury. All at member rates.</p>
+  </div>
+  <div class="ffs" id="fleet-filters">
+    <button class="filt active" onclick="ff('all',this)" data-t="ffa">All</button>
+    <button class="filt" onclick="ff('sedan',this)" data-t="ffs">Sedan</button>
+    <button class="filt" onclick="ff('suv',this)">SUV</button>
+    <button class="filt" onclick="ff('pickup',this)" data-t="ffp">Pick-up</button>
+    <button class="filt" onclick="ff('elite',this)" data-t="ffe">Elite / Luxury</button>
+    <button class="filt" onclick="ff('7pax',this)" data-t="ff7">7+ Passengers</button>
+    <button class="filt" onclick="ff('minivan',this)">Minivan</button>
+    <button class="filt" onclick="ff('conv',this)" data-t="ffc">Convertible</button>
+  </div>
+  <div class="fleet-g" id="fleet-grid"></div>
+</section>
+
+<section>
+  <div class="wrap" style="text-align:center;">
+    <span class="eye reveal" data-t="in-eye">Included</span>
+    <h2 class="sh2 reveal d1" data-t="in-h2">Everything <em>included.</em></h2>
+    <p class="sp reveal d2" style="margin:0 auto;" data-t="in-p">No add-ons. No counter surprises. What we quote is all you pay.</p>
+  </div>
+  <div class="bento-g">
+    <div class="bc s2 ac reveal"><div class="bn">$0</div><h3 data-t="b1h">Zero Deductible</h3><p data-t="b1p">Full coverage, zero deductible. If something happens, you owe nothing extra. Already in your rate.</p></div>
+    <div class="bc reveal d1"><span class="bi">📍</span><h3 data-t="b2h">GPS Included</h3><p data-t="b2p">No $12/day fee. Navigation included in every booking.</p></div>
+    <div class="bc reveal d2"><span class="bi">👤</span><h3 data-t="b3h">+1 Driver Free</h3><p data-t="b3p">Add one extra driver at zero cost on every reservation.</p></div>
+    <div class="bc reveal"><span class="bi">🛣️</span><h3 data-t="b4h">Unlimited Miles</h3><p data-t="b4p">Drive as far as you need. No cap, no surprises.</p></div>
+    <div class="bc reveal d1"><span class="bi">🆘</span><h3 data-t="b5h">24/7 Roadside</h3><p data-t="b5p">Assistance anywhere, anytime, worldwide.</p></div>
+    <div class="bc reveal d2"><span class="bi">✈️</span><h3 data-t="b6h">Airport Pickup</h3><p data-t="b6p">2,000+ airport & city locations worldwide.</p></div>
+    <div class="bc ac reveal d3"><span class="bi">↩️</span><h3 data-t="b7h">Free Cancellation</h3><p data-t="b7p">Cancel anytime, no penalty, no questions.</p></div>
+  </div>
+</section>
+
+<section class="dest-s">
+  <div class="wrap" style="text-align:center;">
+    <span class="eye reveal" data-t="de-eye">Destinations</span>
+    <h2 class="sh2 reveal d1" data-t="de-h2">Popular <em>Destinations</em></h2>
+    <p class="sp reveal d2" style="margin:0 auto;" data-t="de-p">Airports, cities, downtown — 105+ countries.</p>
+  </div>
+  <div class="dest-g" id="dest-grid"></div>
+</section>
+
+<section>
+  <div class="wrap" style="text-align:center;">
+    <span class="eye reveal" data-t="rv-eye">Reviews</span>
+    <h2 class="sh2 reveal d1" data-t="rv-h2">What <em>customers</em> say.</h2>
+    <p class="sp reveal d2" style="margin:0 auto;" data-t="rv-p">Real experiences. 5 ★ average.</p>
+  </div>
+  <div class="tg" id="testi-grid"></div>
+</section>
+
+<section class="faq-s">
+  <div class="wrap" style="text-align:center;">
+    <span class="eye reveal" data-t="fq-eye">FAQ</span>
+    <h2 class="sh2 reveal d1" data-t="fq-h2">Common <em>Questions</em></h2>
+  </div>
+  <div class="fq-w" id="faq-list"></div>
+</section>
+
+<section class="cta-s">
+  <h2 class="reveal"><span data-t="ch">Ready to </span><em data-t="ch2">Drive?</em></h2>
+  <p class="reveal d1" data-t="cp">Tell us your destination — exact quote in minutes.</p>
+  <a href="https://wa.me/14073739085?text=Hi!%20I%20want%20a%20quote.%0ADestination%3A%20%0ADates%3A%20%0ACategory%3A%20" class="btn-g reveal d2" target="_blank" rel="noopener">💬 <span data-t="cb">Get a Free Quote on WhatsApp</span></a>
+</section>
+
+<footer>
+  <div class="fg">
+    <div><div class="flogo">JSUD <em>·</em></div><p class="fd" data-t="fdesc">Premium worldwide vehicle rental. Exclusive member rates across 105+ countries and 2,000+ locations.</p></div>
+    <div class="fcol"><h4 data-t="fc1">Contact</h4><a href="https://wa.me/14073739085" target="_blank" rel="noopener">💬 WhatsApp</a><a href="mailto:info@justshowupdrive.com">✉️ info@justshowupdrive.com</a></div>
+    <div class="fcol"><h4 data-t="fc2">Company</h4><a href="#fleet" data-t="fc-fl">Fleet</a><a href="https://wa.me/14073739085" target="_blank" rel="noopener" data-t="fc-q">Get a Quote</a><a href="#" onclick="document.getElementById('pm').classList.add('open');return false;" data-t="fc-pr">Privacy Policy</a></div>
+  </div>
+  <div class="fb2"><p data-t="fc">© 2026 Just Show Up & Drive · Premium car rental worldwide</p><p data-t="fa">Available 24/7 · 105+ countries · 2,000+ locations</p></div>
+</footer>
+
+<a href="https://wa.me/14073739085?text=Hi!%20I%20want%20a%20quote.%0ADestination%3A%20%0ADates%3A%20%0ACategory%3A%20" class="wa-sticky" target="_blank" rel="noopener">💬 <span data-t="was">Get a Quote</span></a>
+
+<div class="ck" id="ck"><p data-t="ckt">We use essential cookies to improve your experience.</p><div class="ck-b"><button class="ca" onclick="hideCk()" data-t="ckok">Accept</button><button class="cd" onclick="hideCk()" data-t="ckno">Decline</button></div></div>
+
+<div class="mo" id="pm"><div class="mb"><h2>Privacy Policy</h2><p>Just Show Up & Drive ("JSUD") operates justshowupdrive.com. We collect only what's needed to provide our service.</p><p><strong>Information collected:</strong> Name, contact info, and rental preferences when you contact us.</p><p><strong>Usage:</strong> Solely to process your reservation. Never sold or shared beyond what's needed.</p><p><strong>Cookies:</strong> Essential cookies only.</p><p><strong>Contact:</strong> info@justshowupdrive.com</p><button class="mc" onclick="document.getElementById('pm').classList.remove('open')">Close</button></div></div>
+
+<script>
+const WA='https://wa.me/14073739085';
+const CARS=[
+  {id:1,n:"Nissan Versa",cat:"Compact",t:"sedan",p:5,b:3,img:"https://media.ed.edmunds-media.com/nissan/versa/2024/oem/2024_nissan_versa_sedan_sr_fq_oem_1_500.jpg"},
+  {id:2,n:"Volkswagen Jetta",cat:"Standard",t:"sedan",p:5,b:4,img:"https://media.ed.edmunds-media.com/volkswagen/jetta/2024/oem/2024_volkswagen_jetta_sedan_s_fq_oem_1_500.jpg"},
+  {id:3,n:"Toyota Camry",cat:"Full-size",t:"sedan",p:5,b:4,img:"https://media.ed.edmunds-media.com/toyota/camry/2024/oem/2024_toyota_camry_sedan_xse_fq_oem_1_500.jpg"},
+  {id:4,n:"Nissan Sentra",cat:"Intermediate",t:"sedan",p:5,b:3,img:"https://media.ed.edmunds-media.com/nissan/sentra/2024/oem/2024_nissan_sentra_sedan_sv_fq_oem_1_500.jpg"},
+  {id:5,n:"Toyota RAV4",cat:"Compact SUV",t:"suv",p:5,b:4,img:"https://media.ed.edmunds-media.com/toyota/rav4/2024/oem/2024_toyota_rav4_4dr-suv_xle_fq_oem_1_500.jpg"},
+  {id:6,n:"Chevrolet Blazer",cat:"Standard SUV",t:"suv",p:5,b:4,img:"https://media.ed.edmunds-media.com/chevrolet/blazer/2024/oem/2024_chevrolet_blazer_4dr-suv_rs_fq_oem_1_500.jpg"},
+  {id:7,n:"GMC Acadia",cat:"Large SUV",t:"suv",p:7,b:5,img:"https://media.ed.edmunds-media.com/gmc/acadia/2024/oem/2024_gmc_acadia_4dr-suv_at4_fq_oem_1_500.jpg"},
+  {id:8,n:"Chevrolet Suburban",cat:"Full-size SUV",t:"suv 7pax",p:8,b:6,img:"https://media.ed.edmunds-media.com/chevrolet/suburban/2024/oem/2024_chevrolet_suburban_4dr-suv_z71_fq_oem_1_500.jpg"},
+  {id:9,n:"BMW 3 Series",cat:"Full-size Elite",t:"sedan elite",p:5,b:4,img:"https://media.ed.edmunds-media.com/bmw/3-series/2024/oem/2024_bmw_3-series_sedan_330i_fq_oem_1_500.jpg"},
+  {id:10,n:"BMW X3",cat:"Standard Elite SUV",t:"suv elite",p:5,b:4,img:"https://media.ed.edmunds-media.com/bmw/x3/2024/oem/2024_bmw_x3_4dr-suv_xdrive30i_fq_oem_1_500.jpg"},
+  {id:11,n:"BMW X5",cat:"Large Elite SUV",t:"suv elite 7pax",p:7,b:5,img:"https://media.ed.edmunds-media.com/bmw/x5/2024/oem/2024_bmw_x5_4dr-suv_xdrive40i_fq_oem_1_500.jpg"},
+  {id:12,n:"Mercedes C-Class",cat:"Intermediate Elite",t:"sedan elite",p:5,b:3,img:"https://media.ed.edmunds-media.com/mercedes-benz/c-class/2024/oem/2024_mercedes-benz_c-class_sedan_c-300_fq_oem_1_500.jpg"},
+  {id:13,n:"Mercedes GLE",cat:"Large Elite SUV",t:"suv elite",p:5,b:5,img:"https://media.ed.edmunds-media.com/mercedes-benz/gle-class/2024/oem/2024_mercedes-benz_gle-class_4dr-suv_gle-350_fq_oem_1_500.jpg"},
+  {id:14,n:"Ford F-150",cat:"Pick-up Truck",t:"pickup",p:5,b:0,img:"https://media.ed.edmunds-media.com/ford/f-150/2024/oem/2024_ford_f-150_crew-cab-pickup_xlt_fq_oem_1_500.jpg"},
+  {id:15,n:"Chevrolet Silverado",cat:"Full-size Pick-up",t:"pickup",p:5,b:0,img:"https://media.ed.edmunds-media.com/chevrolet/silverado-1500/2024/oem/2024_chevrolet_silverado-1500_crew-cab-pickup_ltz_fq_oem_1_500.jpg"},
+  {id:16,n:"RAM 1500",cat:"Premium Pick-up",t:"pickup",p:5,b:0,img:"https://media.ed.edmunds-media.com/ram/1500/2024/oem/2024_ram_1500_crew-cab-pickup_laramie_fq_oem_1_500.jpg"},
+  {id:17,n:"Chrysler Pacifica",cat:"Minivan",t:"minivan 7pax",p:7,b:5,img:"https://media.ed.edmunds-media.com/chrysler/pacifica/2024/oem/2024_chrysler_pacifica_minivan_touring-l_fq_oem_1_500.jpg"},
+  {id:18,n:"Toyota Sienna",cat:"Premium Minivan",t:"minivan 7pax",p:8,b:6,img:"https://media.ed.edmunds-media.com/toyota/sienna/2024/oem/2024_toyota_sienna_minivan_xse_fq_oem_1_500.jpg"},
+  {id:19,n:"Ford Mustang",cat:"Convertible",t:"conv",p:4,b:2,img:"https://media.ed.edmunds-media.com/ford/mustang/2024/oem/2024_ford_mustang_convertible_gt_fq_oem_1_500.jpg"},
+  {id:20,n:"Chevrolet Camaro",cat:"Convertible",t:"conv",p:4,b:2,img:"https://media.ed.edmunds-media.com/chevrolet/camaro/2024/oem/2024_chevrolet_camaro_convertible_2lt_fq_oem_1_500.jpg"},
+  {id:21,n:"Cadillac Escalade",cat:"Luxury Full-size",t:"suv elite 7pax",p:8,b:6,img:"https://media.ed.edmunds-media.com/cadillac/escalade/2024/oem/2024_cadillac_escalade_4dr-suv_premium-luxury_fq_oem_1_500.jpg"},
+  {id:22,n:"Lincoln Navigator",cat:"Luxury Full-size",t:"suv elite 7pax",p:8,b:6,img:"https://media.ed.edmunds-media.com/lincoln/navigator/2024/oem/2024_lincoln_navigator_4dr-suv_reserve_fq_oem_1_500.jpg"},
+];
+const DESTS=[
+  {f:"🇺🇸",c:"Las Vegas, NV",co:"United States",k:"LAS"},
+  {f:"🇺🇸",c:"Miami, FL",co:"United States",k:"MIA"},
+  {f:"🇺🇸",c:"Orlando, FL",co:"United States",k:"MCO"},
+  {f:"🇺🇸",c:"New York, NY",co:"United States",k:"JFK"},
+  {f:"🇺🇸",c:"Los Angeles, CA",co:"United States",k:"LAX"},
+  {f:"🇲🇽",c:"Cancún",co:"México",k:"CUN"},
+  {f:"🇪🇸",c:"Madrid",co:"España",k:"MAD"},
+  {f:"🇦🇪",c:"Dubai",co:"UAE",k:"DXB"},
+  {f:"🇬🇧",c:"London",co:"United Kingdom",k:"LHR"},
+  {f:"🇫🇷",c:"Paris",co:"France",k:"CDG"},
+  {f:"🇨🇴",c:"Bogotá",co:"Colombia",k:"BOG"},
+  {f:"🌍",c:"Your Destination",co:"105+ countries",k:""},
+];
+const TESTIS={
+  en:[
+    {q:'"Super easy. WhatsApp → quote in 10 min → showed up at Miami airport. BMW X3 was waiting. No surprises. Paid less than any site I checked."',n:"Alejandro R.",d:"🚗 BMW X3 · Miami, FL 🇻🇪",i:"A"},
+    {q:'"RAV4 for 2 weeks in Spain. $0 deductible, GPS, unlimited miles — all true. Saved over $400 vs booking directly. Will always use JSUD."',n:"María C.",d:"🚙 Toyota RAV4 · Madrid, Spain 🇨🇴",i:"M"},
+    {q:'"Suburban for family of 7 in Orlando. Everything fit. Saved over $300 vs what I found online. Easiest rental I\'ve ever done."',n:"Carlos M.",d:"🚗 Chevrolet Suburban · Orlando, FL 🇲🇽",i:"C"},
+    {q:'"Car in Las Vegas for a week. Great rate on a Camry, everything included. Process took under 10 min on WhatsApp. Unbeatable."',n:"Sarah K.",d:"🚗 Toyota Camry · Las Vegas, NV 🇺🇸",i:"S"},
+  ],
+  es:[
+    {q:'"Súper fácil. WhatsApp → cotización en 10 min → llegué al aeropuerto y el BMW X3 me esperaba. Sin sorpresas. Pagué menos que en cualquier sitio."',n:"Alejandro R.",d:"🚗 BMW X3 · Miami, FL 🇻🇪",i:"A"},
+    {q:'"RAV4 por 2 semanas en España. $0 deducible, GPS incluido — todo verdad. Ahorré más de $400 vs reservar directo. Siempre usaré JSUD."',n:"María C.",d:"🚙 Toyota RAV4 · Madrid, España 🇨🇴",i:"M"},
+    {q:'"Suburban para 7 personas en Orlando. Todo cupió. Ahorré más de $300. La renta más fácil que he hecho en mi vida."',n:"Carlos M.",d:"🚗 Chevrolet Suburban · Orlando, FL 🇲🇽",i:"C"},
+    {q:'"Auto en Las Vegas por una semana. Excelente tarifa en un Camry, todo incluido. El proceso tomó menos de 10 minutos por WhatsApp."',n:"Sarah K.",d:"🚗 Toyota Camry · Las Vegas, NV 🇺🇸",i:"S"},
+  ]
+};
+const FAQS={
+  en:[
+    ["How is JSUD cheaper than booking directly?","We hold a special membership with a global rental network that gives us access to wholesale rates not available to the general public. We pass those savings directly to you — same vehicle, same location, lower price."],
+    ["How does the reservation process work?","3 simple steps: (1) Contact us on WhatsApp with destination, dates & vehicle category. (2) Pay a small reservation fee. (3) Show up at the counter and pay the remaining balance."],
+    ["What's included in every reservation?","Full insurance · $0 deductible · GPS · +1 driver free · 24/7 roadside · Unlimited miles · Free cancellation — all included, zero surprises."],
+    ["What payment methods do you accept?","Reservation fee: Zelle (US), Wise (international), Stripe (cards). Remaining balance paid at the counter in local currency."],
+    ["What is the security deposit at pickup?","A hold of $200–$500 USD on your credit card at pickup — fully released on return. Credit card in the driver's name required."],
+    ["What is the minimum age? What documents?","Minimum age: 21 (25 for premium/luxury). Required: driver's license, passport, credit card in driver's name."],
+    ["Can I pick up at the airport? One-way rentals?","Airport pickup at 2,000+ locations worldwide. One-way rentals available — just mention it when you contact us."],
+    ["Are child seats and extras available?","Yes — child seats, ski racks, snow tires at most locations. Mention them in your WhatsApp and we'll include them."],
+  ],
+  es:[
+    ["¿Por qué JSUD es más barato que reservar directo?","Tenemos una membresía especial con una red global que nos da acceso a tarifas mayoristas no disponibles al público. Ese ahorro te lo pasamos a ti — mismo vehículo, misma ubicación, mejor precio."],
+    ["¿Cómo funciona el proceso de reserva?","3 pasos: (1) Contáctanos por WhatsApp con destino, fechas y categoría. (2) Paga una pequeña tarifa de reserva. (3) Preséntate en el mostrador y paga el saldo."],
+    ["¿Qué incluye cada reserva?","Seguro completo · $0 deducible · GPS · +1 conductor gratis · Asistencia 24/7 · Millas ilimitadas · Cancelación gratuita — todo incluido."],
+    ["¿Qué métodos de pago aceptan?","Tarifa de reserva: Zelle (EEUU), Wise (internacional), Stripe (tarjetas). El saldo se paga en el mostrador en moneda local."],
+    ["¿Cuánto es el depósito de seguridad?","Cargo de $200–$500 USD en tarjeta al recoger — se libera al devolver. Tarjeta a nombre del conductor requerida."],
+    ["¿Cuál es la edad mínima? ¿Qué documentos?","Edad mínima: 21 años (25 para premium/lujo). Requerido: licencia, pasaporte, tarjeta a nombre del conductor."],
+    ["¿Puedo recoger en el aeropuerto? ¿Rentas de un tramo?","Sí — recogida en 2,000+ ubicaciones mundiales. Rentas de un solo tramo disponibles."],
+    ["¿Hay sillas de bebé y extras disponibles?","Sí — disponibles en la mayoría de ubicaciones. Menciónalo en tu WhatsApp."],
+  ]
+};
+const T={
+  en:{"nav-cta":"Get a Quote","live":"Available now · 105 countries","h1a":"Same Cars.","h1b":"Better Price.","h1c":"Worldwide.","hero-p":'We hold <strong>exclusive membership rates</strong> at one of the world\'s largest rental networks — same vehicles, same airports, <strong>lower than booking directly.</strong>',"cta1":"Get a Free Quote Now","cta2":"Explore Fleet","st1":"Locations","st2":"Countries","st3":"Categories","st4":"Deductible","w-eye":"Why cheaper?","w-h2":"We beat direct<br><em>booking prices.</em>","w-p":"Our membership unlocks wholesale rates across the entire global network — rates the public can't access online.","a1t":"Exclusive member access","a1b":"Private wholesale rates across the full global fleet — not available at any public booking site.","a2t":"Full global platform","a2b":"Every location, every category, every country — bookable at member pricing.","a3t":"Savings passed directly to you","a3b":"No markups. What we quote is what you pay. Verifiable on your rental invoice.","a4t":"Everything included","a4b":"Insurance · $0 deductible · GPS · extra driver · roadside · unlimited miles — all in every quote.","vs-lbl":"Example · Toyota RAV4 · 7 days · Orlando, FL","vh1":"Feature","vh2":"Direct booking","vr1":"Daily rate","vr1b":"~$86/day","vr1c":"Member rate ✓","vr2":"Insurance/LDW","vr2b":"+$28/day ✗","vr3b":"+$12/day ✗","vr4":"+1 Driver","vr4b":"+$13/day ✗","vr5":"Unlimited miles","vr5b":"Extra ✗","vf":"Feature","ve":"total est.","vj":"Contact us","vs2":"You save more","sp-eye":"Speed","sp-h2":"Quote in <em>minutes,</em><br>not steps.","sp-p":"Booking direct means forms, accounts, upsells. With JSUD it's one WhatsApp message.","sc1":"Booking directly online","ss1a":"Search dates & pick-up location","ss1b":"Compare cars across multiple pages","ss1c":"Add insurance, GPS, extras manually","ss1d":"Create account & fill personal info","ss1e":"Checkout — discover hidden fees","st1t":"~25–40 minutes · Higher price","wb":"⚡ Faster & Cheaper","sc2":"✦ With JSUD","ss2a":"Send one WhatsApp: destination + dates","ss2b":"Get exact quote in minutes","ss2c":"Pay small reservation fee","ss2d":"Just show up & drive. Done.","st2t":"Under 10 minutes · Lower price","fl-eye":"Fleet","fl-h2":"26 Vehicle <em>Categories</em>","fl-p":"Late-model vehicles from top brands — economy to luxury. All at member rates.","ffa":"All","ffs":"Sedan","ffp":"Pick-up","ffe":"Elite / Luxury","ff7":"7+ Passengers","ffc":"Convertible","in-eye":"Included","in-h2":"Everything <em>included.</em>","in-p":"No add-ons. No counter surprises. What we quote is all you pay.","b1h":"Zero Deductible","b1p":"Full coverage, zero deductible. If something happens, you owe nothing extra.","b2h":"GPS Included","b2p":"No $12/day fee. Navigation included in every booking.","b3h":"+1 Driver Free","b3p":"Add one extra driver at zero cost on every reservation.","b4h":"Unlimited Miles","b4p":"Drive as far as you need. No cap, no surprises.","b5h":"24/7 Roadside","b5p":"Assistance anywhere, anytime, worldwide.","b6h":"Airport Pickup","b6p":"2,000+ airport & city locations worldwide.","b7h":"Free Cancellation","b7p":"Cancel anytime, no penalty, no questions.","de-eye":"Destinations","de-h2":"Popular <em>Destinations</em>","de-p":"Airports, cities, downtown — 105+ countries.","rv-eye":"Reviews","rv-h2":"What <em>customers</em> say.","rv-p":"Real experiences. 5 ★ average.","fq-eye":"FAQ","fq-h2":"Common <em>Questions</em>","ch":"Ready to ","ch2":"Drive?","cp":"Tell us your destination — exact quote in minutes.","cb":"Get a Free Quote on WhatsApp","fdesc":"Premium worldwide vehicle rental. Exclusive member rates across 105+ countries and 2,000+ locations.","fc1":"Contact","fc2":"Company","fc-fl":"Fleet","fc-q":"Get a Quote","fc-pr":"Privacy Policy","fc":"© 2026 Just Show Up & Drive · Premium car rental worldwide","fa":"Available 24/7 · 105+ countries · 2,000+ locations","ckt":"We use essential cookies to improve your experience.","ckok":"Accept","ckno":"Decline","was":"Get a Quote","sim":"or similar","qb":"Get quote →"},
+  es:{"nav-cta":"Cotizar","live":"Disponible ahora · 105 países","h1a":"Mismos Autos.","h1b":"Mejor Precio.","h1c":"Mundial.","hero-p":'Tenemos <strong>tarifas de membresía exclusiva</strong> en una de las redes de renta más grandes del mundo — mismos vehículos, mismos aeropuertos, <strong>más baratos que reservando directo.</strong>',"cta1":"Cotización Gratis Ahora","cta2":"Ver Flota ↓","st1":"Ubicaciones","st2":"Países","st3":"Categorías","st4":"Deducible","w-eye":"¿Por qué más barato?","w-h2":"Superamos los precios<br><em>del mercado.</em>","w-p":"Nuestra membresía desbloquea tarifas mayoristas en toda la red global — tarifas que el público no puede acceder online.","a1t":"Acceso exclusivo para miembros","a1b":"Tarifas mayoristas privadas en toda la flota global — no disponibles en ningún sitio público.","a2t":"Plataforma global completa","a2b":"Cada ubicación, cada categoría, cada país — todo a precio de miembro.","a3t":"Ahorros transferidos a ti","a3b":"Sin cobros ocultos. Lo que cotizamos es lo que pagas. Verificable en tu factura.","a4t":"Todo incluido","a4b":"Seguro · $0 deducible · GPS · conductor extra · asistencia · millas ilimitadas — incluido en cada cotización.","vs-lbl":"Ejemplo · Toyota RAV4 · 7 días · Orlando, FL","vh1":"Característica","vh2":"Reserva directa","vr1":"Tarifa diaria","vr1b":"~$86/día","vr1c":"Tarifa miembro ✓","vr2":"Seguro/LDW","vr2b":"+$28/día ✗","vr3b":"+$12/día ✗","vr4":"Conductor extra","vr4b":"+$13/día ✗","vr5":"Millas ilimitadas","vr5b":"Extra ✗","vf":"Característica","ve":"total est.","vj":"Contáctanos","vs2":"Ahorras más","sp-eye":"Velocidad","sp-h2":"Cotización en <em>minutos,</em><br>no pasos.","sp-p":"Reservar directo significa formularios y cobros extra. Con JSUD es un solo mensaje de WhatsApp.","sc1":"Reservando directo online","ss1a":"Buscar fechas y ubicación de recogida","ss1b":"Comparar autos en múltiples páginas","ss1c":"Agregar seguro, GPS, extras manualmente","ss1d":"Crear cuenta y llenar datos personales","ss1e":"Checkout — descubres cargos ocultos","st1t":"~25–40 minutos · Precio mayor","wb":"⚡ Más rápido y barato","sc2":"✦ Con JSUD","ss2a":"Envía un WhatsApp: destino + fechas","ss2b":"Recibes cotización exacta en minutos","ss2c":"Pagas tarifa de reserva para confirmar","ss2d":"Solo preséntate y maneja. Listo.","st2t":"Menos de 10 minutos · Mejor precio","fl-eye":"Flota","fl-h2":"26 <em>Categorías</em> de Vehículos","fl-p":"Vehículos de modelo reciente — desde compacto hasta lujo. Todos a tarifa de miembro.","ffa":"Todos","ffs":"Sedán","ffp":"Pick-up","ffe":"Elite / Lujo","ff7":"7+ Pasajeros","ffc":"Convertible","in-eye":"Incluido","in-h2":"Todo <em>incluido.</em>","in-p":"Sin cargos extras. Sin sorpresas. Lo que cotizamos es todo lo que pagas.","b1h":"Cero Deducible","b1p":"Cobertura total, cero deducible. Si algo pasa, no debes nada extra.","b2h":"GPS Incluido","b2p":"Sin cargo diario. Navegación incluida en cada reserva.","b3h":"+1 Conductor Gratis","b3p":"Agrega un conductor extra sin costo en cada reserva.","b4h":"Millas Ilimitadas","b4p":"Maneja lo que necesites. Sin límite de millas.","b5h":"Asistencia 24/7","b5p":"Ayuda en cualquier lugar y hora. Cobertura mundial.","b6h":"Recogida en Aeropuerto","b6p":"2,000+ aeropuertos y ciudades del mundo.","b7h":"Cancelación Gratuita","b7p":"Cancela en cualquier momento sin penalización.","de-eye":"Destinos","de-h2":"Destinos <em>Populares</em>","de-p":"Aeropuertos, ciudades y centros — 105+ países.","rv-eye":"Reseñas","rv-h2":"Lo que dicen los <em>clientes.</em>","rv-p":"Experiencias reales. Promedio 5 ★.","fq-eye":"Preguntas Frecuentes","fq-h2":"Preguntas <em>Frecuentes</em>","ch":"¿Listo para ","ch2":"Manejar?","cp":"Dinos tu destino — cotización en minutos.","cb":"Cotización Gratis por WhatsApp","fdesc":"Renta de vehículos premium mundial. Tarifas exclusivas en 105+ países y 2,000+ ubicaciones.","fc1":"Contacto","fc2":"Empresa","fc-fl":"Flota","fc-q":"Cotizar","fc-pr":"Política de Privacidad","fc":"© 2026 Just Show Up & Drive · Renta de autos premium mundial","fa":"Disponible 24/7 · 105+ países · 2,000+ ubicaciones","ckt":"Usamos cookies esenciales para mejorar tu experiencia.","ckok":"Aceptar","ckno":"Rechazar","was":"Cotizar","sim":"o similar","qb":"Cotizar →"}
+};
+let lang='en';
+function setLang(l){
+  lang=l;
+  document.getElementById('l-en').classList.toggle('active',l==='en');
+  document.getElementById('l-es').classList.toggle('active',l==='es');
+  document.querySelector('html').lang=l;
+  const t=T[l];
+  document.querySelectorAll('[data-t]').forEach(el=>{const k=el.getAttribute('data-t');if(t[k]!==undefined)el.innerHTML=t[k];});
+  renderFleet('all');renderDests();renderTestis();renderFAQ();
+  // Update WA links
+  const msg=l==='es'?'Hola!%20Quiero%20cotizar.%0ADestino%3A%20%0AFechas%3A%20%0ACategor%C3%ADa%3A%20':'Hi!%20I%20want%20a%20quote.%0ADestination%3A%20%0ADates%3A%20%0ACategory%3A%20';
+  document.querySelectorAll('a[href*="wa.me"]').forEach(a=>{if(a.href.includes('text='))a.href=WA+'?text='+msg;});
+}
+function renderFleet(filter){
+  const t=T[lang];
+  const g=document.getElementById('fleet-grid');
+  const cars=filter==='all'?CARS:CARS.filter(c=>c.t.includes(filter));
+  g.innerHTML=cars.map(car=>`<div class="cc"><div class="cw"><span class="cp">${car.cat}</span><img src="${car.img}" alt="${car.n}" onerror="this.style.display='none'"></div><div class="cb"><div class="cn">${car.n}</div><div class="csim">${t['sim']}</div><div class="csp"><span>👤${car.p}</span>${car.b>0?`<span>🧳${car.b}</span>`:''}</div></div><a href="${WA}?text=${encodeURIComponent((lang==='es'?'Hola! Me interesa el ':'Hi! Interested in the ')+car.n+'.')}" class="cf" target="_blank" rel="noopener"><span class="cfl">${t['qb']}</span><span class="cfa">→</span></a></div>`).join('');
+}
+function ff(f,btn){document.querySelectorAll('.filt').forEach(b=>b.classList.remove('active'));btn.classList.add('active');renderFleet(f);}
+function renderDests(){
+  const g=document.getElementById('dest-grid');
+  g.innerHTML=DESTS.map(d=>`<a href="${WA}?text=${encodeURIComponent(lang==='es'?`Hola! Quiero cotizar para ${d.c}.\nDestino: ${d.c} ${d.k?'('+d.k+')':''}\nFechas: \nCategoría: `:`Hi! I want a quote for ${d.c}.\nDestination: ${d.c} ${d.k?'('+d.k+')':''}\nDates: \nCategory: `)}" class="dc" target="_blank" rel="noopener"><span class="df">${d.f}</span><span class="dci">${d.c}</span><span class="dco">${d.co}</span><span class="dca">${d.k?'Quote →':(lang==='es'?'Cualquier destino →':'Any destination →')}</span></a>`).join('');
+}
+function renderTestis(){
+  const g=document.getElementById('testi-grid');
+  g.innerHTML=TESTIS[lang].map(t=>`<div class="tc"><div class="ts">★★★★★</div><p class="tq">${t.q}</p><div class="tf"><div class="ta">${t.i}</div><div><div class="tn">${t.n}</div><div class="td">${t.d}</div></div></div></div>`).join('');
+}
+function renderFAQ(){
+  const l=document.getElementById('faq-list');
+  l.innerHTML=FAQS[lang].map((f,i)=>`<div class="fi" id="fq${i}"><button class="fb" onclick="tFAQ(${i})">${f[0]}<span class="fc">▼</span></button><div class="fa">${f[1]}</div></div>`).join('');
+}
+function tFAQ(i){document.querySelectorAll('.fi').forEach((el,j)=>el.classList.toggle('open',j===i&&!el.classList.contains('open')));}
+function buildTicker(){
+  const items=['$0 Deductible ✓','GPS Included ✓','+1 Driver Free ✓','Unlimited Miles ✓','105 Countries ✓','2,000+ Locations ✓','Free Cancellation ✓','24/7 Roadside ✓','Beat Any Direct Price ✓','Same Premium Fleet ✓'];
+  const html=items.map(i=>`<span class="ti"><span class="g">${i}</span><span class="sep">✦</span></span>`).join('');
+  document.getElementById('ticker').innerHTML=html+html;
+}
+function animCounters(){
+  document.querySelectorAll('[data-counter]').forEach(el=>{
+    const target=parseInt(el.getAttribute('data-counter'));
+    let cur=0,step=Math.ceil(target/55);
+    const iv=setInterval(()=>{cur=Math.min(cur+step,target);el.textContent=cur.toLocaleString()+'+';if(cur>=target)clearInterval(iv);},16);
+  });
+}
+const ro=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible');}),{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+const ho=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){animCounters();ho.disconnect();}}),{threshold:.5});
+const sb=document.querySelector('.stats-row');if(sb)ho.observe(sb);
+function hideCk(){document.getElementById('ck').classList.add('h');localStorage.setItem('jsud-ck','1');}
+if(localStorage.getItem('jsud-ck'))document.getElementById('ck').classList.add('h');
+renderFleet('all');renderDests();renderTestis();renderFAQ();buildTicker();
+</script>
+</body>
+</html>
