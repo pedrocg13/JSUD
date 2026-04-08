@@ -1,0 +1,1547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=5.0"/>
+<title>Just Show Up & Drive — Premium Car Rental Worldwide</title>
+<meta name="description" content="Premium car rental in 105+ countries. $0 deductible, GPS, LDW, unlimited miles — all included. WhatsApp quote in minutes."/>
+<meta name="robots" content="index,follow"/>
+<link rel="canonical" href="https://www.justshowupdrive.com/"/>
+<link rel="alternate" hreflang="en" href="https://www.justshowupdrive.com/"/>
+<link rel="alternate" hreflang="es" href="https://www.justshowupdrive.com/"/>
+<link rel="alternate" hreflang="x-default" href="https://www.justshowupdrive.com/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://www.justshowupdrive.com/"/>
+<meta property="og:title" content="Just Show Up & Drive — Premium Car Rental Worldwide"/>
+<meta property="og:description" content="Premium car rental in 105+ countries. $0 deductible, GPS, LDW included."/>
+<meta property="og:site_name" content="Just Show Up & Drive"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23000'/%3E%3Ctext x='4' y='24' font-family='Georgia,serif' font-size='20' font-weight='900' fill='%23E84A0E'%3EJ%3C/text%3E%3C/svg%3E"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js" defer></script>
+<style>
+/* ═══════════════════════════════════════════════════
+   JSUD — HYPERREALISTIC CINEMATIC DESIGN SYSTEM
+═══════════════════════════════════════════════════ */
+:root{
+  /* Porcelain premium — warm white */
+  --k0:#F2F0EC;
+  --k1:#FFFFFF;
+  --k2:#F8F7F4;
+  --k3:#EEECEA;
+  --k4:#E4E1DC;
+  --k5:#D8D4CE;
+
+  /* Amber ignition — supercar brake caliper */
+  --a0:#E84A0E;
+  --a1:#FF5C1A;
+  --a2:#FF8040;
+  --a3:rgba(232,74,14,.15);
+  --a-glow:rgba(232,74,14,.3);
+
+  /* Gold — polished 18k */
+  --g0:#8C6820;
+  --g1:#B8902A;
+  --g2:#D4AA48;
+  --g3:#ECC96A;
+  --g-glow:rgba(180,140,40,.25);
+
+  /* Chromium — brushed metal */
+  --c0:#6878A0;
+  --c1:#8898C0;
+  --c2:#AAB8D8;
+
+  /* Emerald — WhatsApp, success */
+  --e0:#059669;
+  --e1:#10B981;
+  --e2:#34D399;
+  --e-glow:rgba(16,185,129,.3);
+
+  /* Type */
+  --t0:#0A0A14;
+  --t1:#1C1C2E;
+  --t2:#5A5A7A;
+  --t3:#9090B0;
+
+  /* Glass & borders */
+  --gl1:rgba(0,0,0,.03);
+  --gl2:rgba(0,0,0,.05);
+  --gl3:rgba(0,0,0,.08);
+  --bd1:rgba(0,0,0,.08);
+  --bd2:rgba(0,0,0,.14);
+  --bda:rgba(232,74,14,.25);
+
+  /* Layout */
+  --nav:58px;
+  --bot:66px;
+  --ease:cubic-bezier(.4,0,.2,1);
+}
+
+/* ── BASE RESET ── */
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{height:100%;overflow:hidden;background:var(--k0);}
+body{font-family:'Inter',sans-serif;color:var(--t1);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+a{text-decoration:none;color:inherit;}
+button{font-family:inherit;cursor:pointer;border:none;background:none;}
+img{display:block;max-width:100%;}
+:focus-visible{outline:2px solid var(--a0);outline-offset:3px;}
+.hidden{display:none!important;}
+
+/* ═══════════════════════════════════════
+   NAVIGATION — ULTRA THIN GLASS
+═══════════════════════════════════════ */
+.nav{
+  position:fixed;top:0;inset-inline:0;z-index:500;
+  height:var(--nav);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 clamp(16px,3vw,40px);
+  background:rgba(242,240,236,.97);
+  backdrop-filter:blur(32px) saturate(160%);
+  -webkit-backdrop-filter:blur(32px) saturate(160%);
+  border-bottom:1px solid rgba(0,0,0,.08);
+}
+/* Hairline amber accent on nav bottom */
+.nav::after{
+  content:'';position:absolute;bottom:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(232,74,14,.3),rgba(180,140,40,.3),transparent);
+}
+
+.nav-logo{
+  display:flex;align-items:center;gap:10px;
+  cursor:pointer;text-decoration:none;
+}
+.nav-logo-mark{
+  width:32px;height:32px;
+  background:linear-gradient(135deg,var(--a0),var(--g1));
+  border-radius:8px;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Fraunces',serif;font-size:16px;font-weight:900;color:#000;
+  box-shadow:0 0 20px var(--a-glow);
+  transition:.3s;
+}
+.nav-logo:hover .nav-logo-mark{box-shadow:0 0 32px var(--a-glow);}
+.nav-logo-text{
+  font-family:'Fraunces',serif;font-size:16px;font-weight:900;
+  color:var(--t0);letter-spacing:-.3px;
+}
+.nav-logo-text small{font-size:9px;font-weight:300;color:var(--t3);letter-spacing:1px;text-transform:uppercase;display:block;font-family:'Inter',sans-serif;margin-top:-2px;}
+
+.nav-tabs{display:none;align-items:center;gap:1px;}
+@media(min-width:768px){.nav-tabs{display:flex;}}
+.ntab{
+  position:relative;font-size:11.5px;font-weight:500;letter-spacing:.2px;
+  color:var(--t3);padding:7px 14px;border-radius:7px;
+  cursor:pointer;transition:all .2s;background:none;border:none;
+}
+.ntab:hover{color:var(--t1);background:var(--gl1);}
+.ntab.on{color:var(--t0);font-weight:600;}
+.ntab.on::after{
+  content:'';position:absolute;bottom:-1px;left:30%;right:30%;height:2px;
+  background:linear-gradient(90deg,var(--a0),var(--g2));
+  border-radius:2px;
+}
+
+.nav-r{display:flex;align-items:center;gap:8px;}
+.lang-box{
+  display:flex;background:var(--k2);
+  border:1px solid var(--bd1);border-radius:8px;overflow:hidden;
+}
+.lb{color:var(--t3);padding:5px 12px;font-size:10.5px;font-weight:700;letter-spacing:.8px;transition:.15s;cursor:pointer;}
+.lb.on{background:linear-gradient(135deg,var(--a0),#B03208);color:#fff;}
+.nav-wa{
+  display:none;align-items:center;gap:7px;
+  background:linear-gradient(135deg,var(--e0),#037A54);
+  color:#fff;font-size:11.5px;font-weight:700;
+  padding:8px 16px;border-radius:8px;
+  transition:.2s;text-decoration:none;white-space:nowrap;
+  border:1px solid rgba(16,185,129,.25);
+  box-shadow:0 2px 16px var(--e-glow);
+}
+.nav-wa:hover{transform:translateY(-1px);box-shadow:0 4px 24px var(--e-glow);}
+@media(min-width:520px){.nav-wa{display:flex;}}
+
+/* ═══════════════════════════════════════
+   BOTTOM NAV — AUTOMOTIVE INSPIRED
+═══════════════════════════════════════ */
+.bot-nav{
+  position:fixed;bottom:0;inset-inline:0;z-index:500;
+  height:var(--bot);display:flex;
+  background:rgba(242,240,236,.98);
+  backdrop-filter:blur(32px);
+  border-top:1px solid rgba(0,0,0,.1);
+}
+/* Thin light line at top of bottom nav */
+.bot-nav::before{
+  content:'';position:absolute;top:0;left:8%;right:8%;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(232,74,14,.25),rgba(180,140,40,.2),transparent);
+}
+.bn{
+  flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:4px;cursor:pointer;transition:.25s;padding:5px 2px;
+  background:none;border:none;position:relative;
+}
+.bn::after{
+  content:'';position:absolute;top:0;left:20%;right:20%;height:2px;
+  background:linear-gradient(90deg,var(--a0),var(--g2));
+  border-radius:0 0 4px 4px;opacity:0;
+  transition:opacity .25s;transform:scaleX(.6);transition:opacity .25s,transform .25s;
+}
+.bn.on::after{opacity:1;transform:scaleX(1);}
+.bn svg{transition:.25s;opacity:.35;}
+.bn.on svg{opacity:1;filter:drop-shadow(0 0 8px rgba(232,74,14,.5));}
+.bn.on svg path{fill:var(--a1)!important;stroke:var(--a1)!important;}
+.bn:not(.on) svg path{fill:none;stroke:var(--t3);stroke-width:1.8;}
+.bn-lbl{font-size:8px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--t2);transition:.25s;}
+.bn.on .bn-lbl{color:var(--a1);}
+@media(min-width:768px){.bot-nav{display:none;}}
+
+/* ═══════════════════════════════════════
+   APP SHELL
+═══════════════════════════════════════ */
+.shell{
+  position:fixed;top:var(--nav);bottom:var(--bot);
+  inset-inline:0;overflow:hidden;
+}
+@media(min-width:768px){.shell{bottom:0;}}
+.page{
+  position:absolute;inset:0;
+  overflow-y:auto;overflow-x:hidden;
+  display:none;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:thin;
+  scrollbar-color:var(--k4) transparent;
+}
+.page.on{display:block;}
+
+/* ═══════════════════════════════════════
+   HOME — CINEMATIC HERO
+═══════════════════════════════════════ */
+.hero{
+  position:relative;
+  min-height:calc(100svh - var(--nav) - var(--bot));
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:48px 20px 32px;overflow:hidden;
+}
+@media(min-width:768px){.hero{min-height:calc(100svh - var(--nav));}}
+
+/* Layered background — like deep space through a windshield */
+.hbg{position:absolute;inset:0;background:radial-gradient(ellipse 140% 120% at 50% 0%,#EDE8DE,var(--k0) 70%);}
+/* Primary glow — warm engine amber */
+.hbg::before{
+  content:'';position:absolute;
+  width:min(900px,110vw);height:min(900px,110vw);
+  border-radius:50%;
+  top:40%;left:50%;transform:translate(-50%,-50%);
+  background:radial-gradient(circle at center,
+    rgba(232,74,14,.07) 0%,
+    rgba(180,90,14,.03) 20%,
+    transparent 50%
+  );
+  animation:glow-pulse 8s ease-in-out infinite;
+}
+/* Secondary glow — cool midnight blue at edges */
+.hbg::after{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 80% 50% at 80% 100%,rgba(232,74,14,.04) 0%,transparent 60%),
+             radial-gradient(ellipse 60% 40% at 10% 10%,rgba(180,140,40,.03) 0%,transparent 50%);
+}
+@keyframes glow-pulse{0%,100%{opacity:.7;}50%{opacity:1;}}
+
+/* Carbon fiber grid texture */
+.hgrid{
+  position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(0,0,0,.04) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(0,0,0,.04) 1px,transparent 1px);
+  background-size:48px 48px;
+  mask-image:radial-gradient(ellipse 80% 70% at 50% 50%,black 0%,transparent 70%);
+}
+/* Subtle scanline effect */
+.hlines{
+  position:absolute;inset:0;
+  background:repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 3px,
+    rgba(0,0,0,.04) 3px,
+    rgba(0,0,0,.04) 4px
+  );
+  pointer-events:none;opacity:.5;
+}
+/* Orbit rings */
+.hring{
+  position:absolute;border-radius:50%;
+  top:50%;left:50%;transform:translate(-50%,-50%);
+  border:1px solid rgba(232,74,14,.08);
+  animation:ring-anim 12s linear infinite;
+}
+.hring.r1{width:min(640px,88vw);height:min(640px,88vw);}
+.hring.r2{width:min(440px,60vw);height:min(440px,60vw);border-color:rgba(180,140,40,.08);animation-duration:18s;animation-direction:reverse;}
+.hring.r3{width:min(280px,36vw);height:min(280px,36vw);border-color:rgba(232,74,14,.07);animation-duration:8s;}
+@keyframes ring-anim{from{transform:translate(-50%,-50%) rotate(0deg);}to{transform:translate(-50%,-50%) rotate(360deg);}}
+
+/* Hero status pill */
+.hpill{
+  position:relative;display:inline-flex;align-items:center;gap:8px;
+  background:rgba(16,185,129,.06);
+  border:1px solid rgba(16,185,129,.18);
+  border-radius:100px;padding:5px 16px;
+  font-size:10.5px;font-weight:600;color:var(--e1);
+  margin-bottom:28px;letter-spacing:.2px;
+}
+.hpill-dot{
+  width:6px;height:6px;border-radius:50%;
+  background:var(--e1);box-shadow:0 0 10px var(--e1);
+  animation:dot-pulse 2s infinite;
+}
+@keyframes dot-pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.4;transform:scale(.8);}}
+
+/* Headline */
+.hh1{
+  position:relative;
+  font-family:'Fraunces',serif;
+  font-size:clamp(52px,11vw,130px);
+  font-weight:900;line-height:.82;
+  letter-spacing:-4px;text-transform:uppercase;
+  color:var(--t0);margin-bottom:24px;
+}
+.hh1 .hl{
+  display:block;font-style:italic;font-weight:300;
+  background:linear-gradient(135deg,var(--a0) 0%,var(--a1) 30%,var(--g2) 70%,var(--g3) 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  letter-spacing:-2px;
+  filter:drop-shadow(0 2px 40px rgba(232,74,14,.4));
+  animation:shimmer-text 4s ease-in-out infinite;
+  background-size:200% 100%;
+}
+@keyframes shimmer-text{0%,100%{background-position:0% 50%;}50%{background-position:100% 50%;}}
+.hh1 .sm{
+  font-size:.5em;letter-spacing:-1px;font-weight:300;
+  color:rgba(255,255,255,.15);font-style:normal;
+}
+
+.hsub{
+  position:relative;font-size:clamp(13px,1.8vw,17px);
+  font-weight:400;color:rgba(232,234,248,.45);
+  max-width:500px;line-height:1.8;margin-bottom:36px;
+}
+.hsub strong{color:var(--t1);font-weight:600;}
+
+/* CTA Buttons */
+.hbtns{position:relative;display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:52px;}
+.btn-p{
+  display:inline-flex;align-items:center;gap:9px;
+  background:linear-gradient(135deg,var(--e0),#037A54);
+  color:#fff;font-size:14px;font-weight:700;
+  padding:14px 28px;border-radius:10px;
+  text-decoration:none;transition:all .3s;
+  box-shadow:0 4px 32px var(--e-glow),inset 0 1px 0 rgba(255,255,255,.1);
+  border:1px solid rgba(52,211,153,.2);
+}
+.btn-p:hover{transform:translateY(-3px);box-shadow:0 10px 48px var(--e-glow),inset 0 1px 0 rgba(255,255,255,.15);}
+.btn-s{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--gl1);color:var(--t1);
+  font-size:14px;font-weight:500;
+  padding:14px 24px;border-radius:10px;
+  text-decoration:none;border:1px solid var(--bd2);
+  transition:all .2s;backdrop-filter:blur(12px);
+}
+.btn-s:hover{background:var(--gl2);border-color:var(--bda);color:var(--t0);}
+
+/* Stats */
+.hstats{
+  position:relative;
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:1px;
+  background:rgba(232,74,14,.18);
+  border-radius:14px;overflow:hidden;
+  max-width:580px;width:100%;
+  box-shadow:0 0 40px rgba(232,74,14,.06);
+}
+.hstat{background:var(--k1);padding:18px 10px;text-align:center;position:relative;}
+.hstat::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(232,74,14,.25),transparent);}
+.hstat-n{
+  font-family:'Fraunces',serif;
+  font-size:clamp(22px,4vw,30px);font-weight:900;
+  background:linear-gradient(135deg,var(--a1),var(--g2));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;display:block;line-height:1;
+  filter:drop-shadow(0 0 14px rgba(232,74,14,.35));
+}
+.hstat-l{font-size:8px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;color:var(--t3);margin-top:4px;display:block;}
+
+/* ── FEATURES STRIP ── */
+.feat-strip{background:linear-gradient(180deg,var(--k2),var(--k3));border-top:1px solid var(--bd1);}
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(0,0,0,.08);}
+@media(min-width:640px){.feat-grid{grid-template-columns:repeat(6,1fr);}}
+.fi{
+  background:var(--k1);padding:18px 12px;text-align:center;
+  transition:.25s;cursor:default;position:relative;overflow:hidden;
+}
+.fi::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(232,74,14,.04),transparent 60%);opacity:0;transition:.25s;}
+.fi:hover::before{opacity:1;}
+.fi-ic{font-size:22px;display:block;margin-bottom:7px;filter:grayscale(.2);}
+.fi-t{font-size:10px;font-weight:700;color:var(--t1);letter-spacing:.2px;}
+.fi-s{font-size:8px;color:var(--t3);margin-top:2px;letter-spacing:.4px;}
+
+/* ── HOW IT WORKS ── */
+.how{padding:clamp(36px,5vw,60px) 20px;background:var(--k3);}
+.s-eye{display:block;font-size:8px;font-weight:800;letter-spacing:4px;text-transform:uppercase;background:linear-gradient(90deg,var(--a0),var(--g2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:10px;text-align:center;}
+.s-h2{font-family:'Fraunces',serif;font-size:clamp(30px,5.5vw,58px);font-weight:900;color:var(--t0);letter-spacing:-2px;text-align:center;line-height:.88;margin-bottom:12px;}
+.s-h2 em{font-style:italic;background:linear-gradient(135deg,var(--a0),var(--g2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.s-p{font-size:14px;color:var(--t3);text-align:center;max-width:420px;margin:0 auto 40px;line-height:1.7;}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(0,0,0,.08);max-width:800px;margin:0 auto;border-radius:12px;overflow:hidden;}
+.step{
+  background:#FFFFFF;padding:28px 20px;position:relative;overflow:hidden;
+  transition:.25s;box-shadow:0 2px 16px rgba(0,0,0,.05);
+}
+.step:hover{background:var(--k2);}
+.step-n{
+  font-family:'Fraunces',serif;font-size:72px;font-weight:900;
+  background:linear-gradient(135deg,rgba(232,74,14,.08),rgba(180,140,40,.04));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;line-height:1;margin-bottom:14px;display:block;
+}
+.step-ic{font-size:28px;display:block;margin-bottom:12px;}
+.step h4{font-size:13px;font-weight:700;color:var(--t0);margin-bottom:7px;}
+.step p{font-size:11px;color:var(--t3);line-height:1.65;}
+
+/* ── REVIEWS ── */
+.reviews{padding:clamp(30px,5vw,52px) 16px;background:var(--k2);}
+.rev-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;max-width:980px;margin:28px auto 0;}
+.rc{
+  background:linear-gradient(145deg,#FFFFFF,var(--k2));
+  border:1px solid var(--bd1);border-radius:16px;box-shadow:0 2px 16px rgba(0,0,0,.06);
+  padding:22px;display:flex;flex-direction:column;gap:14px;
+  transition:all .3s;position:relative;overflow:hidden;
+}
+/* Subtle top-left glow on hover */
+.rc::before{content:'';position:absolute;top:-20px;left:-20px;width:80px;height:80px;border-radius:50%;background:radial-gradient(circle,rgba(232,74,14,.12),transparent 70%);opacity:0;transition:.3s;}
+.rc:hover{border-color:rgba(232,74,14,.18);transform:translateY(-3px);box-shadow:0 16px 48px rgba(0,0,0,.4);}
+.rc:hover::before{opacity:1;}
+.rc-stars{color:var(--g2);font-size:11px;letter-spacing:2.5px;filter:drop-shadow(0 0 6px rgba(180,140,40,.5));}
+.rc-q{font-size:12.5px;color:rgba(232,234,248,.6);line-height:1.8;flex:1;font-style:italic;font-weight:300;}
+.rc-foot{display:flex;align-items:center;gap:10px;padding-top:14px;border-top:1px solid var(--bd1);}
+.rc-av{
+  width:36px;height:36px;border-radius:50%;flex-shrink:0;
+  background:linear-gradient(135deg,var(--a0),#7A2008);
+  display:flex;align-items:center;justify-content:center;
+  font-size:12px;font-weight:800;color:#fff;
+  border:1.5px solid rgba(232,74,14,.4);
+  box-shadow:0 0 12px rgba(232,74,14,.25);
+}
+.rc-name{font-size:11px;font-weight:700;color:var(--t1);}
+.rc-trip{font-size:9px;color:var(--t3);}
+
+/* ── CTA ── */
+.cta-s{
+  padding:clamp(36px,5vw,60px) 20px;text-align:center;
+  background:linear-gradient(180deg,var(--k3),var(--k0));
+  border-top:1px solid var(--bd1);position:relative;overflow:hidden;
+}
+.cta-s::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(232,74,14,.05) 0%,transparent 65%);}
+
+/* ═══════════════════════════════════════
+   FLEET PAGE — AUTOMOTIVE SHOWROOM
+═══════════════════════════════════════ */
+.fleet-pg{min-height:100%;background:var(--k0);}
+
+/* Fleet header — like a dealership entrance */
+.fleet-h{
+  padding:18px clamp(16px,3vw,32px) 0;
+  background:linear-gradient(180deg,var(--k3) 0%,var(--k2) 100%);
+  border-bottom:1px solid var(--bd1);position:relative;
+}
+.fleet-h::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--bda),transparent);}
+.fleet-hr{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px;}
+.fleet-title{font-family:'Fraunces',serif;font-size:clamp(22px,4vw,34px);font-weight:900;color:var(--t0);letter-spacing:-.5px;line-height:1;}
+.fleet-title em{font-style:normal;background:linear-gradient(135deg,var(--a0),var(--g2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.fleet-stats{display:flex;gap:16px;margin-top:5px;flex-wrap:wrap;}
+.fst{font-size:10px;font-weight:500;color:var(--t3);}
+.fst em{font-style:normal;color:var(--a1);}
+
+/* View toggle */
+.vtog{display:flex;background:var(--k3);border:1px solid var(--bd1);border-radius:8px;padding:3px;gap:2px;flex-shrink:0;}
+.vt{width:30px;height:30px;border-radius:6px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--t3);background:none;border:none;transition:.2s;}
+.vt.on{background:linear-gradient(135deg,var(--a0),#8C2A06);color:#fff;box-shadow:0 2px 14px rgba(232,74,14,.3);}
+
+/* Category pills */
+.cat-row{overflow-x:auto;scrollbar-width:none;padding:0 clamp(16px,3vw,32px) 14px;display:flex;gap:7px;}
+.cat-row::-webkit-scrollbar{display:none;}
+.cpill{
+  display:inline-flex;align-items:center;gap:6px;
+  background:var(--k2);border:1.5px solid var(--bd1);
+  border-radius:100px;padding:6px 14px 6px 10px;
+  font-size:11px;font-weight:600;color:var(--t3);
+  white-space:nowrap;cursor:pointer;transition:all .2s;flex-shrink:0;
+}
+.cpill .ic{font-size:14px;}
+.cpill:hover{border-color:rgba(232,74,14,.3);color:var(--t2);}
+.cpill.on{
+  background:linear-gradient(135deg,rgba(232,74,14,.14),rgba(180,140,40,.05));
+  border-color:var(--a0);color:var(--t0);
+  box-shadow:0 0 16px rgba(232,74,14,.1);
+}
+
+/* Hot strip */
+.hot-s{padding:14px clamp(16px,3vw,32px);border-bottom:1px solid var(--bd1);background:var(--k1);}
+.hot-lbl{font-size:8px;font-weight:800;letter-spacing:4px;text-transform:uppercase;background:linear-gradient(90deg,var(--a0),var(--g2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:10px;display:block;}
+.hot-row{display:flex;gap:10px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px;}
+.hot-row::-webkit-scrollbar{display:none;}
+.hcard{
+  background:var(--k3);border:1px solid var(--bda);
+  border-radius:10px;overflow:hidden;
+  min-width:128px;max-width:128px;
+  cursor:pointer;transition:all .25s;
+  text-decoration:none;flex-shrink:0;
+}
+.hcard:hover{border-color:var(--a0);transform:translateY(-3px);box-shadow:0 10px 32px rgba(232,74,14,.18);}
+.hphoto{
+  height:70px;
+  background:radial-gradient(ellipse at 50% 30%,#D8D0C0,#B8B0A0);
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;position:relative;
+}
+.hphoto img{width:100%;height:100%;object-fit:contain;padding:5px;filter:drop-shadow(0 4px 14px rgba(0,0,0,.25));transition:transform .35s;}
+.hcard:hover .hphoto img{transform:scale(1.12);}
+.hpop{position:absolute;top:4px;right:4px;background:linear-gradient(135deg,var(--a0),#7A2008);color:#fff;font-size:7px;font-weight:900;padding:2px 5px;border-radius:3px;letter-spacing:.3px;}
+.hinfo{padding:7px 8px 8px;}
+.hnm{font-size:9.5px;font-weight:700;color:var(--t1);line-height:1.2;margin-bottom:1px;}
+.hcode{font-size:8px;color:var(--a1);font-weight:700;}
+
+/* Search, dest, inc, tabs, filter — all shared below */
+.sbar{background:var(--k1);border-bottom:1px solid var(--bd1);padding:10px clamp(14px,3vw,28px);}
+.slbl{font-size:8px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:var(--t3);margin-bottom:7px;display:flex;align-items:center;gap:8px;}
+.slbl-line{flex:1;height:1px;background:var(--bd1);}
+.srow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+.swrap{position:relative;flex:1;min-width:180px;max-width:300px;}
+.sinput{
+  width:100%;background:var(--k3);
+  border:1.5px solid var(--bd2);border-radius:8px;
+  padding:9px 10px 9px 33px;font-size:13px;
+  font-family:inherit;color:var(--t1);outline:none;transition:.2s;
+}
+.sinput:focus{border-color:var(--a0);box-shadow:0 0 0 3px rgba(232,74,14,.08);}
+.sinput::placeholder{color:var(--t3);}
+.sic{position:absolute;left:10px;top:50%;transform:translateY(-50%);font-size:13px;pointer-events:none;}
+.sclr{position:absolute;right:8px;top:50%;transform:translateY(-50%);background:var(--t3);color:var(--k0);border:none;border-radius:50%;width:16px;height:16px;font-size:9px;cursor:pointer;display:none;align-items:center;justify-content:center;}
+.sclr.show{display:flex;}
+.dest-suggestions{position:absolute;top:100%;left:0;right:0;background:var(--k3);border:1px solid var(--bda);border-radius:0 0 8px 8px;z-index:200;max-height:180px;overflow-y:auto;}
+.dest-sug{padding:8px 12px;cursor:pointer;font-size:12px;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--bd1);transition:.1s;color:var(--t2);}
+.dest-sug:hover{background:var(--k4);color:var(--t0);}
+.rpills{display:flex;gap:5px;flex-wrap:wrap;}
+.rpill{background:transparent;border:1px solid var(--bd1);color:var(--t3);padding:5px 11px;border-radius:20px;font-size:11px;font-weight:600;transition:.15s;white-space:nowrap;cursor:pointer;}
+.rpill:hover{border-color:var(--a0);color:var(--t2);}
+.rpill.on{background:linear-gradient(135deg,var(--a0),#8C2A06);border-color:var(--a0);color:#fff;}
+.cpick{background:var(--k1);border-bottom:1px solid var(--bd1);padding:8px clamp(14px,3vw,28px);display:none;}
+.cpick.open{display:block;}
+.cpick-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:3px;max-height:160px;overflow-y:auto;}
+.cpick-cell{display:flex;align-items:center;gap:5px;padding:5px 8px;border-radius:6px;font-size:11px;cursor:pointer;transition:.12s;color:var(--t2);}
+.cpick-cell:hover{background:var(--k4);}
+.cpick-cell.on{background:rgba(180,140,40,.1);color:var(--g2);font-weight:700;}
+.dbnr{background:rgba(232,74,14,.06);border-bottom:2px solid rgba(232,74,14,.18);padding:7px clamp(14px,3vw,28px);display:none;align-items:center;justify-content:space-between;gap:10px;}
+.dbnr.show{display:flex;}
+.dbnr-txt{font-size:11px;font-weight:700;color:var(--a1);}
+.dbnr-clr{font-size:11px;color:var(--t3);cursor:pointer;}
+.istrip{background:var(--k1);border-bottom:1px solid var(--bd1);padding:8px clamp(14px,3vw,28px);}
+.ilbl{font-size:8px;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:var(--t3);margin-bottom:6px;display:flex;align-items:center;gap:8px;}
+.iline{flex:1;height:1px;background:var(--bd1);}
+.ichips{display:flex;flex-wrap:wrap;gap:4px;}
+.ichip{display:flex;align-items:center;gap:4px;background:var(--k3);border:1px solid rgba(16,185,129,.12);border-radius:20px;padding:3px 10px;font-size:10px;font-weight:600;color:var(--t1);}
+.ftabs{background:var(--k1);border-bottom:1px solid var(--bd1);display:flex;height:44px;}
+.ftab{flex:1;height:100%;font-size:11px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--t3);border-bottom:2px solid transparent;transition:.15s;cursor:pointer;}
+.ftab.on{border-bottom-color:var(--a0);color:var(--t0);}
+.fbar{background:var(--k1);border-bottom:1px solid var(--bd1);padding:10px 14px;}
+.srt-row{display:flex;align-items:center;gap:7px;margin-bottom:9px;flex-wrap:wrap;}
+.srt-lbl{font-size:9.5px;color:var(--t3);font-weight:700;text-transform:uppercase;letter-spacing:.5px;}
+.srt-btn{background:transparent;border:1px solid var(--bd1);border-radius:14px;padding:4px 12px;font-size:10px;cursor:pointer;font-family:inherit;color:var(--t3);transition:all .15s;}
+.srt-btn.on,.srt-btn:hover{background:var(--k4);border-color:var(--a0);color:var(--a1);}
+.fgrp{margin-bottom:9px;}
+.fgrp-l{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--t3);margin-bottom:6px;}
+.fgrp-c{display:flex;flex-wrap:wrap;gap:4px;}
+.fbtn{background:transparent;border:1px solid var(--bd1);border-radius:20px;padding:4px 12px;font-size:10px;cursor:pointer;transition:all .15s;font-family:inherit;color:var(--t3);white-space:nowrap;}
+.fbtn:hover{border-color:var(--a0);color:var(--a1);}
+.fbtn.on{background:linear-gradient(135deg,var(--a0),#8C2A06);border-color:var(--a0);color:#fff;font-weight:700;}
+.rbar{display:flex;align-items:center;justify-content:space-between;padding:8px clamp(12px,2vw,20px);background:rgba(232,74,14,.03);border-bottom:1px solid rgba(232,74,14,.06);gap:10px;}
+.rlbl{font-size:11px;color:var(--t3);}
+.rlbl strong{color:var(--a1);}
+.rbtn{font-size:10px;font-weight:700;color:var(--t3);background:var(--gl2);border:1px solid var(--bd2);padding:4px 12px;border-radius:6px;cursor:pointer;font-family:inherit;transition:.15s;}
+.rbtn:hover{border-color:var(--a0);color:var(--a1);}
+
+/* ── SECTION HEADER ── */
+.shdr{display:flex;align-items:center;gap:10px;padding:20px clamp(14px,2.5vw,24px) 10px;}
+.shdr-i{font-size:18px;}
+.shdr-n{font-family:'Fraunces',serif;font-size:clamp(15px,2.5vw,21px);font-weight:700;color:var(--t0);letter-spacing:-.3px;}
+.shdr-c{background:rgba(232,74,14,.1);color:var(--a1);font-size:10px;font-weight:800;padding:2px 9px;border-radius:100px;}
+.shdr-l{flex:1;height:1px;background:linear-gradient(90deg,rgba(232,74,14,.1),transparent);}
+
+/* ═══════════════════════════════════════
+   VEHICLE CARD — HYPERREALISTIC SHOWROOM
+═══════════════════════════════════════ */
+.vgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,228px),1fr));gap:1px;background:rgba(0,0,0,.08);}
+.vgrid.lv .vc{flex-direction:row;}
+.vgrid.lv .vcp{width:140px;height:auto;min-height:120px;flex-shrink:0;}
+.vgrid.lv .vcta{min-width:96px;max-width:96px;flex-direction:column;justify-content:center;}
+@media(max-width:480px){.vgrid.lv .vc{flex-direction:column;}.vgrid.lv .vcp{width:100%;height:140px;}.vgrid.lv .vcta{max-width:100%;flex-direction:row;}}
+.fbdy{padding:0 0 100px;background:var(--k1);}
+
+.vc{
+  background:var(--k1);
+  display:flex;flex-direction:column;
+  position:relative;transition:background .2s;
+}
+.vc:hover{background:var(--k2);}
+
+/* PHOTO — Studio lighting illusion */
+.vcp{
+  position:relative;height:176px;overflow:hidden;
+  /* Deep studio: radial spotlight from top-center */
+  background:
+    radial-gradient(ellipse 90% 60% at 50% -10%,#1A2840 0%,#0F1630 40%,#0D1028 100%);
+}
+/* Spotlight beam effect */
+.vcp::before{
+  content:'';position:absolute;
+  top:0;left:20%;right:20%;height:100%;
+  background:radial-gradient(ellipse 60% 80% at 50% -20%,rgba(255,220,160,.15),transparent 70%);
+  z-index:1;pointer-events:none;
+  transition:.4s;
+}
+.vc:hover .vcp::before{opacity:1.5;}
+
+/* Floor reflection */
+.vcp::after{
+  content:'';position:absolute;
+  bottom:0;left:0;right:0;height:30%;
+  background:linear-gradient(to top,rgba(0,0,0,.08),transparent);
+  z-index:1;pointer-events:none;
+}
+.vcp img{
+  position:absolute;inset:0;
+  width:100%;height:100%;
+  object-fit:contain;
+  padding:14px 10px 8px;
+  filter:drop-shadow(0 14px 30px rgba(0,0,0,.35)) drop-shadow(0 4px 8px rgba(0,0,0,.2));
+  transition:transform .5s cubic-bezier(.4,0,.2,1),filter .4s;
+  z-index:2;
+}
+.vc:hover .vcp img{
+  transform:scale(1.06) translateY(-6px);
+  filter:drop-shadow(0 20px 40px rgba(0,0,0,.25)) drop-shadow(0 4px 16px rgba(232,74,14,.12));
+}
+/* Bottom gradient fade into card */
+.vcpf{
+  position:absolute;bottom:0;left:0;right:0;height:55px;
+  background:linear-gradient(transparent,var(--k1));
+  pointer-events:none;z-index:3;
+  transition:.2s;
+}
+.vc:hover .vcpf{background:linear-gradient(transparent,var(--k2));}
+.vcni{position:absolute;inset:0;display:none;flex-direction:column;align-items:center;justify-content:center;gap:8px;z-index:2;}
+.vcni-ic{font-size:52px;opacity:.06;}
+.vcni-lbl{font-size:9px;color:var(--t3);letter-spacing:1px;text-transform:uppercase;}
+
+/* Badges */
+.vcbdg{position:absolute;top:8px;left:8px;right:8px;display:flex;justify-content:space-between;align-items:flex-start;z-index:4;}
+.b-pop{background:linear-gradient(135deg,var(--a0),#8C2A06);color:#fff;font-size:8px;font-weight:900;padding:3px 9px;border-radius:5px;letter-spacing:.4px;box-shadow:0 2px 16px rgba(232,74,14,.55);}
+.b-prem{
+  background:rgba(255,255,255,.85);
+  backdrop-filter:blur(8px);
+  border:1px solid rgba(180,140,40,.5);
+  color:var(--g0);font-size:8px;font-weight:800;
+  padding:3px 9px;border-radius:5px;
+  box-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+.b-age{background:rgba(255,255,255,.8);backdrop-filter:blur(8px);border:1px solid rgba(180,140,40,.35);color:var(--g0);font-size:8px;font-weight:700;padding:3px 7px;border-radius:5px;}
+.b-ev{background:rgba(255,255,255,.8);backdrop-filter:blur(8px);border:1px solid rgba(0,120,220,.3);color:#0066AA;font-size:8px;font-weight:800;padding:3px 7px;border-radius:5px;}
+
+/* Code tag */
+.vctag{position:absolute;bottom:9px;left:8px;z-index:4;display:flex;border-radius:5px;overflow:hidden;backdrop-filter:blur(10px);}
+.vcode{font-size:8px;font-weight:900;letter-spacing:.6px;padding:3px 7px;color:rgba(255,255,255,.95);}
+.vcat{font-size:7.5px;font-weight:700;padding:3px 7px;color:rgba(255,255,255,.8);}
+
+/* Card body */
+.vcb{padding:12px 13px 8px;flex:1;display:flex;flex-direction:column;}
+.vcn{font-size:15px;font-weight:700;color:var(--t0);line-height:1.15;margin-bottom:2px;letter-spacing:-.2px;}
+.vcv{font-size:9.5px;color:var(--t3);line-height:1.5;margin-bottom:9px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+/* Specs grid */
+.vcsp{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--bd1);border-radius:8px;overflow:hidden;background:rgba(255,255,255,.015);}
+.vcsp-i{display:flex;flex-direction:column;align-items:center;padding:7px 4px;border-right:1px solid var(--bd1);}
+.vcsp-i:last-child{border-right:none;}
+.vsi-ic{font-size:12px;line-height:1;margin-bottom:2px;}
+.vsi-v{font-size:10px;font-weight:800;color:var(--t2);}
+.vsi-l{font-size:7px;color:var(--t3);text-transform:uppercase;letter-spacing:.4px;margin-top:1px;}
+.vcsp-i.hi .vsi-v{color:var(--g2);}
+
+/* Included */
+.vcin{display:flex;flex-wrap:wrap;gap:3px;padding:8px 13px 5px;border-top:1px solid var(--bd1);}
+.vcin-t{font-size:8px;font-weight:700;color:var(--e1);background:rgba(16,185,129,.06);border:1px solid rgba(16,185,129,.12);padding:2px 7px;border-radius:3px;white-space:nowrap;}
+
+/* CTA */
+.vcta{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:12px 13px;
+  background:linear-gradient(135deg,#0A6E3A,#075C30);
+  text-decoration:none;transition:.25s;gap:8px;
+  border-top:1px solid rgba(0,0,0,.2);
+  position:relative;overflow:hidden;
+}
+.vcta::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(52,211,153,.08),transparent);opacity:0;transition:.25s;}
+.vc:hover .vcta{background:linear-gradient(135deg,var(--e0),#0A6E3A);}
+.vc:hover .vcta::before{opacity:1;}
+.vcta-l{display:flex;align-items:center;gap:6px;}
+.vcta-l span{font-size:12px;font-weight:800;color:#fff;}
+.vcta-arr{color:rgba(255,255,255,.4);font-size:18px;line-height:1;transition:.25s;}
+.vc:hover .vcta-arr{color:rgba(255,255,255,.9);transform:translateX(4px);}
+
+/* Empty */
+.empty{text-align:center;padding:52px 24px;}
+.empty-ic{font-size:44px;margin-bottom:14px;opacity:.3;}
+.empty-btn{background:linear-gradient(135deg,var(--a0),#8C2A06);color:#fff;border:none;padding:11px 26px;border-radius:9px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;margin-top:14px;}
+
+/* Map */
+.mbd{padding:clamp(14px,3vw,28px) clamp(14px,4vw,36px) 24px;}
+.mtt{font-family:'Fraunces',serif;font-size:clamp(18px,3vw,26px);font-weight:700;color:var(--t0);margin-bottom:3px;}
+.msb{font-size:11px;color:var(--t3);margin-bottom:12px;}
+.mleg{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:10px;}
+.mli{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--t3);}
+.mld{width:11px;height:11px;border-radius:3px;flex-shrink:0;}
+#world-svg{width:100%;height:auto;display:block;border-radius:8px;border:1px solid var(--bd1);}
+.mtp{position:fixed;background:var(--k3);color:var(--t1);padding:8px 12px;border-radius:8px;font-size:11px;pointer-events:none;z-index:999;box-shadow:0 8px 24px rgba(0,0,0,.8);display:none;white-space:nowrap;line-height:1.5;border:1px solid var(--bda);}
+.ctyh{font-size:9px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--t3);margin:20px 0 8px;display:flex;align-items:center;gap:10px;}
+.ctyhl{flex:1;height:1px;background:var(--bd1);}
+.ctygrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:1px;background:var(--bd1);border-radius:8px;overflow:hidden;}
+.ctyc{background:var(--k2);padding:7px 10px;font-size:10px;color:var(--t3);display:flex;align-items:center;gap:6px;}
+.ctyd{width:4px;height:4px;border-radius:50%;background:var(--a1);flex-shrink:0;}
+
+/* ═══════════════════════════════════════
+   INCLUDED PAGE
+═══════════════════════════════════════ */
+.incl-pg{min-height:100%;padding:28px 16px 40px;background:var(--k1);}
+.ph{text-align:center;margin-bottom:32px;}
+.pheye{display:block;font-size:8px;font-weight:800;letter-spacing:4px;text-transform:uppercase;background:linear-gradient(90deg,var(--a0),var(--g2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:8px;}
+.phh2{font-family:'Fraunces',serif;font-size:clamp(32px,6vw,64px);font-weight:900;color:var(--t0);line-height:.88;letter-spacing:-2.5px;margin-bottom:12px;}
+.phh2 em{font-style:italic;background:linear-gradient(135deg,var(--a0),var(--g2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.php{font-size:14px;color:var(--t3);line-height:1.7;max-width:440px;margin:0 auto;}
+.bento{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;max-width:920px;margin:0 auto 28px;}
+@media(min-width:600px){.bento{grid-template-columns:repeat(3,1fr);}}
+@media(min-width:860px){.bento{grid-template-columns:repeat(4,1fr);}}
+.bc{
+  background:#FFFFFF;
+  border:1px solid var(--bd1);border-radius:14px;
+  padding:20px;transition:all .3s;
+  position:relative;overflow:hidden;
+  box-shadow:0 2px 16px rgba(0,0,0,.05);
+}
+.bc::after{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(0,0,0,.06),transparent);}
+.bc:hover{border-color:rgba(232,74,14,.3);transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,.1);}
+.bc.ft{grid-column:span 2;background:linear-gradient(145deg,rgba(232,74,14,.07),var(--k2));border-color:rgba(232,74,14,.2);}
+.bc.ft::after{background:linear-gradient(90deg,transparent,rgba(232,74,14,.15),transparent);}
+.bc .bic{font-size:26px;margin-bottom:10px;display:block;}
+.bc .bnv{font-family:'Fraunces',serif;font-size:50px;font-weight:900;background:linear-gradient(135deg,var(--a0),var(--g2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:6px;filter:drop-shadow(0 0 24px rgba(232,74,14,.25));}
+.bc h3{font-family:'Fraunces',serif;font-size:15px;font-weight:700;color:var(--t0);margin-bottom:5px;}
+.bc.ft h3{background:linear-gradient(135deg,var(--a0),var(--g2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.bc p{font-size:11px;color:var(--t3);line-height:1.6;}
+
+/* ═══════════════════════════════════════
+   DESTINATIONS PAGE
+═══════════════════════════════════════ */
+.dest-pg{min-height:100%;padding:28px 16px 40px;background:var(--k1);}
+.dcg{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px;max-width:980px;margin:28px auto 0;}
+.dcc{
+  display:flex;flex-direction:column;align-items:center;gap:5px;
+  padding:18px 8px;
+  background:#FFFFFF;
+  border:1px solid var(--bd1);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,.05);
+  text-decoration:none;transition:all .25s;text-align:center;
+  position:relative;overflow:hidden;
+}
+.dcc::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 100%,rgba(232,74,14,.04),transparent 60%);opacity:0;transition:.25s;}
+.dcc:hover{border-color:rgba(232,74,14,.25);transform:translateY(-3px);box-shadow:0 12px 36px rgba(0,0,0,.4);}
+.dcc:hover::before{opacity:1;}
+.dfl{font-size:22px;}
+.dnm{font-size:11px;font-weight:700;color:var(--t1);line-height:1.2;}
+.dco{font-size:9px;color:var(--t3);}
+.dcta{font-size:9px;color:var(--a1);font-weight:700;margin-top:2px;}
+.dbdg{display:inline-block;background:linear-gradient(135deg,var(--a0),#8C2A06);color:#fff;font-size:7px;font-weight:700;padding:1px 4px;border-radius:3px;margin-left:2px;letter-spacing:.4px;vertical-align:middle;}
+
+/* ═══════════════════════════════════════
+   FAQ PAGE
+═══════════════════════════════════════ */
+.faq-pg{min-height:100%;padding:28px 16px 40px;background:var(--k1);}
+.faqw{max-width:680px;margin:28px auto 0;}
+.fai{border-radius:10px;overflow:hidden;margin-bottom:3px;}
+.faqq{
+  width:100%;background:#FFFFFF;border:none;
+  color:var(--t1);box-shadow:0 1px 8px rgba(0,0,0,.04);font-family:inherit;font-size:13px;font-weight:600;
+  padding:15px 16px;display:flex;justify-content:space-between;align-items:center;
+  cursor:pointer;text-align:left;gap:10px;transition:background .2s;
+}
+.faqq:hover{background:var(--k3);}
+.faqq.open{color:var(--a1);}
+.faqarr{color:var(--a0);font-size:10px;transition:transform .22s;flex-shrink:0;}
+.faqq.open .faqarr{transform:rotate(180deg);}
+.faqa{display:none;padding:0 16px 14px;background:#FFFFFF;font-size:12px;color:var(--t3);line-height:1.75;}
+.faqa.show{display:block;}
+.faqa strong{color:var(--t1);}
+
+/* ═══════════════════════════════════════
+   FLOATING WA
+═══════════════════════════════════════ */
+.waflt{
+  position:fixed;bottom:calc(var(--bot) + 14px);right:18px;z-index:450;
+  display:flex;align-items:center;gap:8px;
+  background:linear-gradient(135deg,var(--e0),#047A54);
+  color:#fff;font-family:inherit;font-size:12px;font-weight:700;
+  padding:12px 18px;border-radius:100px;text-decoration:none;
+  box-shadow:0 4px 28px var(--e-glow),0 0 0 1px rgba(16,185,129,.2);
+  animation:waflt-float 4s ease-in-out infinite;
+}
+@media(min-width:768px){.waflt{bottom:22px;}}
+@keyframes waflt-float{0%,100%{transform:translateY(0);}50%{transform:translateY(-6px);box-shadow:0 10px 40px var(--e-glow),0 0 0 1px rgba(16,185,129,.2);}}
+.waflt:hover{animation-play-state:paused;}
+
+/* ═══════════════════════════════════════
+   SHARED ELEMENTS
+═══════════════════════════════════════ */
+.rv{opacity:0;transform:translateY(20px);transition:opacity .7s var(--ease),transform .7s var(--ease);}
+.rv.in{opacity:1;transform:none;}
+.d1{transition-delay:.08s;}.d2{transition-delay:.16s;}.d3{transition-delay:.24s;}.d4{transition-delay:.32s;}
+
+.cookie-b{
+  position:fixed;bottom:0;inset-inline:0;z-index:600;
+  background:rgba(242,240,236,.98);border-top:1px solid var(--bd1);
+  padding:12px 20px;display:flex;align-items:center;justify-content:space-between;
+  gap:10px;transform:translateY(100%);transition:transform .4s;
+  backdrop-filter:blur(20px);
+}
+.cookie-b.show{transform:translateY(0);}
+.cookie-b p{font-size:12px;color:var(--t3);}
+.ca{background:linear-gradient(135deg,var(--a0),#8C2A06);color:#fff;border:none;font-size:11px;font-weight:800;padding:7px 14px;border-radius:6px;cursor:pointer;font-family:inherit;}
+.cd{background:var(--gl1);color:var(--t3);border:1px solid var(--bd1);font-size:11px;padding:7px 12px;border-radius:6px;cursor:pointer;font-family:inherit;}
+
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.95);z-index:700;display:none;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(8px);}
+.modal.open{display:flex;}
+.mbox{background:#FFFFFF;border:1px solid rgba(232,74,14,.2);border-radius:16px;box-shadow:0 24px 80px rgba(0,0,0,.15);max-width:540px;width:100%;max-height:80vh;overflow-y:auto;padding:30px;}
+.mbox h2{font-family:'Fraunces',serif;font-size:28px;font-weight:900;color:var(--t0);margin-bottom:16px;}
+.mbox h3{font-size:12px;font-weight:700;color:var(--t1);margin-bottom:6px;margin-top:14px;}
+.mbox p{font-size:12px;color:var(--t3);line-height:1.7;margin-bottom:8px;}
+.mclose{background:linear-gradient(135deg,var(--a0),#8C2A06);color:#fff;border:none;font-family:inherit;font-size:12px;font-weight:800;padding:10px 20px;border-radius:8px;cursor:pointer;margin-top:16px;}
+
+@media(max-width:520px){
+  .hstats{grid-template-columns:repeat(2,1fr);}
+  .hbtns{flex-direction:column;align-items:center;}
+  .btn-p,.btn-s{width:100%;justify-content:center;}
+  .waflt span{display:none;}.waflt{padding:14px 16px;border-radius:50%;width:50px;height:50px;justify-content:center;}
+  .steps{grid-template-columns:1fr;}
+  .bento{grid-template-columns:1fr;}.bc.ft{grid-column:span 1;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="tnav">
+  <a class="nav-logo" onclick="showPage('home')" href="#">
+    <div class="nav-logo-mark">J</div>
+    <div class="nav-logo-text">JSUD<small>Just Show Up &amp; Drive</small></div>
+  </a>
+  <div class="nav-tabs">
+    <button class="ntab on t" data-page="home" data-en="Home" data-es="Inicio" onclick="showPage('home')">Home</button>
+    <button class="ntab t" data-page="fleet" data-en="Fleet" data-es="Flota" onclick="showPage('fleet')">Fleet</button>
+    <button class="ntab t" data-page="included" data-en="Included" data-es="Incluido" onclick="showPage('included')">Included</button>
+    <button class="ntab t" data-page="destinations" data-en="Destinations" data-es="Destinos" onclick="showPage('destinations')">Destinations</button>
+    <button class="ntab t" data-page="faq" data-en="FAQ" data-es="FAQ" onclick="showPage('faq')">FAQ</button>
+  </div>
+  <div class="nav-r">
+    <div class="lang-box">
+      <button class="lb on" onclick="setLang('en')" aria-pressed="true">EN</button>
+      <button class="lb" onclick="setLang('es')" aria-pressed="false">ES</button>
+    </div>
+    <a href="https://wa.me/14073739085" class="nav-wa" target="_blank" rel="noopener">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.12.553 4.109 1.522 5.838L.044 23.956l6.284-1.649C8.01 23.39 9.97 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.652-.51-5.17-1.397l-.371-.22-3.851 1.01 1.028-3.752-.242-.386C2.497 15.77 2 13.947 2 12 2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+      <span class="t" data-en="Get a Quote" data-es="Cotizar">Get a Quote</span>
+    </a>
+  </div>
+</nav>
+
+<!-- SHELL -->
+<div class="shell">
+
+<!-- HOME -->
+<div class="page on" id="page-home">
+  <section class="hero">
+    <div class="hbg"></div>
+    <div class="hgrid"></div>
+    <div class="hlines"></div>
+    <div class="hring r1"></div>
+    <div class="hring r2"></div>
+    <div class="hring r3"></div>
+    <div class="hpill rv">
+      <span class="hpill-dot"></span>
+      <span class="t" data-en="Live · 105 countries · 2,000+ locations" data-es="Disponible · 105 países · 2,000+ ubicaciones">Live · 105 countries · 2,000+ locations</span>
+    </div>
+    <h1 class="hh1 rv d1">
+      <span class="t" data-en="Premium Rental." data-es="Renta Premium.">Premium Rental.</span>
+      <span class="hl t" data-en="Worldwide." data-es="Mundial.">Worldwide.</span>
+      <span class="sm t" data-en="Just Show Up &amp; Drive." data-es="Solo preséntate y maneja.">Just Show Up &amp; Drive.</span>
+    </h1>
+    <p class="hsub rv d2 t" data-en="Premium car rental in 105+ countries. WhatsApp us — <strong>$0 deductible · GPS · LDW · Unlimited miles</strong> all included." data-es="Renta de autos premium en 105+ países. Por WhatsApp — <strong>$0 deducible · GPS · LDW · Millas ilimitadas</strong> — todo incluido desde el primer día.">Premium car rental in 105+ countries. WhatsApp us — <strong>$0 deductible · GPS · LDW · Unlimited miles</strong> all included.</p>
+    <div class="hbtns rv d2">
+      <a href="https://wa.me/14073739085?text=Hi!%20I%20want%20a%20quote.%0ADestination%3A%20%0ADates%3A%20%0ACategory%3A%20" class="btn-p" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.12.553 4.109 1.522 5.838L.044 23.956l6.284-1.649C8.01 23.39 9.97 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.652-.51-5.17-1.397l-.371-.22-3.851 1.01 1.028-3.752-.242-.386C2.497 15.77 2 13.947 2 12 2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+        <span class="t" data-en="Get a Free Quote" data-es="Cotización Gratis">Get a Free Quote</span>
+      </a>
+      <button class="btn-s" onclick="showPage('fleet')">
+        <span class="t" data-en="Browse Fleet →" data-es="Ver Flota →">Browse Fleet →</span>
+      </button>
+    </div>
+    <div class="hstats rv d3">
+      <div class="hstat"><span class="hstat-n" data-counter="2000">2,000+</span><span class="hstat-l t" data-en="Locations" data-es="Ubicaciones">Locations</span></div>
+      <div class="hstat"><span class="hstat-n" data-counter="105">105+</span><span class="hstat-l t" data-en="Countries" data-es="Países">Countries</span></div>
+      <div class="hstat"><span class="hstat-n" data-counter="26">26</span><span class="hstat-l t" data-en="Categories" data-es="Categorías">Categories</span></div>
+      <div class="hstat"><span class="hstat-n">$0</span><span class="hstat-l t" data-en="Deductible" data-es="Deducible">Deductible</span></div>
+    </div>
+  </section>
+  <div class="feat-strip">
+    <div class="feat-grid">
+      <div class="fi"><span class="fi-ic">🛡️</span><div class="fi-t t" data-en="$0 Deductible" data-es="$0 Deducible">$0 Deductible</div><div class="fi-s">LDW full coverage</div></div>
+      <div class="fi"><span class="fi-ic">📍</span><div class="fi-t t" data-en="GPS Included" data-es="GPS Incluido">GPS Included</div><div class="fi-s">No daily fee</div></div>
+      <div class="fi"><span class="fi-ic">👤</span><div class="fi-t t" data-en="+1 Driver Free" data-es="+1 Conductor">+1 Driver Free</div><div class="fi-s">Zero cost</div></div>
+      <div class="fi"><span class="fi-ic">🛣️</span><div class="fi-t t" data-en="Unlimited Miles" data-es="Millas Ilimitadas">Unlimited Miles</div><div class="fi-s">No cap</div></div>
+      <div class="fi"><span class="fi-ic">🆘</span><div class="fi-t t" data-en="24/7 Roadside" data-es="Asistencia 24/7">24/7 Roadside</div><div class="fi-s">Worldwide</div></div>
+      <div class="fi"><span class="fi-ic">🔄</span><div class="fi-t t" data-en="Stay Flexible" data-es="Reserva Flexible">Stay Flexible</div><div class="fi-s">Pay at pickup</div></div>
+    </div>
+  </div>
+  <div class="how">
+    <span class="s-eye t" data-en="How it works" data-es="Cómo funciona">How it works</span>
+    <h2 class="s-h2 rv t" data-en="Book in <em>minutes.</em>" data-es="Reserva en <em>minutos.</em>">Book in <em>minutes.</em></h2>
+    <p class="s-p rv d1 t" data-en="One WhatsApp message — everything handled." data-es="Un solo mensaje de WhatsApp — nosotros nos encargamos de todo.">One WhatsApp message — everything handled.</p>
+    <div class="steps">
+      <div class="step"><span class="step-n">01</span><span class="step-ic">💬</span><h4 class="t" data-en="WhatsApp us" data-es="Escríbenos">WhatsApp us</h4><p class="t" data-en="Destination, dates & category. Exact quote in minutes." data-es="Destino, fechas y categoría. Cotización exacta en minutos.">Destination, dates & category. Exact quote in minutes.</p></div>
+      <div class="step"><span class="step-n">02</span><span class="step-ic">🔒</span><h4 class="t" data-en="Confirm" data-es="Confirma">Confirm</h4><p class="t" data-en="Small reservation fee via Zelle, Wise or Stripe." data-es="Pequeña tarifa de reserva vía Zelle, Wise o Stripe.">Small reservation fee via Zelle, Wise or Stripe.</p></div>
+      <div class="step"><span class="step-n">03</span><span class="step-ic">🚗</span><h4 class="t" data-en="Just show up" data-es="Solo preséntate">Just show up</h4><p class="t" data-en="Pick up at any airport. Pay balance at counter." data-es="Recoge en cualquier aeropuerto del mundo. Paga el saldo restante en el mostrador.">Pick up at any airport. Pay balance at counter.</p></div>
+    </div>
+    <p style="text-align:center;font-size:11px;color:var(--t3);margin-top:18px;font-style:italic;" class="t" data-en="💬 Prices vary by destination & dates. Unlimited miles standard — mileage limits notified when applicable." data-es="💬 Precios según destino y fechas. Millas ilimitadas estándar — informamos si aplica límite.">💬 Prices vary by destination & dates. Unlimited miles standard.</p>
+  </div>
+  <div class="reviews">
+    <span class="s-eye t" data-en="Real customers" data-es="Clientes reales">Real customers</span>
+    <h2 class="s-h2 rv t" data-en="What they <em>say.</em>" data-es="Lo que <em>dicen.</em>">What they <em>say.</em></h2>
+    <div class="rev-grid" id="home-reviews"></div>
+  </div>
+  <div class="cta-s">
+    <h2 class="s-h2 rv t" data-en="Ready to <em>Drive?</em>" data-es="¿Listo para <em>Manejar?</em>">Ready to <em>Drive?</em></h2>
+    <p class="s-p rv d1 t" data-en="Tell us your destination & dates — exact quote in minutes." data-es="Dinos tu destino y fechas — cotización exacta en minutos.">Tell us your destination & dates — exact quote in minutes.</p>
+    <a href="https://wa.me/14073739085?text=Hi!%20I%20want%20a%20quote.%0ADestination%3A%20%0ADates%3A%20%0ACategory%3A%20" class="btn-p rv d2" target="_blank" rel="noopener" style="display:inline-flex;">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.12.553 4.109 1.522 5.838L.044 23.956l6.284-1.649C8.01 23.39 9.97 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.652-.51-5.17-1.397l-.371-.22-3.851 1.01 1.028-3.752-.242-.386C2.497 15.77 2 13.947 2 12 2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+      <span class="t" data-en="Get a Free Quote on WhatsApp" data-es="Cotización Gratis por WhatsApp">Get a Free Quote on WhatsApp</span>
+    </a>
+    <p style="text-align:center;margin-top:16px;"><span onclick="openModal()" style="font-size:11px;color:var(--t3);cursor:pointer;text-decoration:underline;text-decoration-color:rgba(255,255,255,.1);" class="t" data-en="Privacy Policy" data-es="Política de Privacidad">Privacy Policy</span></p>
+  </div>
+</div>
+
+<!-- FLEET -->
+<div class="page" id="page-fleet">
+  <div class="fleet-pg">
+    <div class="fleet-h">
+      <div class="fleet-hr">
+        <div>
+          <div class="fleet-title t" data-en="World <em>Fleet</em>" data-es="Flota <em>Mundial</em>">World <em>Fleet</em></div>
+          <div class="fleet-stats"><span class="fst"><em>26</em> categories</span><span class="fst"><em>2,000+</em> locations</span><span class="fst"><em>105</em> countries</span></div>
+        </div>
+        <div class="vtog">
+          <button class="vt on" id="vt-grid" onclick="setView('grid')" aria-label="Grid"><svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor"><rect x="1" y="1" width="6" height="6" rx="1.5"/><rect x="9" y="1" width="6" height="6" rx="1.5"/><rect x="1" y="9" width="6" height="6" rx="1.5"/><rect x="9" y="9" width="6" height="6" rx="1.5"/></svg></button>
+          <button class="vt" id="vt-list" onclick="setView('list')" aria-label="List"><svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor"><rect x="1" y="2.5" width="14" height="2" rx="1"/><rect x="1" y="7" width="14" height="2" rx="1"/><rect x="1" y="11.5" width="14" height="2" rx="1"/></svg></button>
+        </div>
+      </div>
+      <div class="cat-row" id="cat-nav"></div>
+    </div>
+    <div class="hot-s"><span class="hot-lbl t" data-en="⭐ MOST POPULAR" data-es="⭐ MÁS POPULARES">⭐ MOST POPULAR</span><div class="hot-row" id="featured-row"></div></div>
+    <div class="sbar"><div class="slbl"><span class="t" data-en="🌍 Filter by destination" data-es="🌍 Filtrar por destino">🌍 Filter by destination</span><div class="slbl-line"></div></div>
+      <div class="srow"><div class="swrap"><span class="sic">🔍</span><input type="text" id="dest-input" class="sinput" placeholder="Search country or airport..." data-en-placeholder="Search country or airport..." data-es-placeholder="Buscar país o aeropuerto..." oninput="onDestSearch(this.value)" autocomplete="off"/><button class="sclr" id="dest-clear-btn" onclick="clearDest()">×</button></div><div class="rpills" id="region-pills"></div></div>
+    </div>
+    <div class="cpick" id="country-picker"><div class="cpick-grid" id="cpicker-grid"></div></div>
+    <div class="dbnr" id="dest-banner"><span class="dbnr-txt" id="dest-banner-txt"></span><span class="dbnr-clr t" data-en="Show all ×" data-es="Ver todos ×" onclick="clearDest()">Show all ×</span></div>
+    <div class="istrip"><div class="ilbl"><span class="t" data-en="✓ Included in every reservation" data-es="✓ Incluido en cada reserva">✓ Included in every reservation</span><div class="iline"></div></div><div class="ichips" id="inc-chips"></div></div>
+    <div class="ftabs"><button class="ftab on" onclick="setTab('fleet')" id="tbf" role="tab" aria-selected="true"><span class="t" data-en="🚗 Vehicles" data-es="🚗 Vehículos">🚗 Vehicles</span></button><button class="ftab" onclick="setTab('map')" id="tbm" role="tab" aria-selected="false"><span class="t" data-en="🌍 Coverage Map" data-es="🌍 Mapa de Cobertura">🌍 Coverage Map</span></button></div>
+    <div id="sf">
+      <div class="fbar"><div class="srt-row" id="sort-bar"><span class="srt-lbl t" data-en="Sort:" data-es="Orden:">Sort:</span><button class="srt-btn on t" onclick="setSort('default')" id="sort-default" type="button" data-en="Default" data-es="Predeterminado">Default</button><button class="srt-btn t" onclick="setSort('seats')" id="sort-seats" type="button" data-en="Seats ↑" data-es="Asientos ↑">Seats ↑</button><button class="srt-btn t" onclick="setSort('age')" id="sort-age" type="button" data-en="Age req." data-es="Edad req.">Age req.</button></div><div id="fbtns"></div></div>
+      <div class="rbar" id="fleet-bar" style="display:none;"><span class="rlbl" id="fleet-count-lbl"></span><button onclick="resetFilters()" class="rbtn t" data-en="Reset" data-es="Quitar">Reset</button></div>
+      <div class="fbdy" id="fw" role="list"></div>
+    </div>
+    <div id="sm" style="display:none;">
+      <div class="mbd">
+        <h2 class="mtt t" data-en="Worldwide Coverage" data-es="Cobertura Mundial">Worldwide Coverage</h2>
+        <p class="msb t" data-en="105+ countries · 2,000+ locations" data-es="105+ países · 2,000+ ubicaciones">105+ countries · 2,000+ locations</p>
+        <div class="mleg"><div class="mli"><span class="mld" style="background:#E84A0E"></span><span class="t" data-en="Available" data-es="Disponible">Available</span></div><div class="mli"><span class="mld" style="background:#0A0A14;border:1px solid #222236"></span><span class="t" data-en="Not available" data-es="No disponible">Not available</span></div></div>
+        <svg id="world-svg" role="img" aria-label="World coverage map"></svg>
+        <div id="maptip" class="mtp" role="tooltip"></div>
+        <div class="ctyh"><span class="t" data-en="Covered Countries" data-es="Países con Cobertura">Covered Countries</span><div class="ctyhl"></div><span id="ccnt"></span></div>
+        <div class="ctygrid" id="cg"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- INCLUDED -->
+<div class="page" id="page-included">
+  <div class="incl-pg">
+    <div class="ph"><span class="pheye t" data-en="Every reservation" data-es="Cada reserva">Every reservation</span><h2 class="phh2 t" data-en="Everything <em>included.</em>" data-es="Todo <em>incluido.</em>">Everything <em>included.</em></h2><p class="php t" data-en="No add-ons. No surprises. What we quote is all you pay." data-es="Sin extras. Sin sorpresas. Lo que cotizamos es exactamente lo que pagas.">No add-ons. No surprises. What we quote is all you pay.</p></div>
+    <div class="bento">
+      <div class="bc ft rv"><div class="bnv">$0</div><h3 class="t" data-en="Zero Deductible" data-es="Cero Deducible">Zero Deductible</h3><p class="t" data-en="Full LDW — $0.00 financial responsibility. Collision, scratches, theft — all covered. Nothing extra." data-es="LDW completa — $0.00 de responsabilidad. Colisión, rayones y robo — todo cubierto.">Full LDW — $0.00 financial responsibility. Collision, scratches, theft — covered.</p></div>
+      <div class="bc rv d1"><span class="bic">📍</span><h3 class="t" data-en="GPS Included" data-es="GPS Incluido">GPS Included</h3><p class="t" data-en="Navigation included — no extra charge, no daily fee." data-es="GPS incluido — sin cargo extra.">Navigation included — no extra charge, no daily fee.</p></div>
+      <div class="bc rv d2"><span class="bic">👤</span><h3 class="t" data-en="+1 Driver Free" data-es="+1 Conductor Gratis">+1 Driver Free</h3><p class="t" data-en="One additional driver at zero cost on every reservation." data-es="Conductor adicional sin costo.">One additional driver at zero cost on every reservation.</p></div>
+      <div class="bc rv"><span class="bic">🛣️</span><h3 class="t" data-en="Unlimited Miles" data-es="Millas Ilimitadas">Unlimited Miles</h3><p class="t" data-en="All miles included — no mileage cap, no surprises." data-es="Todas las millas incluidas — sin límite.">All miles included — no mileage cap, no surprises.</p></div>
+      <div class="bc rv d1"><span class="bic">🆘</span><h3 class="t" data-en="24/7 Roadside" data-es="Asistencia 24/7">24/7 Roadside</h3><p class="t" data-en="Emergency assistance anywhere, anytime, worldwide." data-es="Asistencia de emergencia en cualquier lugar y hora.">Emergency assistance anywhere, anytime, worldwide.</p></div>
+      <div class="bc ft rv d2"><span class="bic">🔄</span><h3 class="t" data-en="Stay Flexible" data-es="Reserva Flexible">Stay Flexible</h3><p class="t" data-en="Pay at pickup. Rebook free anytime before your rental — no cancellation fees." data-es="Paga al recoger. Reserva nuevamente gratis antes de tu viaje — sin penalización.">Pay at pickup. Rebook free anytime before your rental.</p></div>
+      <div class="bc rv d1"><span class="bic">🛡️</span><h3 class="t" data-en="Age Excess Waiver" data-es="Exención por Edad">Age Excess Waiver</h3><p class="t" data-en="Young driver surcharges waived — no age excess fees." data-es="Recargos por conductor joven exentos.">Young driver surcharges waived.</p></div>
+      <div class="bc rv d2"><span class="bic">✈️</span><h3 class="t" data-en="Airport Pickup" data-es="Recogida en Aeropuerto">Airport Pickup</h3><p class="t" data-en="2,000+ airports and city locations in 105 countries." data-es="Recogida en 2,000+ aeropuertos y ciudades en 105 países.">2,000+ airports in 105 countries.</p></div>
+    </div>
+    <div style="text-align:center;margin-top:8px;">
+      <a href="https://wa.me/14073739085?text=Hi!%20I%20want%20a%20quote.%0ADestination%3A%20%0ADates%3A%20%0ACategory%3A%20" class="btn-p" target="_blank" rel="noopener" style="display:inline-flex;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.12.553 4.109 1.522 5.838L.044 23.956l6.284-1.649C8.01 23.39 9.97 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.652-.51-5.17-1.397l-.371-.22-3.851 1.01 1.028-3.752-.242-.386C2.497 15.77 2 13.947 2 12 2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+        <span class="t" data-en="Get a Quote — All Included" data-es="Cotizar — Todo Incluido">Get a Quote — All Included</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- DESTINATIONS -->
+<div class="page" id="page-destinations">
+  <div class="dest-pg">
+    <div class="ph"><span class="pheye t" data-en="2,000+ locations worldwide" data-es="2,000+ ubicaciones mundiales">2,000+ locations worldwide</span><h2 class="phh2 t" data-en="Popular <em>Destinations</em>" data-es="Destinos <em>Populares</em>">Popular <em>Destinations</em></h2><p class="php t" data-en="Airports, cities, downtown — anywhere. WhatsApp your airport code for an instant quote." data-es="Aeropuertos, ciudades — en cualquier lugar. Escríbenos tu código de aeropuerto.">Airports, cities, downtown — anywhere. WhatsApp your airport code.</p></div>
+    <div class="dcg" id="dest-city-grid"></div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div class="page" id="page-faq">
+  <div class="faq-pg">
+    <div class="ph"><span class="pheye t" data-en="Everything you need to know" data-es="Todo lo que necesitas saber">Everything you need to know</span><h2 class="phh2 t" data-en="Common <em>Questions</em>" data-es="Preguntas <em>Frecuentes</em>">Common <em>Questions</em></h2></div>
+    <div class="faqw" id="faq-list"></div>
+    <div style="text-align:center;margin-top:32px;">
+      <p style="font-size:13px;color:var(--t3);margin-bottom:14px;" class="t" data-en="Still have questions? We reply in minutes." data-es="¿Más preguntas? Respondemos en minutos.">Still have questions? We reply in minutes.</p>
+      <a href="https://wa.me/14073739085" class="btn-p" target="_blank" rel="noopener" style="display:inline-flex;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.12.553 4.109 1.522 5.838L.044 23.956l6.284-1.649C8.01 23.39 9.97 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.652-.51-5.17-1.397l-.371-.22-3.851 1.01 1.028-3.752-.242-.386C2.497 15.77 2 13.947 2 12 2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+        <span class="t" data-en="Ask on WhatsApp" data-es="Preguntar por WhatsApp">Ask on WhatsApp</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+</div><!-- end shell -->
+
+<!-- BOT NAV -->
+<nav class="bot-nav">
+  <button class="bn on" data-page="home" onclick="showPage('home')"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg><span class="bn-lbl t" data-en="Home" data-es="Inicio">Home</span></button>
+  <button class="bn" data-page="fleet" onclick="showPage('fleet')"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.85 7h10.29l1.08 3.11H5.77L6.85 7zM19 17H5v-5h14v5z"/><circle cx="7.5" cy="14.5" r="1.5"/><circle cx="16.5" cy="14.5" r="1.5"/></svg><span class="bn-lbl t" data-en="Fleet" data-es="Flota">Fleet</span></button>
+  <button class="bn" data-page="included" onclick="showPage('included')"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg><span class="bn-lbl t" data-en="Included" data-es="Incluido">Included</span></button>
+  <button class="bn" data-page="destinations" onclick="showPage('destinations')"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg><span class="bn-lbl t" data-en="Destinations" data-es="Destinos">Destinations</span></button>
+  <button class="bn" data-page="faq" onclick="showPage('faq')"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/></svg><span class="bn-lbl t" data-en="FAQ" data-es="FAQ">FAQ</span></button>
+</nav>
+
+<!-- FLOAT WA -->
+<a href="https://wa.me/14073739085" target="_blank" rel="noopener" class="waflt">
+  <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.12.553 4.109 1.522 5.838L.044 23.956l6.284-1.649C8.01 23.39 9.97 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.652-.51-5.17-1.397l-.371-.22-3.851 1.01 1.028-3.752-.242-.386C2.497 15.77 2 13.947 2 12 2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+  <span class="t" data-en="Quote" data-es="Cotizar">Quote</span>
+</a>
+
+<!-- COOKIE -->
+<div class="cookie-b" id="cookie-bar">
+  <p class="t" data-en="We use essential cookies to improve your experience." data-es="Usamos cookies esenciales para mejorar tu experiencia.">We use essential cookies to improve your experience.</p>
+  <div style="display:flex;gap:6px;"><button class="ca t" data-en="Accept" data-es="Aceptar" onclick="acceptCookies()">Accept</button><button class="cd t" data-en="Decline" data-es="Rechazar" onclick="declineCookies()">Decline</button></div>
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+  <div class="mbox">
+    <h2>Privacy Policy</h2>
+    <h3>Information We Collect</h3><p>When you contact us via WhatsApp, we collect your name, contact information, and rental preferences solely to process your reservation.</p>
+    <h3>How We Use It</h3><p>We use your information only to process your rental reservation. We never sell or share your data beyond what is necessary to fulfill your booking.</p>
+    <h3>Cookies</h3><p>We use essential cookies only. No tracking or advertising cookies.</p>
+    <button class="mclose" onclick="closeModal()">Close</button>
+  </div>
+</div>
+
+<script>
+
+
+var lang='en';
+var activeFilter='all',activeSeatFilter=0,activeAgeFilter=0,activeSort='default',activeRegion='',selectedCountry='',mapDone=false;
+var activeCatSec='';var currentView='grid';
+var WA='https://wa.me/14073739085';
+var CAT_ICONS={'Compact & Economy':'🚗','SUV & Crossover':'🚙','Elite & Premium':'🏆','7-Passenger':'👨‍👩‍👧','Pick-up Trucks':'🛻','Convertibles':'🏎️','Vans & Commercial':'🚐','Electric & Hybrid':'⚡'};
+var WASVG='<svg width="13" height="13" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.12.553 4.109 1.522 5.838L.044 23.956l6.284-1.649C8.01 23.39 9.97 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.652-.51-5.17-1.397l-.371-.22-3.851 1.01 1.028-3.752-.242-.386C2.497 15.77 2 13.947 2 12 2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>';
+
+
+
+/* ── FLEET DATA ── */
+var CATS=[
+  {id:1,sec:"Compact & Economy",tags:["sedan"],hot:false,minAge:21,vtype:"sedan",pax:4,doors:4,bags:"1 suitcase",code:"J-CE",bg:"#1E5C8B",
+   en:{name:"Economy Car",cat:"Compact Economy",vary:"Nissan Versa, VW Polo, Opel Corsa, Toyota Yaris — varies by country"},
+   es:{name:"Auto Económico",cat:"Compacto Económico",vary:"Nissan Versa, VW Polo, Opel Corsa, Toyota Yaris — varía por país"},
+   img:"https://media.ed.edmunds-media.com/nissan/versa/2024/oem/2024_nissan_versa_sedan_sr_fq_oem_1_500.jpg"},
+  {id:2,sec:"Compact & Economy",tags:["sedan"],hot:true,minAge:21,vtype:"sedan",pax:5,doors:4,bags:"2 bags",code:"J-CS",bg:"#1E5C8B",
+   en:{name:"Compact Car",cat:"Standard Compact",vary:"VW Jetta, Hyundai Elantra, Nissan Sentra, Chevrolet Cruze — varies by country"},
+   es:{name:"Auto Compacto",cat:"Compacto Estándar",vary:"VW Jetta, Hyundai Elantra, Nissan Sentra — varía por país"},
+   img:"https://media.ed.edmunds-media.com/volkswagen/jetta/2024/oem/2024_volkswagen_jetta_sedan_s_fq_oem_1_500.jpg"},
+  {id:3,sec:"Compact & Economy",tags:["sedan"],hot:false,minAge:21,vtype:"sedan",pax:5,doors:4,bags:"2 bags",code:"J-CI",bg:"#1E5C8B",
+   en:{name:"Intermediate Sedan",cat:"Intermediate",vary:"Nissan Sentra, VW Golf, Hyundai i30, Mazda3 — varies by country"},
+   es:{name:"Sedán Intermedio",cat:"Intermedio",vary:"Nissan Sentra, VW Golf, Hyundai i30, Mazda3 — varía por país"},
+   img:"https://media.ed.edmunds-media.com/nissan/sentra/2024/oem/2024_nissan_sentra_sedan_sv_fq_oem_1_500.jpg"},
+  {id:4,sec:"Compact & Economy",tags:["sedan"],hot:false,minAge:21,vtype:"sedan",pax:5,doors:4,bags:"2 bags",code:"J-CF",bg:"#1E5C8B",
+   en:{name:"Standard Sedan",cat:"Full-size Sedan",vary:"Toyota Camry, VW Passat, Hyundai Sonata, Nissan Altima — varies by country"},
+   es:{name:"Sedán Estándar",cat:"Sedán de Tamaño Completo",vary:"Toyota Camry, VW Passat, Hyundai Sonata, Nissan Altima — varía por país"},
+   img:"https://media.ed.edmunds-media.com/toyota/camry/2024/oem/2024_toyota_camry_sedan_xse_fq_oem_1_500.jpg"},
+  {id:5,sec:"SUV & Crossover",tags:["suv"],hot:true,minAge:21,vtype:"suv",pax:5,doors:4,bags:"2 bags",code:"J-XC",bg:"#1E6E2E",
+   en:{name:"Compact SUV",cat:"Compact SUV / Crossover",vary:"Toyota RAV4, VW Tiguan, Nissan Rogue, Hyundai Tucson — varies by country"},
+   es:{name:"SUV Compacta",cat:"SUV / Crossover Compacto",vary:"Toyota RAV4, VW Tiguan, Nissan Rogue, Hyundai Tucson — varía por país"},
+   img:"https://media.ed.edmunds-media.com/toyota/rav4/2024/oem/2024_toyota_rav4_4dr-suv_xle_fq_oem_1_500.jpg"},
+  {id:6,sec:"SUV & Crossover",tags:["suv"],hot:false,minAge:21,vtype:"suv",pax:5,doors:4,bags:"2 suitcases",code:"J-XM",bg:"#1E6E2E",
+   en:{name:"Intermediate SUV",cat:"Midsize SUV",vary:"Chevrolet Blazer, Ford Edge, Kia Sorento, Mazda CX-5 — varies by country"},
+   es:{name:"SUV Intermedia",cat:"SUV Mediana",vary:"Chevrolet Blazer, Ford Edge, Kia Sorento, Mazda CX-5 — varía por país"},
+   img:"https://media.ed.edmunds-media.com/chevrolet/blazer/2024/oem/2024_chevrolet_blazer_4dr-suv_rs_fq_oem_1_500.jpg"},
+  {id:7,sec:"SUV & Crossover",tags:["suv"],hot:false,minAge:21,vtype:"suv",pax:5,doors:4,bags:"3 bags",code:"J-XL",bg:"#1E6E2E",
+   en:{name:"Standard SUV",cat:"Full-size SUV",vary:"Ford Explorer, Dodge Durango, VW Touareg, Toyota 4Runner — varies by country"},
+   es:{name:"SUV Estándar",cat:"SUV de Tamaño Completo",vary:"Ford Explorer, Dodge Durango, VW Touareg, Toyota 4Runner — varía por país"},
+   img:"https://media.ed.edmunds-media.com/gmc/acadia/2024/oem/2024_gmc_acadia_4dr-suv_at4_fq_oem_1_500.jpg"},
+  {id:8,sec:"Elite & Premium",tags:["elite"],hot:true,minAge:25,vtype:"elite",pax:5,doors:4,bags:"2 bags",code:"J-PC",bg:"#8B6914",
+   en:{name:"Compact Elite",cat:"Compact Elite Sedan",vary:"BMW 1 Series, Audi A3, Mercedes A-Class — varies by country"},
+   es:{name:"Compacto Elite",cat:"Sedán Compacto Elite",vary:"BMW Serie 1, Audi A3, Mercedes Clase A — varía por país"},
+   img:"https://media.ed.edmunds-media.com/bmw/2-series/2024/oem/2024_bmw_2-series_coupe_m240i_fq_oem_1_500.jpg"},
+  {id:9,sec:"Elite & Premium",tags:["elite"],hot:false,minAge:25,vtype:"elite",pax:5,doors:4,bags:"2 suitcases",code:"J-PM",bg:"#8B6914",
+   en:{name:"BMW 3 / Audi A4",cat:"Intermediate Elite Sedan",vary:"BMW 3 Series, Audi A4, Mercedes C-Class, Volvo S60 — varies by country"},
+   es:{name:"BMW 3 / Audi A4",cat:"Sedán Elite Intermedio",vary:"BMW Serie 3, Audi A4, Mercedes Clase C, Volvo S60 — varía por país"},
+   img:"https://media.ed.edmunds-media.com/bmw/3-series/2024/oem/2024_bmw_3-series_sedan_330i_fq_oem_1_500.jpg"},
+  {id:10,sec:"Elite & Premium",tags:["elite"],hot:false,minAge:25,vtype:"elite",pax:5,doors:4,bags:"2 bags",code:"J-PX1",bg:"#8B6914",
+   en:{name:"BMW X1 / Audi Q3",cat:"Compact Elite SUV",vary:"BMW X1, Audi Q3, Mercedes GLA, Lexus NX — varies by country"},
+   es:{name:"BMW X1 / Audi Q3",cat:"SUV Elite Compacto",vary:"BMW X1, Audi Q3, Mercedes GLA, Lexus NX — varía por país"},
+   img:"https://media.ed.edmunds-media.com/bmw/x1/2024/oem/2024_bmw_x1_4dr-suv_xdrive28i_fq_oem_1_500.jpg"},
+  {id:11,sec:"Elite & Premium",tags:["elite"],hot:false,minAge:25,vtype:"elite",pax:5,doors:4,bags:"2 suitcases",code:"J-PX3",bg:"#8B6914",
+   en:{name:"BMW X3 / Audi Q5",cat:"Midsize Elite SUV",vary:"BMW X3, Audi Q5, Mercedes GLC, Volvo XC60 — varies by country"},
+   es:{name:"BMW X3 / Audi Q5",cat:"SUV Elite Mediano",vary:"BMW X3, Audi Q5, Mercedes GLC, Volvo XC60 — varía por país"},
+   img:"https://media.ed.edmunds-media.com/bmw/x3/2024/oem/2024_bmw_x3_4dr-suv_xdrive30i_fq_oem_1_500.jpg"},
+  {id:12,sec:"Elite & Premium",tags:["elite"],hot:false,minAge:25,vtype:"elite",pax:5,doors:4,bags:"3 bags",code:"J-PX5",bg:"#8B6914",
+   en:{name:"BMW X5 / Audi Q7",cat:"Premium Elite SUV",vary:"BMW X5, Audi Q7, Mercedes GLE, Range Rover Velar — varies by country"},
+   es:{name:"BMW X5 / Audi Q7",cat:"SUV Premium Elite",vary:"BMW X5, Audi Q7, Mercedes GLE, Range Rover Velar — varía por país"},
+   img:"https://media.ed.edmunds-media.com/bmw/x5/2024/oem/2024_bmw_x5_4dr-suv_xdrive40i_fq_oem_1_500.jpg"},
+  {id:13,sec:"Elite & Premium",tags:["elite"],hot:false,minAge:25,vtype:"elite",pax:5,doors:4,bags:"2 suitcases",code:"J-PG",bg:"#1A1A1A",
+   en:{name:"Mercedes G-Class",cat:"Premium Elite SUV",vary:"Mercedes G-Class — where available · varies by country"},
+   es:{name:"Mercedes Clase G",cat:"SUV Premium Elite",vary:"Mercedes Clase G — donde disponible"},
+   img:"https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/2019_Mercedes-Benz_G_350_d_in_Selenite_Grey%2C_front_8.15.21.jpg/600px-2019_Mercedes-Benz_G_350_d_in_Selenite_Grey%2C_front_8.15.21.jpg"},
+  {id:14,sec:"7-Passenger",tags:["7pax"],hot:false,minAge:21,vtype:"family",pax:7,doors:4,bags:"2 bags",code:"J-7M",bg:"#1E6E2E",
+   en:{name:"7-Seat SUV",cat:"Midsize 7-Seat",vary:"GMC Acadia, Kia Sorento 7, Ford Explorer, VW Sharan — varies by country"},
+   es:{name:"SUV 7 Plazas",cat:"Mediano 7 Plazas",vary:"GMC Acadia, Kia Sorento 7, Ford Explorer, VW Sharan — varía por país"},
+   img:"https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/2024_GMC_Acadia_AT4_in_Sterling_Metallic,_front_2.1.24.jpg/600px-2024_GMC_Acadia_AT4_in_Sterling_Metallic,_front_2.1.24.jpg"},
+  {id:15,sec:"7-Passenger",tags:["minivan","7pax"],hot:false,minAge:21,vtype:"family",pax:7,doors:4,bags:"2 suitcases",code:"J-7V",bg:"#3A3A8C",
+   en:{name:"Minivan",cat:"Passenger Minivan",vary:"Chrysler Pacifica, VW Multivan, Mercedes V-Class, Toyota Previa — varies by country"},
+   es:{name:"Minivan",cat:"Minivan de Pasajeros",vary:"Chrysler Pacifica, VW Multivan, Mercedes V-Class, Toyota Previa — varía por país"},
+   img:"https://media.ed.edmunds-media.com/chrysler/pacifica/2024/oem/2024_chrysler_pacifica_minivan_touring-l_fq_oem_1_500.jpg"},
+  {id:16,sec:"7-Passenger",tags:["7pax"],hot:false,minAge:21,vtype:"family",pax:7,doors:4,bags:"3 bags",code:"J-7L",bg:"#1E6E2E",
+   en:{name:"Large SUV",cat:"Full-Size 7-Seat SUV",vary:"Chevrolet Tahoe, Ford Expedition, Toyota Land Cruiser, GMC Yukon — varies by country"},
+   es:{name:"SUV Grande",cat:"SUV Grande 7 Plazas",vary:"Chevrolet Tahoe, Ford Expedition, Toyota Land Cruiser, GMC Yukon — varía por país"},
+   img:"https://media.ed.edmunds-media.com/chevrolet/suburban/2024/oem/2024_chevrolet_suburban_4dr-suv_z71_fq_oem_1_500.jpg"},
+  {id:17,sec:"7-Passenger",tags:["elite","7pax"],hot:true,minAge:25,vtype:"family",pax:7,doors:4,bags:"3 bags",code:"J-7E",bg:"#8B6914",
+   en:{name:"BMW X7 / Mercedes GLS",cat:"Elite 7-Seat SUV",vary:"BMW X7, Mercedes GLS, Lexus LX, Cadillac Escalade — varies by country"},
+   es:{name:"BMW X7 / Mercedes GLS",cat:"SUV Elite 7 Plazas",vary:"BMW X7, Mercedes GLS, Lexus LX, Cadillac Escalade — varía por país"},
+   img:"https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/BMW_X7_xDrive40i_(G07,_2021)_(52858944085).jpg/600px-BMW_X7_xDrive40i_(G07,_2021)_(52858944085).jpg"},
+  {id:18,sec:"7-Passenger",tags:["7pax"],hot:false,minAge:25,vtype:"family",pax:7,doors:4,bags:"4 suitcases",code:"J-7P",bg:"#1E6E2E",
+   en:{name:"Premium Large SUV",cat:"Full-Size Premium 7-Seat",vary:"Chevrolet Suburban, GMC Yukon XL, Toyota Land Cruiser V8 — varies by country"},
+   es:{name:"SUV Premium Grande",cat:"SUV Grande Premium",vary:"Chevrolet Suburban, GMC Yukon XL, Toyota Land Cruiser V8 — varía por país"},
+   img:"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/2024_Chevrolet_Suburban_5.3_Z71_V8,_front_left,_06-21-2024.jpg/600px-2024_Chevrolet_Suburban_5.3_Z71_V8,_front_left,_06-21-2024.jpg"},
+  {id:19,sec:"7-Passenger",tags:["elite","7pax"],hot:false,minAge:25,vtype:"family",pax:7,doors:4,bags:"3 suitcases",code:"J-7X",bg:"#8B6914",
+   en:{name:"Cadillac Escalade",cat:"Luxury Full-Size SUV",vary:"Cadillac Escalade, Mercedes GLS 600, Lincoln Navigator — where available"},
+   es:{name:"Cadillac Escalade",cat:"SUV Lujo de Tamaño Completo",vary:"Cadillac Escalade, Mercedes GLS 600, Lincoln Navigator — donde disponible"},
+   img:"https://media.ed.edmunds-media.com/cadillac/escalade/2024/oem/2024_cadillac_escalade_4dr-suv_premium-luxury_fq_oem_1_500.jpg"},
+  {id:20,sec:"Pick-up Trucks",tags:["pickup"],hot:false,minAge:21,vtype:"pickup",pax:5,doors:4,bags:"open bed",code:"J-TK",bg:"#5C3A1E",
+   en:{name:"Compact Pick-up",cat:"Compact Truck",vary:"Ford Maverick, Honda Ridgeline, Nissan Frontier — varies by country"},
+   es:{name:"Pick-up Compacta",cat:"Camioneta Compacta",vary:"Ford Maverick, Honda Ridgeline, Nissan Frontier — varía por país"},
+   img:"https://media.ed.edmunds-media.com/ford/maverick/2024/oem/2024_ford_maverick_crew-cab-pickup_xlt_fq_oem_1_500.jpg"},
+  {id:21,sec:"Pick-up Trucks",tags:["pickup"],hot:true,minAge:21,vtype:"pickup",pax:5,doors:4,bags:"open bed",code:"J-TF",bg:"#5C3A1E",
+   en:{name:"Full-size Pick-up",cat:"Standard Truck",vary:"Ford F-150, RAM 1500, Chevrolet Silverado, GMC Sierra — varies by country"},
+   es:{name:"Pick-up Tamaño Completo",cat:"Camioneta Estándar",vary:"Ford F-150, RAM 1500, Chevrolet Silverado — varía por país"},
+   img:"https://media.ed.edmunds-media.com/ford/f-150/2024/oem/2024_ford_f-150_crew-cab-pickup_xlt_fq_oem_1_500.jpg"},
+  {id:22,sec:"Convertibles",tags:["conv"],hot:true,minAge:21,vtype:"conv",pax:4,doors:2,bags:"2 bags",code:"J-CV",bg:"#6B1E1E",
+   en:{name:"Convertible",cat:"Standard Convertible",vary:"Ford Mustang Convertible, Chevrolet Camaro, VW Beetle — varies by country"},
+   es:{name:"Convertible",cat:"Convertible Estándar",vary:"Ford Mustang Convertible, Chevrolet Camaro, VW Beetle — varía por país"},
+   img:"https://media.ed.edmunds-media.com/ford/mustang/2024/oem/2024_ford_mustang_convertible_gt_fq_oem_1_500.jpg"},
+  {id:23,sec:"Convertibles",tags:["conv","elite"],hot:false,minAge:25,vtype:"conv",pax:2,doors:2,bags:"1 bag",code:"J-CR",bg:"#6B1E1E",
+   en:{name:"Sports Roadster",cat:"Premium Convertible / Roadster",vary:"Porsche Boxster, BMW Z4, Mercedes SLK — varies by country"},
+   es:{name:"Roadster Deportivo",cat:"Convertible Premium / Roadster",vary:"Porsche Boxster, BMW Z4, Mercedes SLK — varía por país"},
+   img:"https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/2022_Porsche_718_Boxster_%28982%29_GTS_4.0_in_Guards_Red%2C_front_8.15.21.jpg/600px-2022_Porsche_718_Boxster_%28982%29_GTS_4.0_in_Guards_Red%2C_front_8.15.21.jpg"},
+  {id:24,sec:"Vans & Commercial",tags:["van"],hot:false,minAge:21,vtype:"van",pax:9,doors:4,bags:"large cargo",code:"J-VL",bg:"#3A3A8C",
+   en:{name:"Passenger Van",cat:"9-Passenger Van",vary:"Ford Transit, Mercedes Sprinter, VW Transporter — varies by country"},
+   es:{name:"Van de Pasajeros",cat:"Van de 9 Pasajeros",vary:"Ford Transit, Mercedes Sprinter, VW Transporter — varía por país"},
+   img:"https://media.ed.edmunds-media.com/ford/transit/2024/oem/2024_ford_transit-passenger-van_passenger-van_xl_fq_oem_1_500.jpg"},
+  {id:25,sec:"Vans & Commercial",tags:["van"],hot:false,minAge:21,vtype:"van",pax:2,doors:2,bags:"cargo",code:"J-VC",bg:"#3A3A8C",
+   en:{name:"Cargo Van",cat:"Commercial Cargo Van",vary:"Ford Transit Cargo, Mercedes Sprinter Cargo, VW Crafter — varies by country"},
+   es:{name:"Van de Carga",cat:"Van Comercial de Carga",vary:"Ford Transit Cargo, Mercedes Sprinter Cargo — varía por país"},
+   img:"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/2020_Ford_Transit_350_in_Oxford_White%2C_front_8.28.20.jpg/600px-2020_Ford_Transit_350_in_Oxford_White%2C_front_8.28.20.jpg"},
+  {id:26,sec:"Electric & Hybrid",tags:["ev"],hot:true,minAge:21,vtype:"ev",pax:5,doors:4,bags:"2 bags",code:"J-EV",bg:"#1E5C8B",
+   en:{name:"Electric / Hybrid",cat:"Zero Emission / Hybrid",vary:"Tesla Model 3, VW ID.4, Peugeot e-208, Toyota Prius — varies by country"},
+   es:{name:"Eléctrico / Híbrido",cat:"Cero Emisiones / Híbrido",vary:"Tesla Model 3, VW ID.4, Peugeot e-208, Toyota Prius — varía por país"},
+   img:"https://media.ed.edmunds-media.com/tesla/model-3/2024/oem/2024_tesla_model-3_sedan_base_fq_oem_1_500.jpg"},
+];
+
+var SECS_LABEL={
+  en:{"Compact & Economy":"Compact & Economy","SUV & Crossover":"SUV & Crossover","Elite & Premium":"Elite & Premium","7-Passenger":"7-Passenger","Pick-up Trucks":"Pick-up Trucks","Convertibles":"Convertibles","Vans & Commercial":"Vans & Commercial","Electric & Hybrid":"Electric & Hybrid"},
+  es:{"Compact & Economy":"Compacto y Económico","SUV & Crossover":"SUV y Crossover","Elite & Premium":"Elite y Premium","7-Passenger":"7 Pasajeros","Pick-up Trucks":"Pick-up / Camionetas","Convertibles":"Convertibles","Vans & Commercial":"Vans y Comerciales","Electric & Hybrid":"Eléctrico e Híbrido"}
+};
+
+var CINC={en:["$0 Deductible","GPS","Unlimited Miles","+1 Driver","24/7 Roadside","Stay Flexible","Age Waiver"],es:["$0 Deducible","GPS","Millas Ilimitadas","+1 Conductor","Asistencia 24/7","Reserva Flexible","Exención Edad"]};
+
+var TRUST={en:["🛡️ $0 Deductible","📍 GPS Included","👤 +1 Driver Free","🛣️ Unlimited Miles","🆘 24/7 Roadside","✈️ Airport Pickup","↩️ Stay Flexible"],es:["🛡️ $0 Deducible","📍 GPS Incluido","👤 +1 Conductor Gratis","🛣️ Millas Ilimitadas","🆘 Asistencia 24/7","✈️ Recogida en Aeropuerto","↩️ Reserva Flexible"]};
+
+var FILTERS={
+  types:{en:[["all","All"],["sedan","Sedan"],["suv","SUV"],["family","7-Passenger"],["elite","Elite/Luxury"],["conv","Convertible"],["pickup","Pick-up"],["van","Van"],["ev","Electric"]],
+         es:[["all","Todos"],["sedan","Sedán"],["suv","SUV"],["family","7 Pasajeros"],["elite","Elite/Lujo"],["conv","Convertible"],["pickup","Pick-up"],["van","Van"],["ev","Eléctrico"]]},
+  seats:[0,4,5,7,9]
+};
+
+var REGIONS=[
+  {id:'na',en:'North America',es:'Norteamérica',countries:['USA','CAN','MEX','PRI','DOM']},
+  {id:'la',en:'Latin America',es:'Latinoamérica',countries:['COL','BRA','ARG','CHL','PER','ECU','BOL','PRY','URY','CRI','PAN','GTM','CUB','JAM','TTO','BAH']},
+  {id:'eu',en:'Europe',es:'Europa',countries:['GBR','DEU','FRA','ESP','ITA','PRT','NLD','BEL','CHE','AUT','SWE','NOR','DNK','FIN','GRC','POL','CZE','HUN','ROU','HRV','SVN','SVK','ALB','EST','LVA','LTU','LUX','MLT','ISL','IRL','BGR','SRB','MDA','GEO','ARM','AZE']},
+  {id:'me',en:'Middle East & Africa',es:'Medio Oriente y África',countries:['ARE','SAU','QAT','KWT','BHR','OMN','ISR','JOR','MAR','ZAF','EGY','TUN','KEN','GHA']},
+  {id:'ap',en:'Asia-Pacific',es:'Asia-Pacífico',countries:['AUS','NZL','JPN','KOR','THA','SGP','MYS','IDN','PHL','IND','HKG','TWN','KAZ','UZB','TKM']},
+];
+
+var COVERED={'USA':'United States','CAN':'Canada','MEX':'Mexico','GBR':'United Kingdom','DEU':'Germany','FRA':'France','ESP':'Spain','ITA':'Italy','PRT':'Portugal','NLD':'Netherlands','BEL':'Belgium','CHE':'Switzerland','AUT':'Austria','SWE':'Sweden','NOR':'Norway','DNK':'Denmark','FIN':'Finland','GRC':'Greece','POL':'Poland','CZE':'Czech Republic','HUN':'Hungary','ROU':'Romania','HRV':'Croatia','SVN':'Slovenia','SVK':'Slovakia','ALB':'Albania','EST':'Estonia','LVA':'Latvia','LTU':'Lithuania','LUX':'Luxembourg','MLT':'Malta','ISL':'Iceland','IRL':'Ireland','BGR':'Bulgaria','SRB':'Serbia','MDA':'Moldova','GEO':'Georgia','ARM':'Armenia','AZE':'Azerbaijan','ARE':'UAE','SAU':'Saudi Arabia','QAT':'Qatar','KWT':'Kuwait','BHR':'Bahrain','OMN':'Oman','ISR':'Israel','JOR':'Jordan','AUS':'Australia','NZL':'New Zealand','JPN':'Japan','KOR':'South Korea','THA':'Thailand','SGP':'Singapore','MYS':'Malaysia','IDN':'Indonesia','PHL':'Philippines','IND':'India','HKG':'Hong Kong','TWN':'Taiwan','KAZ':'Kazakhstan','UZB':'Uzbekistan','TKM':'Turkmenistan','COL':'Colombia','BRA':'Brazil','ARG':'Argentina','CHL':'Chile','PER':'Peru','PRI':'Puerto Rico','DOM':'Dominican Republic','CRI':'Costa Rica','PAN':'Panama','GTM':'Guatemala','CUB':'Cuba','JAM':'Jamaica','TTO':'Trinidad & Tobago','BAH':'Bahamas','MAR':'Morocco','ZAF':'South Africa','EGY':'Egypt','TUN':'Tunisia','KEN':'Kenya','GHA':'Ghana','ECU':'Ecuador','BOL':'Bolivia','PRY':'Paraguay','URY':'Uruguay','BLR':'Belarus','UKR':'Ukraine','KGZ':'Kyrgyzstan'};
+
+var COUNTRY_FLAGS={'USA':'🇺🇸','CAN':'🇨🇦','MEX':'🇲🇽','GBR':'🇬🇧','DEU':'🇩🇪','FRA':'🇫🇷','ESP':'🇪🇸','ITA':'🇮🇹','PRT':'🇵🇹','NLD':'🇳🇱','BEL':'🇧🇪','CHE':'🇨🇭','AUT':'🇦🇹','SWE':'🇸🇪','NOR':'🇳🇴','DNK':'🇩🇰','FIN':'🇫🇮','GRC':'🇬🇷','POL':'🇵🇱','CZE':'🇨🇿','HUN':'🇭🇺','ROU':'🇷🇴','HRV':'🇭🇷','SVN':'🇸🇮','SVK':'🇸🇰','ALB':'🇦🇱','EST':'🇪🇪','LVA':'🇱🇻','LTU':'🇱🇹','LUX':'🇱🇺','MLT':'🇲🇹','ISL':'🇮🇸','IRL':'🇮🇪','BGR':'🇧🇬','SRB':'🇷🇸','MDA':'🇲🇩','GEO':'🇬🇪','ARM':'🇦🇲','AZE':'🇦🇿','ARE':'🇦🇪','SAU':'🇸🇦','QAT':'🇶🇦','KWT':'🇰🇼','BHR':'🇧🇭','OMN':'🇴🇲','ISR':'🇮🇱','JOR':'🇯🇴','AUS':'🇦🇺','NZL':'🇳🇿','JPN':'🇯🇵','KOR':'🇰🇷','THA':'🇹🇭','SGP':'🇸🇬','MYS':'🇲🇾','IDN':'🇮🇩','PHL':'🇵🇭','IND':'🇮🇳','HKG':'🇭🇰','TWN':'🇹🇼','KAZ':'🇰🇿','UZB':'🇺🇿','TKM':'🇹🇲','COL':'🇨🇴','BRA':'🇧🇷','ARG':'🇦🇷','CHL':'🇨🇱','PER':'🇵🇪','PRI':'🇵🇷','DOM':'🇩🇴','CRI':'🇨🇷','PAN':'🇵🇦','GTM':'🇬🇹','CUB':'🇨🇺','JAM':'🇯🇲','TTO':'🇹🇹','BAH':'🇧🇸','MAR':'🇲🇦','ZAF':'🇿🇦','EGY':'🇪🇬','TUN':'🇹🇳','KEN':'🇰🇪','GHA':'🇬🇭','ECU':'🇪🇨','BOL':'🇧🇴','PRY':'🇵🇾','URY':'🇺🇾','BLR':'🇧🇾','UKR':'🇺🇦','KGZ':'🇰🇬'};
+
+var C2R={};REGIONS.forEach(function(r){r.countries.forEach(function(c){C2R[c]=r.id;});});
+
+/* Numeric ISO 3166 → alpha codes for D3 map */
+var N2A={'840':'USA','124':'CAN','484':'MEX','826':'GBR','276':'DEU','250':'FRA','724':'ESP','380':'ITA','620':'PRT','528':'NLD','056':'BEL','756':'CHE','040':'AUT','752':'SWE','578':'NOR','208':'DNK','246':'FIN','300':'GRC','616':'POL','203':'CZE','348':'HUN','642':'ROU','191':'HRV','705':'SVN','703':'SVK','008':'ALB','233':'EST','428':'LVA','440':'LTU','442':'LUX','470':'MLT','352':'ISL','372':'IRL','100':'BGR','688':'SRB','498':'MDA','268':'GEO','051':'ARM','031':'AZE','784':'ARE','682':'SAU','634':'QAT','414':'KWT','048':'BHR','512':'OMN','376':'ISR','400':'JOR','036':'AUS','554':'NZL','392':'JPN','410':'KOR','764':'THA','702':'SGP','458':'MYS','360':'IDN','608':'PHL','356':'IND','344':'HKG','158':'TWN','398':'KAZ','860':'UZB','795':'TKM','170':'COL','076':'BRA','032':'ARG','152':'CHL','604':'PER','630':'PRI','214':'DOM','188':'CRI','591':'PAN','320':'GTM','192':'CUB','388':'JAM','780':'TTO','044':'BAH','504':'MAR','710':'ZAF','818':'EGY','788':'TUN','404':'KEN','288':'GHA','218':'ECU','068':'BOL','600':'PRY','858':'URY','112':'BLR','804':'UKR','417':'KGZ'};
+
+var AIRPORTS={'LAS':'USA','MIA':'USA','MCO':'USA','JFK':'USA','LAX':'USA','ORD':'USA','SFO':'USA','BOS':'USA','DFW':'USA','ATL':'USA','SEA':'USA','LGA':'USA','EWR':'USA','YYZ':'CAN','YVR':'CAN','YUL':'CAN','MEX':'MEX','CUN':'MEX','GDL':'MEX','LHR':'GBR','LGW':'GBR','MAN':'GBR','EDI':'GBR','CDG':'FRA','ORY':'FRA','NCE':'FRA','FRA':'DEU','MUC':'DEU','DUS':'DEU','BCN':'ESP','MAD':'ESP','AGP':'ESP','MXP':'ITA','FCO':'ITA','CIA':'ITA','LIS':'PRT','AMS':'NLD','BRU':'BEL','ZRH':'CHE','VIE':'AUT','ARN':'SWE','OSL':'NOR','CPH':'DNK','HEL':'FIN','ATH':'GRC','WAW':'POL','PRG':'CZE','BUD':'HUN','OTP':'ROU','DXB':'ARE','AUH':'ARE','RUH':'SAU','DOH':'QAT','KWI':'KWT','SYD':'AUS','MEL':'AUS','AKL':'NZL','NRT':'JPN','KIX':'JPN','ICN':'KOR','BKK':'THA','SIN':'SGP','KUL':'MYS','CGK':'IDN','MNL':'PHL','DEL':'IND','BOM':'IND','BOG':'COL','GRU':'BRA','EZE':'ARG','SCL':'CHL','LIM':'PER','SJO':'CRI','PTY':'PAN','CMN':'MAR','JNB':'ZAF','CAI':'EGY'};
+
+var TESTIS={
+  en:[
+    {q:'"Super easy. WhatsApp to quote in 10 min. Showed up at Miami airport and the BMW X3 was waiting. Everything exactly as quoted. Zero surprises."',n:"Alejandro R.",d:"🚗 BMW X3 · Miami, FL",loc:"🇻🇪 Venezuela",i:"A"},
+    {q:'"RAV4 for 2 weeks in Spain. $0 deductible, GPS, unlimited miles — all true. No surprises at the counter. Will always use JSUD."',n:"María C.",d:"🚙 Toyota RAV4 · Madrid, Spain",loc:"🇨🇴 Colombia",i:"M"},
+    {q:'"Suburban for family of 7 in Orlando. Everything fit perfectly. No surprises at the counter. The easiest rental process ever."',n:"Carlos M.",d:"🚗 Chevrolet Suburban · Orlando, FL",loc:"🇲🇽 México",i:"C"},
+    {q:'"Great experience with a Camry in Las Vegas for a week — everything included. Process took under 10 min on WhatsApp. Unbeatable service."',n:"Sarah K.",d:"🚗 Toyota Camry · Las Vegas, NV",loc:"🇺🇸 United States",i:"S"},
+  ],
+  es:[
+    {q:'"Súper fácil. WhatsApp → cotización en 10 min → llegué al aeropuerto de Miami y el BMW X3 me esperaba. Todo exactamente como se cotizó. Sin sorpresas."',n:"Alejandro R.",d:"🚗 BMW X3 · Miami, FL",loc:"🇻🇪 Venezuela",i:"A"},
+    {q:'"RAV4 por 2 semanas en España. $0 deducible, GPS incluido — todo verdad. Sin sorpresas en el mostrador. Siempre usaré JSUD."',n:"María C.",d:"🚙 Toyota RAV4 · Madrid, España",loc:"🇨🇴 Colombia",i:"M"},
+    {q:'"Suburban para 7 personas en Orlando. Todo perfecto, sin sorpresas en el mostrador. El proceso de renta más sencillo que he hecho."',n:"Carlos M.",d:"🚗 Chevrolet Suburban · Orlando, FL",loc:"🇲🇽 México",i:"C"},
+    {q:'"Excelente experiencia con un Camry en Las Vegas por una semana — todo incluido. El proceso tomó menos de 10 minutos por WhatsApp."',n:"Sarah K.",d:"🚗 Toyota Camry · Las Vegas, NV",loc:"🇺🇸 Estados Unidos",i:"S"},
+  ]
+};
+
+var FAQS={
+  en:[
+    ["How does JSUD pricing work?","We quote a transparent all-in price that includes LDW, $0 deductible, GPS, extra driver, 24/7 roadside, unlimited miles, and age waiver. What we quote is exactly what you pay — no hidden fees, no surprises at the counter."],
+    ["How does the reservation process work?","3 steps: (1) WhatsApp us with destination, dates & vehicle category. (2) Pay a small reservation fee via Zelle, Wise, or Stripe. (3) Show up at the counter and pay the remaining balance."],
+    ["What's included in every reservation?","<strong>Full insurance · $0 deductible · GPS · +1 driver free · 24/7 roadside · Unlimited miles · Stay flexible</strong> — all included, zero surprises."],
+    ["What payment methods do you accept?","Reservation fee: <strong>Zelle</strong> (US), <strong>Wise</strong> (international), <strong>Stripe</strong> (cards). Remaining balance paid at the counter in local currency."],
+    ["What is the security deposit at pickup?","A hold of <strong>$200–$500 USD</strong> on your credit card at pickup — fully released on return. Credit card in the driver's name required."],
+    ["What is the minimum age? What documents?","Minimum age: <strong>21</strong> (25 for premium/luxury). Required: driver's license, passport, credit card in driver's name."],
+    ["Can I pick up at the airport? One-way rentals?","<strong>Yes</strong> — airport pickup at 2,000+ locations worldwide. One-way rentals available — just mention it when you contact us."],
+    ["What currency do I pay in?","Reservation fee in <strong>USD</strong>. Balance at counter in local currency (EUR, MXN, AED, etc.) at your bank's rate."],
+    ["Are child seats and extras available?","Yes — child seats, ski racks, snow tires available at most locations. Mention them in your WhatsApp and we'll include them."],
+  ],
+  es:[
+    ["¿Cómo funciona el precio de JSUD?","Cotizamos un precio todo incluido: LDW, $0 deducible, GPS, conductor adicional, asistencia 24/7, millas ilimitadas y exención de edad. Lo que cotizamos es exactamente lo que pagas — sin cargos ocultos."],
+    ["¿Cómo funciona el proceso de reserva?","3 pasos: (1) Escríbenos por WhatsApp con destino, fechas y categoría. (2) Paga una pequeña tarifa de reserva vía Zelle, Wise o Stripe. (3) Preséntate en el mostrador y paga el saldo restante."],
+    ["¿Qué incluye cada reserva?","<strong>Seguro completo · $0 deducible · GPS · +1 conductor gratis · Asistencia 24/7 · Millas ilimitadas · Reserva flexible (paga al recoger)</strong> — todo incluido."],
+    ["¿Qué métodos de pago aceptan?","Tarifa de reserva: <strong>Zelle</strong> (EEUU), <strong>Wise</strong> (internacional), <strong>Stripe</strong> (tarjetas). Saldo en el mostrador en moneda local."],
+    ["¿Cuánto es el depósito de seguridad?","Cargo de <strong>$200–$500 USD</strong> en tarjeta al recoger — se libera al devolver. Tarjeta a nombre del conductor requerida."],
+    ["¿Cuál es la edad mínima y qué documentos?","Edad mínima: <strong>21</strong> (25 para premium/lujo). Requerido: licencia, pasaporte, tarjeta de crédito a nombre del conductor."],
+    ["¿Puedo recoger en el aeropuerto? ¿Rentas de ida?","<strong>Sí</strong> — recogida en 2,000+ ubicaciones mundiales. Rentas de un solo tramo disponibles."],
+    ["¿En qué moneda pago?","Tarifa de reserva en <strong>USD</strong>. Saldo en el mostrador en moneda local (EUR, MXN, AED, etc.) a la tasa de tu banco."],
+    ["¿Hay sillas de bebé y extras disponibles?","Sí — disponibles en la mayoría de ubicaciones. Menciónalo en tu WhatsApp."],
+  ]
+};
+
+var DEST_CITIES=[
+  {f:"🇺🇸",c:"Las Vegas, NV",co:"United States",k:"LAS"},
+  {f:"🇺🇸",c:"Miami, FL",co:"United States",k:"MIA"},
+  {f:"🇺🇸",c:"Orlando, FL",co:"United States",k:"MCO"},
+  {f:"🇺🇸",c:"New York, NY",co:"United States",k:"JFK"},
+  {f:"🇺🇸",c:"Los Angeles, CA",co:"United States",k:"LAX"},
+  {f:"🇲🇽",c:"Cancún",co:"México",k:"CUN"},
+  {f:"🇪🇸",c:"Madrid",co:"España",k:"MAD"},
+  {f:"🇦🇪",c:"Dubai",co:"UAE",k:"DXB"},
+  {f:"🇬🇧",c:"London",co:"United Kingdom",k:"LHR"},
+  {f:"🇫🇷",c:"Paris",co:"France",k:"CDG"},
+  {f:"🇨🇴",c:"Bogotá",co:"Colombia",k:"BOG"},
+  {f:"🇦🇺",c:"Sydney",co:"Australia",k:"SYD"},
+  {f:"🇯🇵",c:"Tokyo",co:"Japan",k:"NRT"},
+  {f:"🌍",c:"Your Destination",co:"105+ countries",k:"",ces:"Tu Destino",coes:"105+ países"},
+];
+
+/* PAGE NAV */
+var pg='home';
+function showPage(id){
+  if(id===pg&&id!=='fleet')return; pg=id;
+  document.querySelectorAll('.page').forEach(function(p){p.classList.remove('on');});
+  var p=document.getElementById('page-'+id);
+  if(p){p.classList.add('on');p.scrollTop=0;}
+  document.querySelectorAll('.ntab,.bn').forEach(function(b){b.classList.toggle('on',b.dataset.page===id);});
+  if(id==='fleet'){renderInc();renderFilts();renderRegionPills();renderCatNav();renderFeatured();renderFleet();}
+  if(id==='destinations')renderDestCities();
+  if(id==='faq')renderFAQ();
+  if(id==='included'){setTimeout(function(){document.querySelectorAll('#page-included .rv').forEach(function(e){e.classList.add('in');});},100);}
+  if(id==='home'){setTimeout(function(){document.querySelectorAll('#page-home .rv').forEach(function(e){e.classList.add('in');});},100);animCounters();renderTestimonials();}
+}
+/* LANG */
+function setLang(l){
+  lang=l;document.documentElement.lang=l;
+  document.querySelectorAll('.lb').forEach(function(b){var on=b.textContent.trim()===l.toUpperCase();b.classList.toggle('on',on);b.setAttribute('aria-pressed',on?'true':'false');});
+  document.querySelectorAll('[data-'+l+']').forEach(function(el){var v=el.getAttribute('data-'+l);if(v!==null){if(v.indexOf('<')!==-1)el.innerHTML=v;else el.textContent=v;}});
+  var inp=document.getElementById('dest-input');
+  if(inp){var ph=inp.getAttribute('data-'+l+'-placeholder');if(ph)inp.placeholder=ph;}
+  renderInc();renderFilts();renderRegionPills();renderCatNav();renderFeatured();renderFleet();
+  renderCountries();renderTestimonials();renderFAQ();renderDestCities();
+}
+/* FLEET TAB */
+function setTab(t){
+  var sf=document.getElementById('sf'),sm=document.getElementById('sm');
+  if(sf)sf.style.display=t==='fleet'?'block':'none';
+  if(sm)sm.style.display=t!=='fleet'?'block':'none';
+  var tbf=document.getElementById('tbf'),tbm=document.getElementById('tbm');
+  if(tbf){tbf.classList.toggle('on',t==='fleet');}
+  if(tbm){tbm.classList.toggle('on',t!=='fleet');}
+  if(t==='map'&&!mapDone){mapDone=true;setTimeout(renderMap,100);}
+}
+/* VIEW */
+function setView(v){
+  currentView=v;
+  var g=document.getElementById('vt-grid'),l=document.getElementById('vt-list');
+  if(g)g.classList.toggle('on',v==='grid');
+  if(l)l.classList.toggle('on',v==='list');
+  renderFleet();
+}
+/* INC CHIPS */
+function renderInc(){
+  var d=CINC[lang],e=document.getElementById('inc-chips');
+  if(e)e.innerHTML=d.map(function(x){return'<div class="ichip"><span>✓</span><span>'+x+'</span></div>';}).join('');
+}
+/* FILTERS */
+function renderFilts(){
+  var el=document.getElementById('fbtns');if(!el)return;
+  var types=FILTERS.types[lang],h='';
+  h+='<div class="fgrp"><div class="fgrp-l">'+(lang==='en'?'Vehicle Type':'Tipo de Vehículo')+'</div><div class="fgrp-c">';
+  types.forEach(function(f){
+    var ic={all:'🚗',sedan:'🚗',suv:'🚙',family:'👨‍👩‍👧',elite:'🏆',conv:'🏎️',pickup:'🛻',van:'🚐',ev:'⚡'};
+    h+='<button class="fbtn'+(activeFilter===f[0]?' on':'')+'" data-fval="'+f[0]+'" onclick="setFilter(this.dataset.fval);" type="button">'+(ic[f[0]]||'🚗')+' '+f[1]+'</button>';
+  });
+  h+='</div></div><div class="fgrp"><div class="fgrp-l">'+(lang==='en'?'Min. Seats':'Asientos Mín.')+'</div><div class="fgrp-c">';
+  [0,4,5,7,9].forEach(function(s){var lbl=s===0?(lang==='en'?'Any':'Todos'):s+'+';h+='<button class="fbtn'+(activeSeatFilter===s?' on':'')+'" onclick="setSeatFilter('+s+');" type="button">'+lbl+'</button>';});
+  h+='</div></div><div class="fgrp"><div class="fgrp-l">'+(lang==='en'?'Driver Age':'Edad Conductor')+'</div><div class="fgrp-c">';
+  [[0,'Any'],[21,'21+'],[25,'25+']].forEach(function(a){var lbl=a[0]===0?(lang==='en'?'Any':'Todos'):a[1];h+='<button class="fbtn'+(activeAgeFilter===a[0]?' on':'')+'" onclick="setAgeFilter('+a[0]+');" type="button">'+lbl+'</button>';});
+  h+='</div></div>';
+  el.innerHTML=h;
+}
+function setFilter(f){activeFilter=f;renderFilts();renderFleet();}
+function setSeatFilter(s){activeSeatFilter=s;renderFilts();renderFleet();}
+function setAgeFilter(a){activeAgeFilter=a;renderFilts();renderFleet();}
+function setSort(s){activeSort=s;document.querySelectorAll('.srt-btn').forEach(function(b){b.classList.toggle('on',b.id==='sort-'+s);});renderFleet();}
+function resetFilters(){activeFilter='all';activeSeatFilter=0;activeAgeFilter=0;activeSort='default';activeCatSec='';document.querySelectorAll('.cpill').forEach(function(b){b.classList.toggle('on',b.dataset.fval==='');});renderFilts();renderFleet();}
+/* REGION */
+function renderRegionPills(){
+  var el=document.getElementById('region-pills');if(!el)return;
+  el.innerHTML=REGIONS.map(function(r){var name=lang==='en'?r.en:r.es;return'<button class="rpill'+(activeRegion===r.id?' on':'')+'" data-rid="'+r.id+'" onclick="setRegion(this.dataset.rid);" type="button">'+name+'</button>';}).join('');
+}
+function setRegion(rid){
+  if(activeRegion===rid){activeRegion='';selectedCountry='';var p=document.getElementById('country-picker');if(p)p.classList.remove('open');}
+  else{activeRegion=rid;selectedCountry='';}
+  renderRegionPills();renderCountryPicker();updateBanner();renderFleet();
+}
+function renderCountryPicker(){
+  var picker=document.getElementById('country-picker');if(!picker)return;
+  if(!activeRegion){picker.classList.remove('open');return;}
+  picker.classList.add('open');
+  var region=REGIONS.find(function(r){return r.id===activeRegion;});if(!region)return;
+  var h='';
+  region.countries.forEach(function(code){if(!COVERED[code])return;h+='<div class="cpick-cell'+(selectedCountry===code?' on':'')+'" data-code="'+code+'" onclick="selectCountry(this.dataset.code)">'+(COUNTRY_FLAGS[code]||'🏳️')+' '+COVERED[code]+'</div>';});
+  document.getElementById('cpicker-grid').innerHTML=h;
+}
+function selectCountry(code){selectedCountry=(selectedCountry===code)?'':code;renderCountryPicker();updateBanner();renderFleet();var inp=document.getElementById('dest-input');if(inp&&selectedCountry){inp.value=COVERED[selectedCountry]||'';document.getElementById('dest-clear-btn').classList.add('show');}}
+function onDestSearch(val){
+  var btn=document.getElementById('dest-clear-btn');if(btn)btn.classList.toggle('show',val.length>0);
+  var q=val.toUpperCase().trim();
+  if(q.length===3&&AIRPORTS[q]){var cc=AIRPORTS[q];if(COVERED[cc]){selectedCountry=cc;activeRegion=C2R[cc]||'';var inp=document.getElementById('dest-input');if(inp)inp.value=COVERED[cc]+' ('+q+')';renderRegionPills();renderCountryPicker();updateBanner();renderFleet();hideSugg();return;}}
+  if(val.length<2){if(!val)clearDest();hideSugg();return;}
+  var ql=val.toLowerCase(),matches=Object.keys(COVERED).filter(function(code){return COVERED[code].toLowerCase().indexOf(ql)!==-1;}).sort(function(a,b){return COVERED[a].toLowerCase().indexOf(ql)-COVERED[b].toLowerCase().indexOf(ql)||COVERED[a].localeCompare(COVERED[b]);}).slice(0,8);
+  showSugg(matches);
+  if(matches.length===1){selectedCountry=matches[0];activeRegion=C2R[matches[0]]||'';renderRegionPills();renderCountryPicker();updateBanner();renderFleet();}
+}
+function showSugg(codes){var wrap=document.getElementById('dest-suggestions');if(!wrap){var inp=document.getElementById('dest-input');if(!inp)return;wrap=document.createElement('div');wrap.id='dest-suggestions';wrap.className='dest-suggestions';inp.parentNode.appendChild(wrap);}if(!codes.length){wrap.style.display='none';return;}wrap.style.display='block';wrap.innerHTML=codes.map(function(code){return'<div class="dest-sug" data-code="'+code+'" onclick="selectSugg(this.dataset.code)">'+(COUNTRY_FLAGS[code]||'🏳️')+' '+COVERED[code]+'</div>';}).join('');}
+function hideSugg(){var w=document.getElementById('dest-suggestions');if(w)w.style.display='none';}
+function selectSugg(code){selectedCountry=code;activeRegion=C2R[code]||'';var inp=document.getElementById('dest-input');if(inp)inp.value=COVERED[code];document.getElementById('dest-clear-btn').classList.add('show');renderRegionPills();renderCountryPicker();updateBanner();renderFleet();hideSugg();}
+function clearDest(){selectedCountry='';activeRegion='';hideSugg();var inp=document.getElementById('dest-input');if(inp)inp.value='';var btn=document.getElementById('dest-clear-btn');if(btn)btn.classList.remove('show');var picker=document.getElementById('country-picker');if(picker)picker.classList.remove('open');renderRegionPills();updateBanner();renderFleet();}
+function updateBanner(){
+  var banner=document.getElementById('dest-banner'),txt=document.getElementById('dest-banner-txt');if(!banner||!txt)return;
+  if(selectedCountry){txt.textContent=(lang==='en'?'Fleet for: ':'Flota para: ')+(COUNTRY_FLAGS[selectedCountry]||'')+' '+COVERED[selectedCountry];banner.classList.add('show');}
+  else if(activeRegion){var reg=REGIONS.find(function(r){return r.id===activeRegion;});if(reg)txt.textContent=(lang==='en'?'Region: ':'Región: ')+(lang==='en'?reg.en:reg.es);banner.classList.add('show');}
+  else{banner.classList.remove('show');}
+}
+function imgErr(img){img.style.display='none';var fb=img.nextElementSibling;if(fb)fb.style.display='flex';}
+/* CAT NAV */
+function renderCatNav(){
+  var el=document.getElementById('cat-nav');if(!el)return;
+  var allL=lang==='en'?'All':'Todos';
+  var h='<button class="cpill'+(activeCatSec===''?' on':'')+'" data-fval="" onclick="setCatFilter(this.dataset.fval)"><span class="ic">✦</span>'+allL+'</button>';
+  var seen=[];CATS.forEach(function(c){if(seen.indexOf(c.sec)===-1)seen.push(c.sec);});
+  seen.forEach(function(sec){var ic=CAT_ICONS[sec]||'🚗',lbl=(SECS_LABEL[lang]||{})[sec]||sec,short=lbl.split(' ')[0];h+='<button class="cpill'+(activeCatSec===sec?' on':'')+'" data-fval="'+sec+'" onclick="setCatFilter(this.dataset.fval)"><span class="ic">'+ic+'</span>'+short+'</button>';});
+  el.innerHTML=h;
+}
+function setCatFilter(val){activeCatSec=val;document.querySelectorAll('.cpill').forEach(function(b){b.classList.toggle('on',b.dataset.fval===val);});renderFleet();}
+/* FEATURED */
+function renderFeatured(){
+  var el=document.getElementById('featured-row');if(!el)return;
+  var hot=CATS.filter(function(c){return c.hot;}).slice(0,6);
+  el.innerHTML=hot.map(function(car){
+    var d=car[lang]||car.en,msg=encodeURIComponent((lang==='en'?'Hi! Quote for: ':'Hola! Cotizar: ')+d.name+' ('+car.code+')')+'%0ADates:%20%0ADays:%20';
+    return'<a href="'+WA+'?text='+msg+'" class="hcard" target="_blank" rel="noopener">'
+      +'<div class="hphoto"><img src="'+car.img+'" alt="'+d.name+'" loading="lazy" onerror="this.style.display=\'none\'"><span class="hpop">⭐</span></div>'
+      +'<div class="hinfo"><div class="hnm">'+d.name+'</div><div class="hcode">'+car.code+'</div></div></a>';
+  }).join('');
+}
+/* FLEET RENDER */
+function renderFleet(){
+  var el=document.getElementById('fw');if(!el)return;
+  var ci=CINC[lang];
+  var filtered=CATS.filter(function(car){
+    if(activeCatSec!==''&&car.sec!==activeCatSec)return false;
+    if(activeFilter!=='all'&&car.vtype!==activeFilter)return false;
+    if(activeSeatFilter>0&&car.pax<activeSeatFilter)return false;
+    if(activeAgeFilter>0&&car.minAge>activeAgeFilter)return false;
+    return true;
+  });
+  if(activeSort==='seats')filtered.sort(function(a,b){return b.pax-a.pax;});
+  else if(activeSort==='age')filtered.sort(function(a,b){return a.minAge-b.minAge;});
+  var isF=(activeCatSec!==''||activeFilter!=='all'||activeSeatFilter>0||activeAgeFilter>0);
+  var bar=document.getElementById('fleet-bar'),lbl=document.getElementById('fleet-count-lbl');
+  if(bar)bar.style.display=isF?'flex':'none';
+  if(lbl)lbl.innerHTML='<strong>'+filtered.length+'</strong> '+(lang==='en'?'vehicles':'vehículos');
+  if(!filtered.length){el.innerHTML='<div class="empty"><div class="empty-ic">🔍</div><p style="color:var(--t3);font-size:13px;">'+(lang==='en'?'No vehicles match your filters.':'No hay vehículos con estos filtros.')+'</p><button onclick="resetFilters()" class="empty-btn">'+(lang==='en'?'Reset Filters':'Quitar Filtros')+'</button></div>';return;}
+  var secs=[];filtered.forEach(function(c){if(secs.indexOf(c.sec)===-1)secs.push(c.sec);});
+  var qLbl=lang==='en'?'Get Quote':'Cotizar';
+  var destP=selectedCountry&&COVERED[selectedCountry]?'%0ADestination: '+encodeURIComponent((COUNTRY_FLAGS[selectedCountry]||'')+' '+COVERED[selectedCountry]):'';
+  var isList=currentView==='list';
+  var gc='vgrid'+(isList?' lv':'');
+  var h='';
+  secs.forEach(function(sec){
+    var sc=filtered.filter(function(c){return c.sec===sec;});
+    var sL=(SECS_LABEL[lang]||{})[sec]||sec,sI=CAT_ICONS[sec]||'🚗';
+    h+='<div class="shdr"><span class="shdr-i">'+sI+'</span><span class="shdr-n">'+sL+'</span><span class="shdr-c">'+sc.length+'</span><div class="shdr-l"></div></div><div class="'+gc+'">';
+    sc.forEach(function(car){
+      var d=car[lang]||car.en;
+      var msg=encodeURIComponent((lang==='en'?'Hi! Quote for: ':'Hola! Cotizar: ')+d.name+' ('+car.code+')')+destP+'%0ADates:%20%0ADays:%20';
+      var bL='',bR='';
+      if(car.hot)bL='<span class="b-pop">⭐ '+(lang==='en'?'Popular':'Popular')+'</span>';
+      if(car.vtype==='ev')bR='<span class="b-ev">⚡ EV</span>';
+      else if(car.vtype==='elite'||car.vtype==='conv')bR='<span class="b-prem">★ '+(lang==='en'?'Premium':'Premium')+'</span>';
+      else if(car.minAge>=25&&!car.hot)bR='<span class="b-age">🪪 25+</span>';
+      var specs='<div class="vcsp">'
+        +'<div class="vcsp-i"><span class="vsi-ic">👤</span><span class="vsi-v">'+car.pax+'</span><span class="vsi-l">'+(lang==='en'?'Seats':'Asientos')+'</span></div>'
+        +'<div class="vcsp-i"><span class="vsi-ic">🚪</span><span class="vsi-v">'+car.doors+'</span><span class="vsi-l">'+(lang==='en'?'Doors':'Puertas')+'</span></div>'
+        +'<div class="vcsp-i"><span class="vsi-ic">🧳</span><span class="vsi-v">'+car.bags.split(' ')[0]+'</span><span class="vsi-l">'+(lang==='en'?'Bags':'Maletas')+'</span></div>'
+        +'<div class="vcsp-i'+(car.minAge>=25?' hi':'')+'"><span class="vsi-ic">🪪</span><span class="vsi-v">'+car.minAge+'+</span><span class="vsi-l">'+(lang==='en'?'Age':'Edad')+'</span></div>'
+        +'</div>';
+      var incT=ci.slice(0,4).map(function(t){return'<span class="vcin-t">✓ '+t+'</span>';}).join('');
+      h+='<article class="vc" role="listitem">'
+        +'<div class="vcp">'
+        +'<img src="'+car.img+'" alt="'+d.name+'" loading="lazy" width="228" height="176" onerror="imgErr(this)">'
+        +'<div class="vcni"><span class="vcni-ic">🚗</span><span class="vcni-lbl">'+d.name+'</span></div>'
+        +'<div class="vcpf"></div>'
+        +'<div class="vcbdg"><div>'+bL+'</div><div>'+bR+'</div></div>'
+        +'<div class="vctag"><span class="vcode" style="background:'+car.bg+'">'+car.code+'</span><span class="vcat" style="background:'+car.bg+'">'+d.cat+'</span></div>'
+        +'</div>'
+        +'<div class="vcb"><div class="vcn">'+d.name+'</div><div class="vcv">'+d.vary+'</div>'+specs+'</div>'
+        +'<div class="vcin">'+incT+'</div>'
+        +'<a href="'+WA+'?text='+msg+'" target="_blank" rel="noopener" class="vcta">'
+        +'<div class="vcta-l">'+WASVG+'<span>'+qLbl+'</span></div>'
+        +'<span class="vcta-arr">→</span></a>'
+        +'</article>';
+    });
+    h+='</div>';
+  });
+  el.innerHTML=h;
+}
+/* D3 MAP */
+function renderMap(){
+  var svgEl=document.getElementById('world-svg');if(!svgEl)return;
+  var w=svgEl.parentElement?svgEl.parentElement.clientWidth:360;if(w<10)w=360;
+  var h=Math.round(w*.5);svgEl.setAttribute('viewBox','0 0 '+w+' '+h);
+  var sel=d3.select(svgEl);
+  sel.append('rect').attr('width',w).attr('height',h).attr('fill','#E8E4DC').attr('rx',8);
+  var proj=d3.geoNaturalEarth1().scale(w/6.3).translate([w/2,h/2]);
+  var path=d3.geoPath().projection(proj);
+  sel.append('path').datum(d3.geoGraticule()()).attr('fill','none').attr('stroke','rgba(255,255,255,.03)').attr('stroke-width',.4).attr('d',path);
+  var tip=document.getElementById('maptip');
+  d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json').then(function(world){
+    var features=topojson.feature(world,world.objects.countries).features;
+    sel.selectAll('path.c').data(features).join('path').attr('class','c').attr('d',path)
+      .attr('fill',function(d){var a=N2A[String(d.id).padStart(3,'0')];return(a&&COVERED[a])?'#E84A0E':'#C8C4BC';})
+      .attr('stroke','#F2F0EC').attr('stroke-width',.5).style('cursor','pointer')
+      .on('mousemove',function(ev,d){var a=N2A[String(d.id).padStart(3,'0')],ok=!!(a&&COVERED[a]),nm=(a&&COVERED[a])||'—';if(!tip)return;tip.innerHTML='<strong>'+(COUNTRY_FLAGS[a]||'')+' '+nm+'</strong><br><span style="color:'+(ok?'#10B981':'#EF4444')+'">'+(lang==='en'?(ok?'✓ Available':'✗ Not available'):(ok?'✓ Disponible':'✗ No disponible'))+'</span>';tip.style.cssText='display:block;left:'+(ev.clientX+14)+'px;top:'+(ev.clientY-56)+'px;';})
+      .on('mouseleave',function(){if(tip)tip.style.display='none';})
+      .on('click',function(ev,d){var a=N2A[String(d.id).padStart(3,'0')];if(a&&COVERED[a]){selectedCountry=a;activeRegion=C2R[a]||'';setTab('fleet');renderRegionPills();renderCountryPicker();updateBanner();renderFleet();}});
+  }).catch(function(){});
+}
+function renderCountries(){var el=document.getElementById('cg');if(!el)return;var sorted=Object.entries(COVERED).sort(function(a,b){return a[1].localeCompare(b[1]);});el.innerHTML=sorted.map(function(e){return'<div class="ctyc"><span class="ctyd"></span>'+(COUNTRY_FLAGS[e[0]]||'🏳️')+'&nbsp;'+e[1]+'</div>';}).join('');var cnt=document.getElementById('ccnt');if(cnt)cnt.textContent=sorted.length;}
+/* TESTIMONIALS */
+function renderTestimonials(){
+  var g=document.getElementById('home-reviews');if(!g)return;
+  g.innerHTML=TESTIS[lang].map(function(t){
+    return'<div class="rc"><div class="rc-stars">★★★★★</div><p class="rc-q">'+t.q+'</p>'
+      +'<div class="rc-foot"><div class="rc-av">'+t.i+'</div><div><div class="rc-name">'+t.n+'</div><div class="rc-trip">'+t.d+'</div></div></div></div>';
+  }).join('');
+}
+/* FAQ */
+function renderFAQ(){
+  var list=document.getElementById('faq-list');if(!list)return;
+  list.innerHTML=FAQS[lang].map(function(f,i){return'<div class="fai"><button class="faqq" onclick="toggleFAQ('+i+')">'+f[0]+' <span class="faqarr">▼</span></button><div class="faqa">'+f[1]+'</div></div>';}).join('');
+}
+function toggleFAQ(i){document.querySelectorAll('.fai').forEach(function(el,j){var btn=el.querySelector('.faqq'),ans=el.querySelector('.faqa');var open=j===i&&!btn.classList.contains('open');btn.classList.toggle('open',open);ans.classList.toggle('show',open);});}
+/* DESTINATIONS */
+function renderDestCities(){
+  var g=document.getElementById('dest-city-grid');if(!g)return;
+  g.innerHTML=DEST_CITIES.map(function(d){
+    var cN=lang==='es'&&d.ces?d.ces:d.c,cC=lang==='es'&&d.coes?d.coes:d.co;
+    var msg=d.k?(lang==='es'?'Hola!%20Cotizar%20para%20'+encodeURIComponent(cN)+'.%0AFechas%3A%20%0ACategor%C3%ADa%3A%20':'Hi!%20Quote%20for%20'+encodeURIComponent(cN)+'%20('+d.k+').%0ADates%3A%20%0ACategory%3A%20'):(lang==='es'?'Hola!%20Quiero%20cotizar.%0ADestino%3A%20%0AFechas%3A%20%0ACategor%C3%ADa%3A%20':'Hi!%20I%20want%20a%20quote.%0ADestination%3A%20%0ADates%3A%20%0ACategory%3A%20');
+    var aL=lang==='es'?'Cualquier destino →':'Any destination →';
+    return'<a href="'+WA+'?text='+msg+'" class="dcc" target="_blank" rel="noopener">'
+      +'<span class="dfl">'+d.f+'</span><span class="dnm">'+cN+(d.k?'<span class="dbdg">'+d.k+'</span>':'')+'</span>'
+      +'<span class="dco">'+cC+'</span><span class="dcta">'+(d.k?'Quote →':aL)+'</span></a>';
+  }).join('');
+}
+
+
+/* COUNTERS */
+function animCounters(){document.querySelectorAll('[data-counter]').forEach(function(el){var t=parseInt(el.getAttribute('data-counter')),c=0,s=Math.ceil(t/55);var iv=setInterval(function(){c=Math.min(c+s,t);el.textContent=c.toLocaleString()+'+';if(c>=t)clearInterval(iv);},16);});}
+/* COOKIE / MODAL */
+function acceptCookies(){try{localStorage.setItem('jsud_ck','1');}catch(e){}var b=document.getElementById('cookie-bar');if(b)b.classList.remove('show');}
+function declineCookies(){try{localStorage.setItem('jsud_ck','0');}catch(e){}var b=document.getElementById('cookie-bar');if(b)b.classList.remove('show');}
+function openModal(){var m=document.getElementById('modal');if(m)m.classList.add('open');}
+function closeModal(){var m=document.getElementById('modal');if(m)m.classList.remove('open');}
+/* REVEAL */
+var RO=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting)e.target.classList.add('in');});},{threshold:.08});
+/* INIT */
+document.addEventListener('DOMContentLoaded',function(){
+  setLang('en');showPage('home');
+  document.querySelectorAll('.rv').forEach(function(el){RO.observe(el);});
+  try{if(!localStorage.getItem('jsud_ck')){setTimeout(function(){var b=document.getElementById('cookie-bar');if(b)b.classList.add('show');},2500);}}catch(e){}
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal();});
+  renderInc();renderFilts();renderRegionPills();renderTestimonials();
+});
+
+
+
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"TravelAgency","name":"Just Show Up & Drive","description":"Premium worldwide vehicle rental in 105+ countries. $0 deductible, GPS, LDW included.","url":"https://www.justshowupdrive.com/","areaServed":{"@type":"Place","name":"Worldwide"},"currenciesAccepted":"USD","paymentAccepted":"Zelle, Wise, Stripe"}
+</script>
+</body>
+</html>
